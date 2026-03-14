@@ -1,4 +1,11 @@
 {
-  "next_index": 0,
-  "published": []
+  "next_index": 1,
+  "published": [
+    {
+      "index": 0,
+      "topic": "How often should Cache Valley homes get a professional deep clean?",
+      "file": "2026-03-14-how-often-should-cache-valley-homes-get-a-professional-deep-clean.md",
+      "date": "2026-03-14"
+    }
+  ]
 }
