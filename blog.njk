@@ -1,0 +1,120 @@
+---
+layout: null
+title: "Cleaning Tips & Local Guides | Hero Cleaners Blog — Logan, UT"
+description: "Practical house cleaning tips, Cache Valley home guides, and local insights from the team at Hero Cleaners LLC in Logan, Utah."
+permalink: /blog/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}" />
+  <link rel="canonical" href="https://herocleanersllc.com/blog/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --red: #B71C1C; --red-dark: #8B0000; --red-light: #FFCDD2;
+      --black: #1A1A1A; --charcoal: #2D2D2D; --gray: #757575;
+      --off-white: #F9F6F4; --white: #FFFFFF; --border: #E8E0DD;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Open Sans', Helvetica, Arial, sans-serif; color: var(--black); background: var(--off-white); }
+    nav { background: var(--white); border-bottom: 3px solid var(--red); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 68px; position: sticky; top: 0; z-index: 200; box-shadow: 0 2px 12px rgba(183,28,28,0.08); }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
+    .nav-logo .logo-text { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.7rem; letter-spacing: 0.04em; line-height: 1; }
+    .nav-logo .logo-text span.hero { color: var(--black); }
+    .nav-logo .logo-text span.clean { color: var(--red); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a { color: var(--charcoal); text-decoration: none; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.15s; }
+    .nav-links a:hover { color: var(--red); }
+    .nav-cta { background: var(--red) !important; color: var(--white) !important; padding: 9px 22px; border-radius: 4px; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--red-dark) !important; }
+    .blog-hero { background: var(--black); color: var(--white); padding: 64px 32px 56px; text-align: center; position: relative; overflow: hidden; }
+    .blog-hero::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--red); }
+    .blog-hero .eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--red); margin-bottom: 14px; }
+    .blog-hero h1 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: clamp(2.4rem, 6vw, 4rem); letter-spacing: 0.04em; line-height: 1.05; margin-bottom: 16px; }
+    .blog-hero h1 span { color: var(--red); }
+    .blog-hero p { font-size: 1rem; color: rgba(255,255,255,0.65); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+    .posts-section { max-width: 1120px; margin: 0 auto; padding: 52px 28px 96px; }
+    .section-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--red); margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .posts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 24px; }
+    .post-card { background: var(--white); border-radius: 6px; border: 1px solid var(--border); padding: 30px 28px 26px; display: flex; flex-direction: column; transition: box-shadow 0.18s, transform 0.18s; position: relative; overflow: hidden; }
+    .post-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: var(--red); transition: height 0.22s; }
+    .post-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.10); transform: translateY(-2px); }
+    .post-card:hover::before { height: 100%; }
+    .card-date { font-size: 0.75rem; color: var(--gray); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+    .card-tag { display: inline-block; background: var(--red-light); color: var(--red-dark); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 3px 8px; border-radius: 3px; margin-bottom: 12px; }
+    .post-card h2 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.35rem; letter-spacing: 0.03em; line-height: 1.2; color: var(--black); margin-bottom: 12px; flex: 1; }
+    .post-card h2 a { color: inherit; text-decoration: none; transition: color 0.15s; }
+    .post-card h2 a:hover { color: var(--red); }
+    .card-excerpt { font-size: 0.88rem; color: var(--gray); line-height: 1.6; margin-bottom: 22px; }
+    .read-more { display: inline-flex; align-items: center; gap: 6px; color: var(--red); font-weight: 700; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.02em; text-transform: uppercase; }
+    .read-more:hover { text-decoration: underline; }
+    .no-posts { text-align: center; padding: 80px 24px; color: var(--gray); grid-column: 1 / -1; }
+    .cta-strip { background: var(--red); color: var(--white); text-align: center; padding: 44px 24px; }
+    .cta-strip h2 { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 2rem; letter-spacing: 0.05em; margin-bottom: 10px; }
+    .cta-strip p { font-size: 0.97rem; opacity: 0.85; margin-bottom: 22px; }
+    .cta-strip a { display: inline-block; background: var(--white); color: var(--red); padding: 12px 32px; border-radius: 4px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+    footer { background: var(--black); color: rgba(255,255,255,0.45); text-align: center; padding: 36px 24px; font-size: 0.82rem; border-top: 3px solid var(--red); }
+    footer a { color: rgba(255,255,255,0.65); text-decoration: none; }
+    footer a:hover { color: var(--white); }
+    .footer-logo { font-family: 'Bebas Neue', Impact, sans-serif; font-size: 1.3rem; letter-spacing: 0.05em; margin-bottom: 10px; color: var(--white); }
+    .footer-logo span { color: var(--red); }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="nav-logo" href="/"><div class="logo-text"><span class="hero">Hero </span><span class="clean">Cleaners</span></div></a>
+    <div class="nav-links">
+      <a href="/services">Services</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact-us">Contact</a>
+      <a href="https://herocleanersllc.com/book" class="nav-cta">Book Now</a>
+    </div>
+  </nav>
+  <div class="blog-hero">
+    <div class="eyebrow">Hero Cleaners · Logan, Utah</div>
+    <h1>Cleaning Tips &<br><span>Cache Valley</span> Guides</h1>
+    <p>Practical advice from Cache Valley's most trusted house cleaning team — published every Monday.</p>
+  </div>
+  <div class="posts-section">
+    <div class="section-label">Latest Articles</div>
+    {% set blogPosts = collections.post | reverse %}
+    <div class="posts-grid">
+      {% if blogPosts and blogPosts.length > 0 %}
+        {% for post in blogPosts %}
+          <div class="post-card">
+            <div class="card-date">{{ post.date | readableDate }}</div>
+            <span class="card-tag">Cache Valley Tips</span>
+            <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+            {% if post.data.description %}
+              <p class="card-excerpt">{{ post.data.description | truncate(110) }}</p>
+            {% else %}
+              <p class="card-excerpt">{{ post.templateContent | striptags | truncate(110) }}</p>
+            {% endif %}
+            <a class="read-more" href="{{ post.url }}">Read article →</a>
+          </div>
+        {% endfor %}
+      {% else %}
+        <div class="no-posts"><p>First post coming Monday — check back soon!</p></div>
+      {% endif %}
+    </div>
+  </div>
+  <div class="cta-strip">
+    <h2>Ready for a Spotless Home?</h2>
+    <p>Hero Cleaners serves all of Cache Valley — Logan, Smithfield, Hyrum, North Logan, Nibley, Providence and more.</p>
+    <a href="https://herocleanersllc.com/book">Get a Free Quote Today</a>
+  </div>
+  <footer>
+    <div class="footer-logo">Hero <span>Cleaners</span> LLC</div>
+    <p>Logan, Utah · Cache Valley's Most Trusted Cleaning Team</p>
+    <p style="margin-top:8px;"><a href="tel:4352770370">(435) 277-0370</a> · <a href="mailto:herocleanersinfo@gmail.com">herocleanersinfo@gmail.com</a> · <a href="https://herocleanersllc.com">herocleanersllc.com</a></p>
+    <p style="margin-top:12px; font-size:0.75rem;">© 2026 Hero Cleaners LLC. All rights reserved.</p>
+  </footer>
+</body>
+</html>
