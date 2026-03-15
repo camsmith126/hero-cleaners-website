@@ -110,7 +110,7 @@
     /* SERVICES */
     .services { background: var(--off-white); }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .service-card { background: var(--white); border-radius: 12px; padding: 32px 28px; border: 1.5px solid var(--border); transition: all 0.25s ease; position: relative; overflow: hidden; }
+    .service-card { background: var(--white); border-radius: 12px; padding: 32px 28px; border: 1.5px solid var(--border); transition: all 0.25s ease; position: relative; overflow: hidden; cursor: pointer; }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
     .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(183,28,28,0.2); }
     .service-card:hover::before { transform: scaleX(1); }
@@ -523,5 +523,16 @@
     });
   }
 </script>
+
+  <script>
+    // Make entire service card clickable
+    document.querySelectorAll('.service-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('.service-link')) return;
+        var link = card.querySelector('.service-link');
+        if (link) window.location.href = link.href;
+      });
+    });
+  </script>
 </body>
 </html>
