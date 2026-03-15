@@ -1,0 +1,10 @@
+{
+  "name": "hero-cleaners-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx @11ty/eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
