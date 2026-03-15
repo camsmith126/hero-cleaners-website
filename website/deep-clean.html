@@ -84,6 +84,10 @@
     .check-list li:last-child{border-bottom:none;}
     .check-list li::before{content:'\2713';color:var(--red);font-weight:700;font-size:15px;flex-shrink:0;margin-top:1px;}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+    .bullet-list{list-style:none;margin:0;padding:0;}
+    .bullet-list li{font-size:15px;color:var(--charcoal);padding:8px 0 8px 20px;position:relative;line-height:1.6;border-bottom:1px solid var(--border);}
+    .bullet-list li:last-child{border-bottom:none;}
+    .bullet-list li::before{content:'\2022';color:var(--red);font-weight:900;font-size:18px;position:absolute;left:0;top:7px;}
     .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
     .card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:32px;transition:all 0.25s ease;}
     .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(183,28,28,0.2);}
@@ -165,7 +169,7 @@
   <div><div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:#92400E;margin-bottom:5px;">What happens after you book</div>
   <div style="font-size:14px;color:#78350F;line-height:1.7;">We personally reach out to every new customer before we ever show up &mdash; to learn your home, understand your priorities, and make sure we come fully prepared. No guessing, no surprises on either side.</div></div>
 </div></div>
-      <ul class="detail-list">
+      <ul class="bullet-list">
           <li>We focus on what matters most to <em>you</em> &mdash; every home is different, and we clean accordingly</li>
           <li>Common areas include kitchens, bathrooms, appliances, baseboards, cabinets, ceiling fans, window sills &amp; more &mdash; based on your needs</li>
           <li>After you book, we personally reach out to walk through your home's priorities before we ever show up</li>
@@ -178,8 +182,8 @@
           <div style="background:var(--black);border-radius:12px;padding:32px 28px;color:white;">
           <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--red);margin-bottom:8px;">BUILT AROUND YOU</p>
           <h3 style="font-family:var(--font-display);font-size:1.6rem;color:white;margin-bottom:16px;">EVERY CLEAN IS CUSTOM</h3>
-          <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:16px;">No two homes are the same â and we don't treat them that way. After you book, we personally reach out to learn what matters most to you. Your priorities shape everything we do.</p>
-          <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.7;">Common areas we cover: kitchens &amp; appliances, bathrooms, baseboards, door frames, window sills &amp; tracks, ceiling fans &amp; vents, and more â tailored to your home's specific needs.</p>
+          <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:16px;">No two homes are the same Ã¢ÂÂ and we don't treat them that way. After you book, we personally reach out to learn what matters most to you. Your priorities shape everything we do.</p>
+          <p style="color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.7;">Common areas we cover: kitchens &amp; appliances, bathrooms, baseboards, door frames, window sills &amp; tracks, ceiling fans &amp; vents, and more Ã¢ÂÂ tailored to your home's specific needs.</p>
         </div>
       </div>
       <div class="card">
