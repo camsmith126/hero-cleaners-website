@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("website");
+  // Copy website/ files to root of _site (not /website/ subfolder)
+  eleventyConfig.addPassthroughCopy({ "website": "." });
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     const d = new Date(dateObj);
