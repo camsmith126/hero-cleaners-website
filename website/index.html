@@ -41,7 +41,7 @@
     .nav-links a:hover { color: var(--red); }
     .nav-dropdown { position: relative; list-style: none; }
     .nav-dropdown > a { display: flex; align-items: center; gap: 5px; cursor: pointer; }
-    .nav-dropdown > a::after { content: 'â¾'; font-size: 11px; margin-left: 2px; }
+    .nav-dropdown > a::after { content: ''; display: inline-block; width: 0; height: 0; border-left: 4px solid transparent; border-right: 4px solid transparent; border-top: 5px solid currentColor; margin-left: 6px; vertical-align: middle; position: relative; top: 1px; }
     .nav-dropdown-menu { display: none; position: absolute; top: 100%; left: -8px; background: #fff; border: 1px solid #eeeeee; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.12); min-width: 215px; z-index: 300; padding: 6px 0; margin-top: 0; }
     .nav-dropdown:hover .nav-dropdown-menu { display: block; }
     .nav-dropdown > a { padding-bottom: 8px; margin-bottom: -8px; }
