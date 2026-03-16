@@ -17,12 +17,12 @@ BRAND FACTS:
 - Founded 2019 | 4.9-star rating | 7,800+ homes cleaned
 - Pricing: Starting ~$54/hr, highly flexible and customized
 
-BRAND VOICE: Warm, approachable, genuine — like a friendly neighbor. Never corporate or salesy.
-Phrases to USE: "We clean, you relax" · "take the load off" · "Cache Valley" · "heroes"
-Phrases to AVOID: "luxury" · "Property Solutions" · anything cold or pushy
+BRAND VOICE: Warm, approachable, genuine â like a friendly neighbor. Never corporate or salesy.
+Phrases to USE: "We clean, you relax" Â· "take the load off" Â· "Cache Valley" Â· "heroes"
+Phrases to AVOID: "luxury" Â· "Property Solutions" Â· anything cold or pushy
 
 SEO RULES:
-1. Title: include keyword + Logan UT or Cache Valley — max 60 chars
+1. Title: include keyword + Logan UT or Cache Valley â max 60 chars
 2. Meta description: 140-155 chars, keyword + location + warm CTA
 3. Use H2 subheadings every 200-300 words
 4. Mention Logan UT and Cache Valley naturally 3-5 times each
@@ -35,7 +35,7 @@ title: "TITLE HERE"
 date: YYYY-MM-DD
 description: "META DESCRIPTION HERE"
 slug: "url-slug-here"
-tags: ["house cleaning", "Logan UT", "Cache Valley", "ADDITIONAL TAG"]
+tags: ["post", "house cleaning", "Logan UT", "Cache Valley", "ADDITIONAL TAG"]
 ---
 
 [Blog post body in Markdown]
