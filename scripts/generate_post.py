@@ -17,12 +17,12 @@ BRAND FACTS:
 - Founded 2019 | 4.9-star rating | 7,800+ homes cleaned
 - Pricing: Starting ~$54/hr, highly flexible and customized
 
-BRAND VOICE: Warm, approachable, genuine â like a friendly neighbor. Never corporate or salesy.
-Phrases to USE: "We clean, you relax" Â· "take the load off" Â· "Cache Valley" Â· "heroes"
-Phrases to AVOID: "luxury" Â· "Property Solutions" Â· anything cold or pushy
+BRAND VOICE: Warm, approachable, genuine Ã¢ÂÂ like a friendly neighbor. Never corporate or salesy.
+Phrases to USE: "We clean, you relax" ÃÂ· "take the load off" ÃÂ· "Cache Valley" ÃÂ· "heroes"
+Phrases to AVOID: "luxury" ÃÂ· "Property Solutions" ÃÂ· anything cold or pushy
 
 SEO RULES:
-1. Title: include keyword + Logan UT or Cache Valley â max 60 chars
+1. Title: include keyword + Logan UT or Cache Valley Ã¢ÂÂ max 60 chars
 2. Meta description: 140-155 chars, keyword + location + warm CTA
 3. Use H2 subheadings every 200-300 words
 4. Mention Logan UT and Cache Valley naturally 3-5 times each
@@ -72,9 +72,30 @@ def main():
     )
     content = message.content[0].text
 
+    # Strip any frontmatter the AI may have written (between --- markers) and replace with correct one
+    body = content
+    if content.startswith("---"):
+        end = content.find("---", 3)
+        if end != -1:
+            body = content[end+3:].lstrip("\n")
+
+    # Build correct frontmatter
+    frontmatter = f"""---
+title: "{topic} | Logan UT"
+date: {date_str}
+description: "Hero Cleaners Cache Valley — {topic[:100]}"
+slug: "{slug}"
+tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
+layout: post.njk
+permalink: /blog/{slug}/
+---
+
+"""
+    final_content = frontmatter + body
+
     os.makedirs(BLOG_DIR, exist_ok=True)
     filename = f"{date_str}-{slug}.md"
-    open(os.path.join(BLOG_DIR, filename), "w").write(content)
+    open(os.path.join(BLOG_DIR, filename), "w").write(final_content)
 
     tracker["next_index"] = idx + 1
     tracker["published"].append({"index": idx, "topic": topic, "file": filename, "date": date_str})
