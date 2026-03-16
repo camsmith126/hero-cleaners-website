@@ -1,11 +1,17 @@
 {
-  "next_index": 1,
+  "next_index": 2,
   "published": [
     {
       "index": 0,
       "topic": "How often should Cache Valley homes get a professional deep clean?",
       "file": "2026-03-14-how-often-should-cache-valley-homes-get-a-professional-deep-clean.md",
       "date": "2026-03-14"
+    },
+    {
+      "index": 1,
+      "topic": "What to expect on your first Hero Cleaners visit in Logan, UT",
+      "file": "2026-03-16-what-to-expect-on-your-first-hero-cleaners-visit-in-logan-ut.md",
+      "date": "2026-03-16"
     }
   ]
 }
