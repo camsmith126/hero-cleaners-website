@@ -109,7 +109,14 @@
     .hcp-button.btn-primary, .hcp-button.plan-cta-primary { background: var(--red-accent) !important; }
     .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #B71C1C !important; }
   </style>
-<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
+<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners">
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
+      navLinks.style.display = 'none';
+    }
+  });
+</script>
 </head><body><div class="draft-banner">&#x26A0; <span>DRAFT</span> &mdash; Not Live</div>
 <div class="announcement-bar">&#x1F3C6; Cache Valley's #1 Rated Cleaning Service &nbsp;&middot;&nbsp; 4.9 Stars &nbsp;&middot;&nbsp; <a href="tel:4352770370">Call or Text (435) 277-0370</a></div>
 <nav class="nav"><div class="container"><div class="nav-inner">
