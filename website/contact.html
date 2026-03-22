@@ -256,6 +256,13 @@
   const navLinks = document.querySelector('.nav-links');
   if (hamburger) { hamburger.addEventListener('click', () => { const open = navLinks.style.display === 'flex'; navLinks.style.display = open ? 'none' : 'flex'; if (!open) Object.assign(navLinks.style, {flexDirection:'column',position:'absolute',top:'72px',left:'0',right:'0',background:'white',padding:'16px 24px',boxShadow:'0 4px 20px rgba(0,0,0,0.1)',zIndex:'99'}); }); }
   document.querySelectorAll('a[href^="#"]').forEach(a => { a.addEventListener('click', e => { const t = document.querySelector(a.getAttribute('href')); if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); } }); });
+
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
+      navLinks.style.display = 'none';
+    }
+  });
 </script>
 
 <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#db0a1f" data-organization="47d059ad-7323-403e-838f-fa7fee0d5ffa" defer></script>
