@@ -244,7 +244,14 @@
   <div class="cta-actions">
     <!--Start of Housecallpro Online booking button-->
 <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" style="background:#D32F2F;border-color:#D32F2F;color:white;;font-weight:700;" onClick="HCPWidget.openModal()">Book Online Now</button>
-<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
+<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners">
+  // Close nav when clicking outside
+  document.addEventListener('click', function(e) {
+    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
+      navLinks.style.display = 'none';
+    }
+  });
+</script>
 <!--End of Housecallpro Online booking button-->
     <a href="tel:4352770370" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);">Call or Text (435) 277-0370</a>
   </div>
