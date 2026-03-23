@@ -16,3 +16,58 @@
   to = "https://theherocleaners.com/:splat"
   status = 301
   force = true
+
+# Page-level redirects — old herocleanersllc.com slugs → new theherocleaners.com slugs
+[[redirects]]
+  from = "/about-us"
+  to = "https://theherocleaners.com/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact-us"
+  to = "https://theherocleaners.com/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/deep-cleaning"
+  to = "https://theherocleaners.com/deep-clean"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Recurring-Clean"
+  to = "https://theherocleaners.com/recurring-cleaning"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Commercial"
+  to = "https://theherocleaners.com/commercial-cleaning"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Window-washing"
+  to = "https://theherocleaners.com/window-washing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/FAQs"
+  to = "https://theherocleaners.com/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/Reviews"
+  to = "https://theherocleaners.com/reviews"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/services"
+  to = "https://theherocleaners.com/"
+  status = 301
+  force = true
