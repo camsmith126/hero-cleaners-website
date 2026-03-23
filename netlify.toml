@@ -1,73 +1,135 @@
 [build]
-  command = "npm install && npx @11ty/eleventy"
+  command = "npx @11ty/eleventy"
   publish = "_site"
 
 [build.environment]
   NODE_VERSION = "18"
 
-[[redirects]]
-  from = "https://herocleanersllc.com/*"
-  to = "https://theherocleaners.com/:splat"
-  status = 301
-  force = true
+# ============================================================
+# DOMAIN-LEVEL REDIRECTS — old slug to new slug (MUST come first)
+# These handle old herocleanersllc.com URLs that Google has indexed
+# ============================================================
 
 [[redirects]]
-  from = "https://www.herocleanersllc.com/*"
-  to = "https://theherocleaners.com/:splat"
-  status = 301
-  force = true
-
-# Page-level redirects — old herocleanersllc.com slugs → new theherocleaners.com slugs
-[[redirects]]
-  from = "/about-us"
+  from = "https://herocleanersllc.com/about-us"
   to = "https://theherocleaners.com/about"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/contact-us"
+  from = "https://www.herocleanersllc.com/about-us"
+  to = "https://theherocleaners.com/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/contact-us"
   to = "https://theherocleaners.com/contact"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/deep-cleaning"
+  from = "https://www.herocleanersllc.com/contact-us"
+  to = "https://theherocleaners.com/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/deep-cleaning"
   to = "https://theherocleaners.com/deep-clean"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/Recurring-Clean"
+  from = "https://www.herocleanersllc.com/deep-cleaning"
+  to = "https://theherocleaners.com/deep-clean"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Recurring-Clean"
   to = "https://theherocleaners.com/recurring-cleaning"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/Commercial"
+  from = "https://www.herocleanersllc.com/Recurring-Clean"
+  to = "https://theherocleaners.com/recurring-cleaning"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Commercial"
   to = "https://theherocleaners.com/commercial-cleaning"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/Window-washing"
+  from = "https://www.herocleanersllc.com/Commercial"
+  to = "https://theherocleaners.com/commercial-cleaning"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Window-washing"
   to = "https://theherocleaners.com/window-washing"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/FAQs"
+  from = "https://www.herocleanersllc.com/Window-washing"
+  to = "https://theherocleaners.com/window-washing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/FAQs"
   to = "https://theherocleaners.com/faq"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/Reviews"
+  from = "https://www.herocleanersllc.com/FAQs"
+  to = "https://theherocleaners.com/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Reviews"
   to = "https://theherocleaners.com/reviews"
   status = 301
   force = true
 
 [[redirects]]
-  from = "/services"
+  from = "https://www.herocleanersllc.com/Reviews"
+  to = "https://theherocleaners.com/reviews"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/services"
+  to = "https://theherocleaners.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.herocleanersllc.com/services"
+  to = "https://theherocleaners.com/"
+  status = 301
+  force = true
+
+# ============================================================
+# CATCH-ALL — anything else on herocleanersllc.com → homepage
+# ============================================================
+
+[[redirects]]
+  from = "https://herocleanersllc.com/*"
+  to = "https://theherocleaners.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.herocleanersllc.com/*"
   to = "https://theherocleaners.com/"
   status = 301
   force = true
