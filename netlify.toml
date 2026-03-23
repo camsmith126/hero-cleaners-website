@@ -4,3 +4,15 @@
 
 [build.environment]
   NODE_VERSION = "18"
+
+[[redirects]]
+  from = "https://herocleanersllc.com/*"
+  to = "https://theherocleaners.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.herocleanersllc.com/*"
+  to = "https://theherocleaners.com/:splat"
+  status = 301
+  force = true
