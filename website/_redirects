@@ -1,0 +1,36 @@
+# Old HCP-style URLs → New site pages (301 permanent redirects)
+/Recurring-Clean        /recurring-cleaning     301
+/recurring-clean        /recurring-cleaning     301
+/First-Time             /deep-clean             301
+/first-time             /deep-clean             301
+/Move-Out               /deep-clean             301
+/move-out               /deep-clean             301
+/Commercial             /commercial-cleaning    301
+/commercial             /commercial-cleaning    301
+/Window-washing         /window-washing         301
+/about-us               /about                  301
+/About-Us               /about                  301
+/contact-us             /contact                301
+/Contact-Us             /contact                301
+/FAQs                   /faq                    301
+/faqs                   /faq                    301
+/Reviews                /reviews                301
+/services               /                       301
+/Services               /                       301
+
+# Old WordPress URLs → closest new pages
+/house-cleaning/                    /recurring-cleaning     301
+/commercial-cleaning/               /commercial-cleaning    301
+/window-washing/                    /window-washing         301
+/contact/                           /contact                301
+/about/                             /about                  301
+/faq/                               /faq                    301
+/reviews/                           /reviews                301
+/gallery/                           /                       301
+/blog/                              /blog                   301
+/gutter-cleaning/                   /                       301
+/holiday-lighting/                  /                       301
+/construction-clean-up/             /                       301
+/driveway-sealing/                  /                       301
+/pressure-washing/                  /                       301
+/hero-cleaners-llc-press-release/   /about                  301
