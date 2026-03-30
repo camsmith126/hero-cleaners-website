@@ -1,5 +1,5 @@
 {
-  "next_index": 3,
+  "next_index": 4,
   "published": [
     {
       "index": 0,
@@ -18,6 +18,12 @@
       "topic": "Recurring house cleaning vs one-time cleaning: which is right for Cache Valley families?",
       "file": "2026-03-23-recurring-house-cleaning-vs-one-time-cleaning-which-is-right-for-cache-valley-fa.md",
       "date": "2026-03-23"
+    },
+    {
+      "index": 3,
+      "topic": "5 signs your Logan home needs a professional clean \u2014 not just a tidy",
+      "file": "2026-03-30-5-signs-your-logan-home-needs-a-professional-clean-not-just-a-tidy.md",
+      "date": "2026-03-30"
     }
   ]
 }
