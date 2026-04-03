@@ -17,12 +17,12 @@ BRAND FACTS:
 - Founded 2019 | 4.9-star rating | 7,800+ homes cleaned
 - Pricing: Starting ~$54/hr, highly flexible and customized
 
-BRAND VOICE: Warm, approachable, genuine Ã¢ÂÂ like a friendly neighbor. Never corporate or salesy.
-Phrases to USE: "We clean, you relax" ÃÂ· "take the load off" ÃÂ· "Cache Valley" ÃÂ· "heroes"
-Phrases to AVOID: "luxury" ÃÂ· "Property Solutions" ÃÂ· anything cold or pushy
+BRAND VOICE: Warm, approachable, genuine — like a friendly neighbor. Never corporate or salesy.
+Phrases to USE: "We clean, you relax" · "take the load off" · "Cache Valley" · "heroes"
+Phrases to AVOID: "luxury" · "Property Solutions" · anything cold or pushy
 
 SEO RULES:
-1. Title: include keyword + Logan UT or Cache Valley Ã¢ÂÂ max 60 chars
+1. Title: include keyword + Logan UT or Cache Valley — max 60 chars
 2. Meta description: 140-155 chars, keyword + location + warm CTA
 3. Use H2 subheadings every 200-300 words
 4. Mention Logan UT and Cache Valley naturally 3-5 times each
@@ -42,20 +42,81 @@ tags: ["post", "house cleaning", "Logan UT", "Cache Valley", "ADDITIONAL TAG"]
 
 No code fences. No preamble. Raw Markdown only."""
 
+TOPIC_GEN_PROMPT = """You generate SEO blog topic ideas for Hero Cleaners LLC, a locally owned cleaning company in Logan, Utah serving Cache Valley.
+
+Services: recurring house cleaning, deep cleaning, move-in/move-out cleaning, commercial cleaning, window washing.
+Service cities: Logan, North Logan, Smithfield, Hyrum, Nibley, Providence, River Heights, Hyde Park, Wellsville, Richmond, Lewiston, Clarkston.
+
+Generate exactly 20 new blog topic titles. Each should:
+- Target a specific local SEO keyword (e.g. "house cleaning Logan Utah", "maid service Cache Valley", "deep clean Smithfield UT")
+- Cover a mix of: cleaning tips, seasonal topics, city-specific topics, recurring cleaning benefits, move-out cleaning, window washing, commercial cleaning, and home maintenance
+- Be natural and engaging — not stuffed with keywords
+- NEVER repeat or closely paraphrase any topic from the list below
+
+Return ONLY a JSON array of 20 strings. No commentary, no code fences, no numbering."""
+
 def slugify(text):
     text = text.lower()
     text = re.sub(r"[^\w\s-]", "", text)
     text = re.sub(r"[\s_]+", "-", text)
     return re.sub(r"-+", "-", text).strip("-")[:80]
 
+def get_used_topics(topics, tracker):
+    """Collect all topics that have been used or are queued."""
+    used = set()
+    for t in topics:
+        used.add(t.strip().lower())
+    for entry in tracker.get("published", []):
+        used.add(entry["topic"].strip().lower())
+    return used
+
+def generate_new_topics(client, used_topics):
+    """Call Claude API to generate 20 new unique topics."""
+    used_list = "\n".join(f"- {t}" for t in sorted(used_topics))
+    prompt = f"Here are all previously used or queued topics — do NOT repeat any:\n\n{used_list}\n\nGenerate 20 new topics now."
+
+    print("Generating 20 new blog topics...")
+    message = client.messages.create(
+        model="claude-sonnet-4-20250514",
+        max_tokens=2000,
+        system=TOPIC_GEN_PROMPT,
+        messages=[{"role": "user", "content": prompt}],
+    )
+    raw = message.content[0].text.strip()
+
+    # Strip code fences if present
+    if raw.startswith("```"):
+        raw = re.sub(r"^```\w*\n?", "", raw)
+        raw = re.sub(r"\n?```$", "", raw)
+
+    new_topics = json.loads(raw)
+
+    # Filter out any duplicates that slipped through
+    filtered = [t for t in new_topics if t.strip().lower() not in used_topics]
+    print(f"Generated {len(filtered)} new unique topics.")
+    return filtered
+
 def main():
     topics  = json.load(open(TOPICS_FILE))
     tracker = json.load(open(TRACKER_FILE)) if os.path.exists(TRACKER_FILE) else {"next_index": 0, "published": []}
     idx     = tracker.get("next_index", 0)
+    remaining = len(topics) - idx
+
+    client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
+
+    # Auto-generate new topics when fewer than 5 remain
+    if remaining < 5:
+        print(f"Only {remaining} topics remaining — auto-generating more.")
+        used = get_used_topics(topics, tracker)
+        new_topics = generate_new_topics(client, used)
+        if new_topics:
+            topics.extend(new_topics)
+            json.dump(topics, open(TOPICS_FILE, "w"), indent=2, ensure_ascii=False)
+            print(f"topics.json now has {len(topics)} total topics ({len(topics) - idx} remaining).")
 
     if idx >= len(topics):
-        print("All topics published! Add more to topics.json.")
-        sys.exit(0)
+        print("ERROR: No topics available and generation failed.")
+        sys.exit(1)
 
     topic    = topics[idx]
     date_str = datetime.date.today().isoformat()
@@ -63,7 +124,6 @@ def main():
 
     print(f"Generating post #{idx+1}: {topic}")
 
-    client  = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
     message = client.messages.create(
         model="claude-opus-4-6",
         max_tokens=2000,

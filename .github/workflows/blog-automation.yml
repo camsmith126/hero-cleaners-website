@@ -30,10 +30,17 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python scripts/generate_post.py
 
+      - name: Verify post was created
+        run: |
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "::error::No blog post was generated — check topics.json or API key"
+            exit 1
+          fi
+
       - name: Commit and push new post
         run: |
           git config --global user.name "Hero Cleaners Blog Bot"
           git config --global user.email "herocleanersinfo@gmail.com"
-          git add blog/ scripts/topics_tracker.json
-          git diff --staged --quiet || git commit -m "chore: auto-publish weekly blog post [skip ci]"
+          git add blog/ scripts/topics_tracker.json topics.json
+          git commit -m "chore: auto-publish weekly blog post [skip ci]"
           git push
