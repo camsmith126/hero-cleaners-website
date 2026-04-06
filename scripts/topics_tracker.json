@@ -1,5 +1,5 @@
 {
-  "next_index": 4,
+  "next_index": 5,
   "published": [
     {
       "index": 0,
@@ -24,6 +24,12 @@
       "topic": "5 signs your Logan home needs a professional clean \u2014 not just a tidy",
       "file": "2026-03-30-5-signs-your-logan-home-needs-a-professional-clean-not-just-a-tidy.md",
       "date": "2026-03-30"
+    },
+    {
+      "index": 4,
+      "topic": "How to prepare your home before the cleaners arrive",
+      "file": "2026-04-06-how-to-prepare-your-home-before-the-cleaners-arrive.md",
+      "date": "2026-04-06"
     }
   ]
 }
