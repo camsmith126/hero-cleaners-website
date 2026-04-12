@@ -117,14 +117,7 @@
     .hcp-button.btn-primary, .hcp-button.plan-cta-primary { background: var(--red-accent) !important; }
     .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #B71C1C !important; }
   </style>
-<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners">
-  // Close nav when clicking outside
-  document.addEventListener('click', function(e) {
-    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
-      navLinks.style.display = 'none';
-    }
-  });
-</script>
+<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
 
   <link rel="canonical" href="https://theherocleaners.com/commercial-cleaning">
   <meta property="og:type" content="website">
@@ -196,7 +189,7 @@
 </div></div>
       <ul class="check-list">
         <li>Dedicated manager overseeing your account &mdash; consistent point of contact</li>
-        <li>Licensed, insured, and licensed and insured team members</li>
+        <li>Licensed, insured, and background-checked team members</li>
         <li>After-hours and weekend cleaning available</li>
         <li>Card on file billing &mdash; charged after each visit, no hassle</li>
         <li>We talk through scope and frequency before any work begins</li>
@@ -220,12 +213,8 @@
       </div>
       <div class="card">
         <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red);margin-bottom:12px;">Transparent Pricing</div>
-        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px;">
-          <div style="font-size:13px;color:var(--charcoal);padding:10px 14px;background:var(--off-white);border-radius:6px;display:flex;justify-content:space-between;"><span>Monthly / Deep Clean</span><strong>$60/hr</strong></div>
-          <div style="font-size:13px;color:var(--charcoal);padding:10px 14px;background:var(--off-white);border-radius:6px;display:flex;justify-content:space-between;"><span>Weekly</span><strong>$55/hr</strong></div>
-          <div style="font-size:13px;color:var(--charcoal);padding:10px 14px;background:var(--off-white);border-radius:6px;display:flex;justify-content:space-between;"><span>2x/Week or More</span><strong>$50/hr</strong></div>
-        </div>
-        <div style="font-size:13px;color:var(--gray);line-height:1.6;">Final price depends on the size of your space and scope. We provide a full quote before any work begins &mdash; no surprises.</div>
+        <p style="font-size:15px;color:var(--charcoal);line-height:1.7;margin-bottom:16px;">Every commercial space is different. We price by the size of your space, the scope of work, and how often we visit &mdash; then we give you a clear, honest quote before any work begins. No surprises.</p>
+        <div style="padding:12px 16px;background:var(--off-white);border-radius:8px;font-size:13px;color:var(--gray);line-height:1.6;">Recurring commercial accounts receive preferred scheduling and preferred rates.</div>
       </div>
     </div>
   </div>
@@ -273,6 +262,7 @@
   const h=document.querySelector('.hamburger'),nl=document.querySelector('.nav-links');
   if(h)h.addEventListener('click',()=>{const o=nl.style.display==='flex';nl.style.display=o?'none':'flex';if(!o)Object.assign(nl.style,{flexDirection:'column',position:'absolute',top:'72px',left:'0',right:'0',background:'white',padding:'16px 24px',boxShadow:'0 4px 20px rgba(0,0,0,0.1)',zIndex:'99'});});
   document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+  document.addEventListener('click',function(e){if(nl&&!e.target.closest('.nav')&&!e.target.closest('.hamburger')){nl.style.display='none';}});
 </script>
 <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#db0a1f" data-organization="47d059ad-7323-403e-838f-fa7fee0d5ffa" defer></script>
 </body></html>

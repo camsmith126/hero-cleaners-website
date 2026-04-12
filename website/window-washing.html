@@ -117,14 +117,7 @@
     .hcp-button.btn-primary, .hcp-button.plan-cta-primary { background: var(--red-accent) !important; }
     .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #B71C1C !important; }
   </style>
-<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners">
-  // Close nav when clicking outside
-  document.addEventListener('click', function(e) {
-    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
-      navLinks.style.display = 'none';
-    }
-  });
-</script>
+<script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
 
   <link rel="canonical" href="https://theherocleaners.com/window-washing">
   <meta property="og:type" content="website">
@@ -264,6 +257,7 @@
   const h=document.querySelector('.hamburger'),nl=document.querySelector('.nav-links');
   if(h)h.addEventListener('click',()=>{const o=nl.style.display==='flex';nl.style.display=o?'none':'flex';if(!o)Object.assign(nl.style,{flexDirection:'column',position:'absolute',top:'72px',left:'0',right:'0',background:'white',padding:'16px 24px',boxShadow:'0 4px 20px rgba(0,0,0,0.1)',zIndex:'99'});});
   document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}});});
+  document.addEventListener('click',function(e){if(nl&&!e.target.closest('.nav')&&!e.target.closest('.hamburger')){nl.style.display='none';}});
 </script>
 <script id="housecall-pro-chat-bubble" src="https://chat.housecallpro.com/proChat.js" type="text/javascript" data-color="#db0a1f" data-organization="47d059ad-7323-403e-838f-fa7fee0d5ffa" defer></script>
 </body></html>
