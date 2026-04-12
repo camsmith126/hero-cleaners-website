@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+
+# GSC report — contains absolute path to credentials.json
+scripts/gsc_config.json
+
+# Never commit secrets, ever
+credentials.json
+*.pem
+*.key
+.env
+.env.*
