@@ -1,5 +1,5 @@
 {
-  "next_index": 5,
+  "next_index": 6,
   "published": [
     {
       "index": 0,
@@ -30,6 +30,12 @@
       "topic": "How to prepare your home before the cleaners arrive",
       "file": "2026-04-06-how-to-prepare-your-home-before-the-cleaners-arrive.md",
       "date": "2026-04-06"
+    },
+    {
+      "index": 5,
+      "topic": "The real cost of cleaning your own home every week in Cache Valley",
+      "file": "2026-04-13-the-real-cost-of-cleaning-your-own-home-every-week-in-cache-valley.md",
+      "date": "2026-04-13"
     }
   ]
 }
