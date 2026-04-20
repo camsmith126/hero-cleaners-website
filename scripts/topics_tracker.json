@@ -1,5 +1,5 @@
 {
-  "next_index": 6,
+  "next_index": 7,
   "published": [
     {
       "index": 0,
@@ -36,6 +36,12 @@
       "topic": "The real cost of cleaning your own home every week in Cache Valley",
       "file": "2026-04-13-the-real-cost-of-cleaning-your-own-home-every-week-in-cache-valley.md",
       "date": "2026-04-13"
+    },
+    {
+      "index": 6,
+      "topic": "Move-out cleaning checklist for Logan, UT renters and homeowners",
+      "file": "2026-04-20-move-out-cleaning-checklist-for-logan-ut-renters-and-homeowners.md",
+      "date": "2026-04-20"
     }
   ]
 }
