@@ -1,5 +1,5 @@
 {
-  "next_index": 7,
+  "next_index": 8,
   "published": [
     {
       "index": 0,
@@ -42,6 +42,12 @@
       "topic": "Move-out cleaning checklist for Logan, UT renters and homeowners",
       "file": "2026-04-20-move-out-cleaning-checklist-for-logan-ut-renters-and-homeowners.md",
       "date": "2026-04-20"
+    },
+    {
+      "index": 7,
+      "topic": "Is hiring a house cleaner a luxury? The truth for Cache Valley families",
+      "file": "2026-04-27-is-hiring-a-house-cleaner-a-luxury-the-truth-for-cache-valley-families.md",
+      "date": "2026-04-27"
     }
   ]
 }
