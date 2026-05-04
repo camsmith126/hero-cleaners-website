@@ -1,5 +1,5 @@
 {
-  "next_index": 8,
+  "next_index": 9,
   "published": [
     {
       "index": 0,
@@ -48,6 +48,12 @@
       "topic": "Is hiring a house cleaner a luxury? The truth for Cache Valley families",
       "file": "2026-04-27-is-hiring-a-house-cleaner-a-luxury-the-truth-for-cache-valley-families.md",
       "date": "2026-04-27"
+    },
+    {
+      "index": 8,
+      "topic": "Why biweekly cleaning is the most popular schedule for busy families in Logan",
+      "file": "2026-05-04-why-biweekly-cleaning-is-the-most-popular-schedule-for-busy-families-in-logan.md",
+      "date": "2026-05-04"
     }
   ]
 }
