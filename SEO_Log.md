@@ -74,3 +74,53 @@
   - Update Google Business Profile URL
   - Update Facebook/Yelp/Instagram bio links
   - Provide before/after photos for differentiator page
+
+[2026-05-09] — Old-domain duplicate-content fix
+- Audit triggered by Cam asking why we still aren't ranking #1
+  for "cleaning in logan" despite having 3-4x more reviews than
+  competitors.
+- Verified citation consistency: GBP URL, Facebook, Yelp,
+  Instagram bio links all updated to theherocleaners.com (Cam
+  confirmed all four). Removed those from the blocked list.
+- Found backend issue: herocleanersllc.com was set up as a
+  domain alias on the new Netlify site, with old-slug-prefixed
+  redirect rules in netlify.toml that only partially worked.
+  Inner pages /about, /window-washing, /commercial-cleaning,
+  /contact were serving the new site's content with 200 (not
+  301) because force=true doesn't override static-file
+  resolution across alias hostnames. Result: Google saw two
+  live versions of those pages (one on each domain) and was
+  diluting authority transfer + applying duplicate-content
+  treatment.
+- Fix: split the old domain off to its own Netlify site
+  (redirect-only, empty publish dir) so force=true works
+  correctly. Verified every URL on herocleanersllc.com now
+  301s to theherocleaners.com/<same-path> with absolute
+  Location header. See Changes_Log.md 2026-05-09 entry for
+  the full sequence and dead-code note.
+- Expected SEO impact (4-8 weeks as Google recrawls):
+  - Duplicate-content drag on /about, /window-washing,
+    /commercial-cleaning, /contact disappears
+  - Authority transfer from old domain stops being diluted
+  - Should help climb on the commercial cleaning keyword
+    cluster (currently positions 14-22, 200+ impressions/mo)
+
+[2026-05-09] — Blog automation: 7 weeks of unindexed posts
+- Cam noticed the blog "hasn't been posting." Investigation
+  showed the GitHub Action was generating posts on schedule
+  every Monday and committing them, but the live site only had
+  the 2 hand-written original posts visible.
+- Root cause: generate_post.py was writing
+  `permalink: /blog/{slug}/` (no /index.html). 11ty produces
+  an output file at _site/blog/{slug} with no extension, so
+  /blog/{slug}/ requests 404. The blog index page listed all
+  posts because markdown files were detected, masking the bug.
+- Fixed the generator + back-filled the 7 broken existing
+  posts. All now return 200 on the live site (verified via
+  curl across all 7 URLs). 7 weeks of SEO content shifts from
+  invisible to indexable.
+- These posts target a wide topic mix: deep cleaning,
+  recurring cleaning, move-out, biweekly cadence, etc. — each
+  is a fresh long-tail organic asset. Expect impressions on
+  these URLs to start showing up in GSC within 1-2 weeks
+  after Google's next crawl.
