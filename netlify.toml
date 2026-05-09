@@ -6,88 +6,131 @@
   NODE_VERSION = "18"
 
 # ============================================================
-# OLD DOMAIN REDIRECTS — herocleanersllc.com -> theherocleaners.com
-#
-# Uses conditions={Host=[...]} rather than hostname-prefixed `from`
-# patterns. The hostname-prefixed form had two problems on this
-# multi-alias setup:
-#   1. force=true did not override static files at the same path
-#      (e.g. /about, /window-washing kept serving 200 from _site/).
-#   2. Cross-host destinations were rewritten to relative Location
-#      headers, leaving the user on the old hostname after redirect.
-# The conditions form fixes both.
+# DOMAIN-LEVEL REDIRECTS — old slug to new slug (MUST come first)
+# These handle old herocleanersllc.com URLs that Google has indexed
 # ============================================================
 
-# --- Specific old-slug -> new-slug mappings (must come before catch-all) ---
-
 [[redirects]]
-  from = "/about-us"
+  from = "https://herocleanersllc.com/about-us"
   to = "https://theherocleaners.com/about"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/contact-us"
+  from = "https://www.herocleanersllc.com/about-us"
+  to = "https://theherocleaners.com/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/contact-us"
   to = "https://theherocleaners.com/contact"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/deep-cleaning"
+  from = "https://www.herocleanersllc.com/contact-us"
+  to = "https://theherocleaners.com/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/deep-cleaning"
   to = "https://theherocleaners.com/deep-clean"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/Recurring-Clean"
+  from = "https://www.herocleanersllc.com/deep-cleaning"
+  to = "https://theherocleaners.com/deep-clean"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Recurring-Clean"
   to = "https://theherocleaners.com/recurring-cleaning"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/Commercial"
+  from = "https://www.herocleanersllc.com/Recurring-Clean"
+  to = "https://theherocleaners.com/recurring-cleaning"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Commercial"
   to = "https://theherocleaners.com/commercial-cleaning"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/Window-washing"
+  from = "https://www.herocleanersllc.com/Commercial"
+  to = "https://theherocleaners.com/commercial-cleaning"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Window-washing"
   to = "https://theherocleaners.com/window-washing"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/FAQs"
+  from = "https://www.herocleanersllc.com/Window-washing"
+  to = "https://theherocleaners.com/window-washing"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/FAQs"
   to = "https://theherocleaners.com/faq"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/Reviews"
+  from = "https://www.herocleanersllc.com/FAQs"
+  to = "https://theherocleaners.com/faq"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/Reviews"
   to = "https://theherocleaners.com/reviews"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
 
 [[redirects]]
-  from = "/services"
+  from = "https://www.herocleanersllc.com/Reviews"
+  to = "https://theherocleaners.com/reviews"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://herocleanersllc.com/services"
   to = "https://theherocleaners.com/"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
-
-# --- Catch-all: preserve path on the new domain ---
 
 [[redirects]]
-  from = "/*"
+  from = "https://www.herocleanersllc.com/services"
+  to = "https://theherocleaners.com/"
+  status = 301
+  force = true
+
+# ============================================================
+# CATCH-ALL — preserve path on the new domain
+# (Place AFTER the specific old-slug → new-slug rules above so those win)
+# ============================================================
+
+[[redirects]]
+  from = "https://herocleanersllc.com/*"
   to = "https://theherocleaners.com/:splat"
   status = 301
   force = true
-  conditions = {Host = ["herocleanersllc.com", "www.herocleanersllc.com"]}
+
+[[redirects]]
+  from = "https://www.herocleanersllc.com/*"
+  to = "https://theherocleaners.com/:splat"
+  status = 301
+  force = true
