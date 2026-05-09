@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — Why biweekly cleaning is the most p
 slug: "why-biweekly-cleaning-is-the-most-popular-schedule-for-busy-families-in-logan"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/why-biweekly-cleaning-is-the-most-popular-schedule-for-busy-families-in-logan/
+permalink: /blog/why-biweekly-cleaning-is-the-most-popular-schedule-for-busy-families-in-logan/index.html
 ---
 
 # Why Biweekly Cleaning Is the Most Popular Schedule for Busy Families in Logan

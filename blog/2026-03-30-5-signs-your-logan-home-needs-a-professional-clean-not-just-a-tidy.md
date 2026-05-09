@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — 5 signs your Logan home needs a pro
 slug: "5-signs-your-logan-home-needs-a-professional-clean-not-just-a-tidy"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/5-signs-your-logan-home-needs-a-professional-clean-not-just-a-tidy/
+permalink: /blog/5-signs-your-logan-home-needs-a-professional-clean-not-just-a-tidy/index.html
 ---
 
 # 5 Signs Your Logan Home Needs a Professional Clean — Not Just a Tidy

@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — How to prepare your home before the
 slug: "how-to-prepare-your-home-before-the-cleaners-arrive"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/how-to-prepare-your-home-before-the-cleaners-arrive/
+permalink: /blog/how-to-prepare-your-home-before-the-cleaners-arrive/index.html
 ---
 
 # How to Prepare Your Home Before the Cleaners Arrive

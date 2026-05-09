@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — Recurring house cleaning vs one-tim
 slug: "recurring-house-cleaning-vs-one-time-cleaning-which-is-right-for-cache-valley-fa"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/recurring-house-cleaning-vs-one-time-cleaning-which-is-right-for-cache-valley-fa/
+permalink: /blog/recurring-house-cleaning-vs-one-time-cleaning-which-is-right-for-cache-valley-fa/index.html
 ---
 
 # Recurring House Cleaning vs One-Time Cleaning: Which Is Right for Cache Valley Families?

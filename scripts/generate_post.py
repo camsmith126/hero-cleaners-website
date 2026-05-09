@@ -147,7 +147,7 @@ description: "Hero Cleaners Cache Valley — {topic[:100]}"
 slug: "{slug}"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/{slug}/
+permalink: /blog/{slug}/index.html
 ---
 
 """

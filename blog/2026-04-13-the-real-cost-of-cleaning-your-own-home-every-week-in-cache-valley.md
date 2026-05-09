@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — The real cost of cleaning your own 
 slug: "the-real-cost-of-cleaning-your-own-home-every-week-in-cache-valley"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/the-real-cost-of-cleaning-your-own-home-every-week-in-cache-valley/
+permalink: /blog/the-real-cost-of-cleaning-your-own-home-every-week-in-cache-valley/index.html
 ---
 
 # The Real Cost of Cleaning Your Own Home Every Week in Cache Valley

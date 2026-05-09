@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — Move-out cleaning checklist for Log
 slug: "move-out-cleaning-checklist-for-logan-ut-renters-and-homeowners"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/move-out-cleaning-checklist-for-logan-ut-renters-and-homeowners/
+permalink: /blog/move-out-cleaning-checklist-for-logan-ut-renters-and-homeowners/index.html
 ---
 
 # Move-Out Cleaning Checklist for Logan, UT Renters and Homeowners

@@ -5,7 +5,7 @@ description: "Hero Cleaners Cache Valley — Is hiring a house cleaner a luxury?
 slug: "is-hiring-a-house-cleaner-a-luxury-the-truth-for-cache-valley-families"
 tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
 layout: post.njk
-permalink: /blog/is-hiring-a-house-cleaner-a-luxury-the-truth-for-cache-valley-families/
+permalink: /blog/is-hiring-a-house-cleaner-a-luxury-the-truth-for-cache-valley-families/index.html
 ---
 
 # Is Hiring a House Cleaner a Luxury? The Truth for Cache Valley Families
