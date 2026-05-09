@@ -119,17 +119,18 @@
   force = true
 
 # ============================================================
-# CATCH-ALL — anything else on herocleanersllc.com → homepage
+# CATCH-ALL — preserve path on the new domain
+# (Place AFTER the specific old-slug → new-slug rules above so those win)
 # ============================================================
 
 [[redirects]]
   from = "https://herocleanersllc.com/*"
-  to = "https://theherocleaners.com/"
+  to = "https://theherocleaners.com/:splat"
   status = 301
   force = true
 
 [[redirects]]
   from = "https://www.herocleanersllc.com/*"
-  to = "https://theherocleaners.com/"
+  to = "https://theherocleaners.com/:splat"
   status = 301
   force = true
