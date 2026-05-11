@@ -1,5 +1,5 @@
 {
-  "next_index": 9,
+  "next_index": 10,
   "published": [
     {
       "index": 0,
@@ -54,6 +54,12 @@
       "topic": "Why biweekly cleaning is the most popular schedule for busy families in Logan",
       "file": "2026-05-04-why-biweekly-cleaning-is-the-most-popular-schedule-for-busy-families-in-logan.md",
       "date": "2026-05-04"
+    },
+    {
+      "index": 9,
+      "topic": "Commercial cleaning vs residential cleaning: what's the difference?",
+      "file": "2026-05-11-commercial-cleaning-vs-residential-cleaning-whats-the-difference.md",
+      "date": "2026-05-11"
     }
   ]
 }
