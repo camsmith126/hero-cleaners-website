@@ -108,6 +108,26 @@ hostname-prefix + :splat form (commit 24b0d43). The complete
 fix had to happen at the Netlify dashboard layer, not in
 netlify.toml — see next entry.
 
+[2026-05-09] — commit 0aea4d8 — robots.txt + templated sitemap
+Audit follow-up: robots.txt was returning 404 and the static
+website/sitemap.xml only listed 12 URLs (the 11 main pages +
+the /blog index) — none of the 9 individual blog posts.
+Fixes:
+- Added website/robots.txt (3 lines) with Allow: / and an
+  explicit Sitemap: pointer so crawlers find the sitemap on
+  first visit instead of guessing.
+- Replaced the static sitemap.xml with sitemap.njk at the
+  repo root. The new template iterates collections.post in
+  reverse-chronological order and emits a <url> entry with
+  <lastmod> from each post's date. Sitemap now self-updates
+  on every build — every future weekly auto-publish lands
+  in the sitemap with zero maintenance.
+Verified live: robots.txt 200 with correct content, sitemap
+now contains 22 URLs (12 main + 10 blog posts, including
+today's Monday auto-publish 76ffdd2 "Commercial Cleaning vs
+Residential Cleaning"). Confirms blog automation is end-to-
+end healthy post the earlier 71ffc36 permalink fix.
+
 [2026-05-09] — Netlify dashboard — Redirect-only site cutover
 Created a separate Netlify site (`hero-cleaners-redirect`) whose
 only purpose is to 301-redirect every URL on herocleanersllc.com

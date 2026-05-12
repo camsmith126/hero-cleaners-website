@@ -105,6 +105,29 @@
   - Should help climb on the commercial cleaning keyword
     cluster (currently positions 14-22, 200+ impressions/mo)
 
+[2026-05-09] — Audit verification + robots.txt/sitemap follow-up
+- Cam asked for an online-presence analysis after the morning's
+  fixes. Pulled fresh GSC, GA4, and curl verification.
+- Top-line trend (28d vs prior 28d): clicks +84% (56→103),
+  impressions +119% (1,691→3,710), avg position 29.0→18.8.
+- Headline keyword movement: "commercial cleaning logan"
+  jumped from April pos 14.0 to last-7-days pos 7.4 (page 2
+  to page 1). Related variations slightly wobbled (normal
+  during recrawl). Worth watching but not concerning.
+- Discovered two remaining gaps during the audit:
+  - robots.txt 404
+  - sitemap missing all 9 blog posts (the static file was
+    only manually maintained, never updated when auto-
+    publishes ran)
+- Both fixed in commit 0aea4d8 — see Changes_Log.md. The
+  sitemap is now templated so weekly auto-publishes will
+  appear automatically going forward (Google indexes
+  sitemap-listed URLs ~1-2 weeks faster than crawl-only).
+- Expected SEO compounding: every Monday post is now (a)
+  visible on the live site, (b) included in the sitemap on
+  the same deploy, (c) discoverable via robots.txt's explicit
+  sitemap pointer. Closed loop, no human in the path.
+
 [2026-05-09] — Blog automation: 7 weeks of unindexed posts
 - Cam noticed the blog "hasn't been posting." Investigation
   showed the GitHub Action was generating posts on schedule
