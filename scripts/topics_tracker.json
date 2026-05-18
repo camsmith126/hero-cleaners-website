@@ -1,5 +1,5 @@
 {
-  "next_index": 10,
+  "next_index": 11,
   "published": [
     {
       "index": 0,
@@ -60,6 +60,12 @@
       "topic": "Commercial cleaning vs residential cleaning: what's the difference?",
       "file": "2026-05-11-commercial-cleaning-vs-residential-cleaning-whats-the-difference.md",
       "date": "2026-05-11"
+    },
+    {
+      "index": 10,
+      "topic": "How professional window washing improves your home's curb appeal in Cache Valley",
+      "file": "2026-05-18-how-professional-window-washing-improves-your-homes-curb-appeal-in-cache-valley.md",
+      "date": "2026-05-18"
     }
   ]
 }
