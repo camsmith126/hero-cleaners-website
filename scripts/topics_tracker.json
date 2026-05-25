@@ -1,5 +1,5 @@
 {
-  "next_index": 11,
+  "next_index": 12,
   "published": [
     {
       "index": 0,
@@ -66,6 +66,12 @@
       "topic": "How professional window washing improves your home's curb appeal in Cache Valley",
       "file": "2026-05-18-how-professional-window-washing-improves-your-homes-curb-appeal-in-cache-valley.md",
       "date": "2026-05-18"
+    },
+    {
+      "index": 11,
+      "topic": "What makes a great house cleaning company in Logan, UT?",
+      "file": "2026-05-25-what-makes-a-great-house-cleaning-company-in-logan-ut.md",
+      "date": "2026-05-25"
     }
   ]
 }
