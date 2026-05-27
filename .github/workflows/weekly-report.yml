@@ -1,0 +1,70 @@
+name: Weekly Report + Dashboard
+
+# Runs every Tuesday morning, one day after the blog auto-publishes,
+# so the dashboard always reflects Monday's fresh post and the GSC
+# numbers have settled. Can also be triggered manually any time via
+# the "Run workflow" button in GitHub Actions.
+
+on:
+  schedule:
+    - cron: '0 15 * * 2'   # Tuesday 15:00 UTC = 9am MDT
+  workflow_dispatch:
+
+jobs:
+  weekly-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0   # Need full history for git log activity feed
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install google-api-python-client google-auth google-analytics-data
+
+      - name: Write service account credentials from secret
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+        run: |
+          # weekly_report.py / generate_dashboard.py read credentials from
+          # the path declared in scripts/gsc_config.json. In CI we write
+          # the secret JSON to that exact location.
+          CREDS_PATH=$(python3 -c "
+          import json, os
+          cfg = json.load(open('scripts/gsc_config.json'))
+          p = os.path.expanduser(cfg['credentials_path'])
+          os.makedirs(os.path.dirname(p), exist_ok=True)
+          print(p)
+          ")
+          echo "$GCP_SA_KEY" > "$CREDS_PATH"
+
+      - name: Run weekly report (writes to Google Sheet)
+        run: python scripts/weekly_report.py
+
+      - name: Generate dashboard HTML
+        run: python scripts/generate_dashboard.py
+
+      - name: Commit and push dashboard if changed
+        run: |
+          git config --global user.name "Hero Cleaners Report Bot"
+          git config --global user.email "herocleanersinfo@gmail.com"
+          if git diff --quiet website/dashboard/index.html; then
+            echo "Dashboard unchanged — nothing to commit"
+          else
+            git add website/dashboard/index.html
+            git commit -m "chore: refresh weekly dashboard"
+            # Robust push that handles concurrent commits gracefully
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin main && break || sleep 5
+            done
+          fi
