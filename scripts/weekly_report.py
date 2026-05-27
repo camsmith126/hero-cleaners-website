@@ -22,12 +22,15 @@ scripts/gsc_config.json (gitignored) or GSC_SHEET_ID env var.
 Run: /usr/bin/python3 scripts/weekly_report.py
 """
 
+import datetime
 import json
 import os
 import subprocess
 import sys
 from datetime import date, timedelta
+from http.client import HTTPSConnection
 from pathlib import Path
+from urllib.parse import urlparse
 
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -52,6 +55,24 @@ REPORT_LAG_DAYS = 3
 
 REPO_ROOT = Path(__file__).parent.parent
 
+# Canary URLs for old-domain redirect verification. Each should return
+# HTTP 301 with a Location header beginning with the canonical-domain
+# prefix below. The infrastructure that makes these pass is the
+# separate "hero-cleaners-redirect" Netlify site set up 2026-05-09 —
+# do NOT re-add herocleanersllc.com as an alias on the main Netlify
+# project; it shadows the redirect-only site and silently breaks these.
+REDIRECT_CANARY_URLS = [
+    "https://herocleanersllc.com/about",
+    "https://herocleanersllc.com/services",
+    "https://www.herocleanersllc.com/contact",
+    "https://herocleanersllc.com/window-washing",
+    "https://herocleanersllc.com/commercial-cleaning",
+    "https://herocleanersllc.com/about-us",
+    "https://herocleanersllc.com/some-page-that-never-existed",
+    "https://herocleanersllc.com/blog/why-biweekly-cleaning-is-the-most-popular-schedule-for-busy-families-in-logan/",
+]
+CANONICAL_PREFIX = "https://theherocleaners.com/"
+
 
 def get_sheet_id() -> str:
     env = os.environ.get("GSC_SHEET_ID")
@@ -73,6 +94,70 @@ def build_services():
     gsc = build("searchconsole", "v1", credentials=creds, cache_discovery=False)
     sheets = build("sheets", "v4", credentials=creds, cache_discovery=False)
     return gsc, sheets
+
+
+def _head_no_redirect(url: str) -> tuple[int, str]:
+    """Single HEAD request that does NOT follow redirects. Returns
+    (status_code, location_header)."""
+    p = urlparse(url)
+    path = p.path or "/"
+    if p.query:
+        path += "?" + p.query
+    conn = HTTPSConnection(p.netloc, timeout=10)
+    try:
+        conn.request("HEAD", path, headers={"User-Agent": "hero-cleaners-canary/1.0"})
+        resp = conn.getresponse()
+        return resp.status, (resp.getheader("Location", "") or "")
+    finally:
+        conn.close()
+
+
+def check_redirect_canaries() -> tuple[list[list[str]], int]:
+    """HEAD each canary URL, following up to 2 redirect hops, and verify
+    the chain (a) starts with a 301 and (b) ends on the canonical-domain
+    prefix.
+
+    Why 2 hops: www.herocleanersllc.com is hosted alongside the apex on
+    the dedicated redirect-only Netlify site; Netlify auto-redirects www
+    -> apex BEFORE the netlify.toml catch-all fires, so www requests
+    legitimately take two 301 hops to reach the canonical domain. Single
+    hop is preferred but two is acceptable and documented.
+
+    Returns (rows_for_sheet, failure_count). Rows include header row.
+    """
+    now = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    rows = [["url", "first_status", "final_location", "hops", "result", "checked_at"]]
+    failures = 0
+    for url in REDIRECT_CANARY_URLS:
+        try:
+            first_status, first_location = _head_no_redirect(url)
+            current_location = first_location.split("?", 1)[0]
+            hops = 1
+            # Follow up to 2 more hops if we haven't landed on canonical yet
+            while (
+                first_status == 301
+                and current_location
+                and not current_location.startswith(CANONICAL_PREFIX)
+                and hops < 3
+            ):
+                next_status, next_location = _head_no_redirect(current_location)
+                if next_status != 301:
+                    break  # intermediate hop wasn't a 301; chain is broken
+                current_location = next_location.split("?", 1)[0]
+                hops += 1
+            ok = (
+                first_status == 301
+                and current_location.startswith(CANONICAL_PREFIX)
+                and hops <= 2  # single or double hop both acceptable
+            )
+            result = "PASS" if ok else "FAIL"
+            if not ok:
+                failures += 1
+            rows.append([url, str(first_status), current_location, str(hops), result, now])
+        except Exception as e:
+            failures += 1
+            rows.append([url, "ERR", f"{type(e).__name__}: {e}"[:200], "0", "ERROR", now])
+    return rows, failures
 
 
 def git_activity(limit: int = 50) -> list[list[str]]:
@@ -169,6 +254,7 @@ def main():
         "Activity Log",
         "Next Up",
         "Blocked",
+        "Redirect Health",
     ]
     print(f"Sheet ID: {sid}")
     print("Ensuring tabs exist...")
@@ -200,6 +286,7 @@ def main():
         ["  Activity Log — recent git commits to theherocleaners.com."],
         ["  Next Up — prioritized action items (editable by hand)."],
         ["  Blocked — items waiting on manual action from Cam."],
+        ["  Redirect Health — old-domain 301 canary checks. Every row should be PASS."],
         [""],
         ["To refresh the Sheet:"],
         ["  /usr/bin/python3 scripts/weekly_report.py"],
@@ -281,6 +368,11 @@ def main():
         ]
         write_tab(sheets, sid, "Next Up", next_up)
 
+    # --- Redirect Health (canary checks on old-domain 301s) ---
+    print("Checking old-domain redirect canaries...")
+    canary_rows, canary_failures = check_redirect_canaries()
+    write_tab(sheets, sid, "Redirect Health", canary_rows)
+
     # --- Blocked (only seed on first run) ---
     if not tab_has_data(sheets, sid, "Blocked"):
         blocked = [
@@ -303,6 +395,15 @@ def main():
         f"| CTR: {totals['ctr_pct']}%  "
         f"| unique queries: {totals['queries']}"
     )
+    if canary_failures == 0:
+        print(f"Redirect canaries: PASS ({len(REDIRECT_CANARY_URLS)}/{len(REDIRECT_CANARY_URLS)})")
+    else:
+        print(
+            f"Redirect canaries: FAIL — {canary_failures}/{len(REDIRECT_CANARY_URLS)} broken. "
+            "See Redirect Health tab. Likely cause: herocleanersllc.com was re-added as an "
+            "alias on the main Netlify site, shadowing the dedicated redirect-only project."
+        )
+        sys.exit(2)
 
 
 if __name__ == "__main__":
