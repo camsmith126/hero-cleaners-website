@@ -1,8 +1,10 @@
 # OS
 .DS_Store
 
-# GSC report — contains absolute path to credentials.json
-scripts/gsc_config.json
+# NOTE: scripts/gsc_config.json IS now checked in. It only holds the
+# credentials path, site URL, and sheet ID — none of which are secrets
+# on their own. The actual credentials live in the GCP_SA_KEY GitHub
+# secret (for CI) and at the path declared inside the file (locally).
 
 # Never commit secrets, ever
 credentials.json
