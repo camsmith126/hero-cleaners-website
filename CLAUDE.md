@@ -66,38 +66,6 @@ With these logs:
 
 You are part of a system now. Act like it.
 
-## Files to read every session
-
-Before any action, read these files:
-- SEO_Log.md — running history of what's been done and found
-- Opportunities.md — current list of identified improvements
-- Changes_Log.md — every deployment ever made
-- AGENT_LOG.md — cross-cutting signals and recent decisions for the Conductor
-
-After every session, update these files with what you did and found.
-
-## Startup Checklist — Run Every Session
-
-Do these in order before anything else:
-
-1. Check when last blog post was published
-   If more than 7 days ago — fix automation or write one manually
-
-2. Check Google Search Console for:
-   - Any new crawl errors
-   - Impressions and clicks vs prior week
-   - Any pages with dropping positions
-
-3. Check theherocleaners.com loads correctly
-   - Homepage loads
-   - HCP booking widget present
-   - Nav works
-   - No console errors
-
-4. Review Opportunities.md — is anything ready to execute?
-
-5. Check GitHub Actions — is blog automation running?
-
 ---
 
 ## Business Identity
@@ -113,6 +81,8 @@ Do these in order before anything else:
 - **GitHub:** camsmith126/hero-cleaners-website
 - **Netlify team:** slamenterprises23
 
+---
+
 ## Mission & Vision
 Provide consistent, amazing home and commercial cleaning that genuinely makes people's lives easier. Vision: become THE home service provider in Cache Valley. Revenue goal: $1M within ~3 years.
 
@@ -123,6 +93,17 @@ Logan, Utah + all of Cache Valley: North Logan, Smithfield, Hyrum, Nibley, Provi
 - **Residential** — managed by Jaylee (GM, primary revenue driver)
 - **Windows** — managed by Abbey (also handles all billing) — seasonal March–November only
 - **Commercial** — managed by Laura
+
+## The Core Positioning
+The people ARE the product. Customers don't just love clean homes — they love having someone they know and trust. Jaylee has transformed the customer experience. Recurring customers build genuine relationships with their cleaners. This is the competitive edge.
+
+## Customer Hesitations — Never Contradict in Copy
+- "Cleaning is a luxury" → It's not; it's about getting time back
+- "I'm lazy if I hire a cleaner" → Everyone could use an extra hand
+- "I'm nervous about someone in my home" → Trust and relationships are core
+- "I'm embarrassed about my house" → No judgment, ever
+
+---
 
 ## Active Services — Always Promote
 House Cleaning, Maid Service, Recurring Cleaning, Deep Cleaning, Move-In/Move-Out Cleaning, Commercial Cleaning, Window Washing
@@ -138,15 +119,6 @@ Power washing, driveway sealing, Christmas lights, Airbnb turnovers, apartment c
 
 ---
 
-## Brand Identity
-**Colors:**
-- Hero Red: #B71C1C | Hero Black: #1A1A1A | Clean White: #FFFFFF
-- Accent Red: #D32F2F | Light Rose: #FFCDD2 | Charcoal: #2D2D2D
-
-**Fonts:** Bebas Neue / Impact (headings) · Open Sans / Helvetica Neue (body)
-
-**Logo:** Black superhero figure with red cape + "Hero" (black bold) + "Cleaners" (red bold) + squeegee icon
-
 ## Brand Voice
 - Warm, personal, local — "like the neighbor who shows up without being asked"
 - Friendly, hardworking, down-to-earth, genuine, confident but not cocky
@@ -158,158 +130,14 @@ Power washing, driveway sealing, Christmas lights, Airbnb turnovers, apartment c
 
 **Never use:** "Property Solutions" · luxury-focused language · corporate/cold tone · condescending language · one-size-fits-all messaging
 
-## The Core Positioning
-The people ARE the product. Customers don't just love clean homes — they love having someone they know and trust. Jaylee has transformed the customer experience. Recurring customers build genuine relationships with their cleaners. This is the competitive edge.
+## Brand Identity
+**Colors:**
+- Hero Red: #B71C1C | Hero Black: #1A1A1A | Clean White: #FFFFFF
+- Accent Red: #D32F2F | Light Rose: #FFCDD2 | Charcoal: #2D2D2D
 
-## Customer Hesitations — Never Contradict in Copy
-- "Cleaning is a luxury" → It's not; it's about getting time back
-- "I'm lazy if I hire a cleaner" → Everyone could use an extra hand
-- "I'm nervous about someone in my home" → Trust and relationships are core
-- "I'm embarrassed about my house" → No judgment, ever
+**Fonts:** Bebas Neue / Impact (headings) · Open Sans / Helvetica Neue (body)
 
----
-
-## Site Architecture
-- All main HTML pages in /website/
-- Stack: Static HTML/CSS/JS + Eleventy (11ty)
-- Netlify auto-deploys on every push to main
-- 9 main pages: index, about, contact, recurring-cleaning, deep-clean, commercial-cleaning, window-washing, reviews, service-areas
-- 10 hidden city SEO pages (noindex) in /website/ — never make indexable, never add to nav
-- Blog posts live in /blog/ as Markdown files with front matter
-
-## Blog Automation — ACTIVE PRIORITY
-The blog is a core SEO strategy. Weekly posts targeting local cleaning keywords help rank for "house cleaning Logan Utah" and surrounding Cache Valley city searches.
-
-### How It Works
-- `generate_post.py` — Python script that uses the Claude API to write a new blog post
-- `topics.json` — Queue of upcoming blog post topics/keywords to write about
-- GitHub Actions workflow — scheduled to run weekly and auto-publish new posts
-- Posts are Markdown files fed through Eleventy and published to /blog/ on the live site
-
-### Current Status — NEEDS ATTENTION
-The blog automation is likely not posting. When starting a session, check:
-1. When was the last blog post published? (check /blog/ directory for most recent file date)
-2. Is the GitHub Actions workflow running? (check .github/workflows/ and Actions tab on GitHub)
-3. Is topics.json populated with upcoming topics?
-4. Are there any errors in the workflow logs?
-
-### Blog Post Standards
-Every post must:
-- Target a specific local keyword naturally (e.g. "house cleaning Logan Utah," "maid service Cache Valley," "deep clean Smithfield UT")
-- Be 600–900 words minimum for SEO value
-- Match Hero Cleaners brand voice — warm, local, helpful, never salesy
-- Include a CTA toward recurring cleaning or booking
-- Never mention discontinued services
-- Have proper Eleventy front matter (title, date, description, tags including "post")
-
-### Blog Topic Direction
-Good topics to cover:
-- "How often should you deep clean your home in Logan, UT"
-- "Best recurring cleaning schedule for Cache Valley families"
-- "What to expect from your first professional house cleaning"
-- "Spring cleaning checklist for Logan Utah homeowners"
-- "How to prepare your home for a move-out clean"
-- City-specific pages: "House cleaning in [Smithfield/Providence/North Logan/etc.]"
-- Window washing seasonal topics (spring/fall)
-- Commercial cleaning tips for Logan businesses
-
-### Monitoring Responsibility
-At the start of every session, check if a new blog post has gone out in the past 7 days. If not, flag it and either fix the automation or manually generate and publish a post. Weekly cadence is the goal — this directly impacts SEO ranking.
-
-## SEO Context
-- Primary keyword: "house cleaning Logan Utah"
-- Current position: #2 organic (behind Clean Freak at cleanfreakut.com)
-- All 9 main pages have: canonical tags, Open Graph tags, structured data schema
-- Sitemap at /sitemap.xml — update when adding pages
-- Blog posts should be included in sitemap
-
-**Target homepage title:** `Hero Cleaners | #1 House Cleaning in Logan, UT | Book Online`
-**Target homepage meta:** `Cache Valley's most trusted house cleaning team. Recurring, deep clean & move-out services. Friendly, reliable, locally owned. Book online in minutes — (435) 277-0370.`
-
-**Competitors:** Clean Freak (cleanfreakut.com) · ACDC Cleaning · Clean & Tide · Special House Cleaning · Queens Cleaning
-
-## Embeds — Never Remove or Alter
-- HCP (Housecall Pro) booking widget — must remain on site
-- HCP chat bubble — must remain on site
-- Both must stay functional after any change
-
-## Competitor Intelligence
-
-### Primary Competitor: Clean Freak (cleanfreakut.com)
-Current position: #1 for "house cleaning Logan Utah"
-Why they're winning: domain age and authority, not content quality
-
-What they have:
-- Before/after photo gallery
-- In-person bid requirement (friction — our advantage)
-- No blog, no content strategy
-- Outdated site design
-- Strong review presence
-
-What they lack:
-- No blog or content
-- No online booking
-- No city-specific pages
-- No schema markup visible
-- Slower site
-
-Our competitive advantage:
-- Online booking (massive conversion advantage)
-- Blog with weekly content
-- Modern site design
-- 4.9 stars vs their reviews
-- Better brand voice and positioning
-
-### Monitor Monthly
-Check cleanfreakut.com monthly for:
-- New pages or services added
-- Any blog or content strategy starting
-- Changes to their booking/contact flow
-- New review volume
-
-Also monitor:
-- ACDC Cleaning
-- Clean & Tide
-- Special House Cleaning
-- Queens Cleaning
-
-Check if any are starting to blog or build content — flag immediately.
-
-### National Research
-Quarterly, research top-performing cleaning company websites nationally.
-Look for:
-- Content strategies that work in similar markets
-- Page structures that convert well
-- Before/after page formats
-- Landing page approaches
-- Trust signals that work
-
-Add findings to Opportunities.md.
-
-## Website Vision — Where This Is Going
-
-Cam's direction for the site's future. Build with this in mind:
-
-**Near term:**
-- Before/after page with real Cache Valley photos (Cam will provide)
-- Maid service dedicated page
-- City-specific service pages (indexable)
-- Stronger commercial cleaning presence
-
-**Medium term:**
-- Custom landing page to replace HCP booking widget dependency
-- Lead capture form with direct HCP integration
-- A/B testing on CTAs
-- Review generation automation
-
-**Long term ($3M vision):**
-- Full lead funnel — awareness to booking to retention
-- Separate landing pages per service and city
-- Automated review responses
-- Chat/AI customer service integration
-
-Every technical decision made today should make these easier to build.
-Never make changes that would require tearing down to add these later.
+**Logo:** Black superhero figure with red cape + "Hero" (black bold) + "Cleaners" (red bold) + squeegee icon
 
 ---
 
@@ -366,21 +194,65 @@ These require a direct "yes go ahead" from Cam in the session:
 The agent builds. Cam approves. Nothing goes live without Cam saying go.
 The git safety net exists — but the best safety net is not needing it.
 
-## Critical Technical Rules
-1. Surgical edits only — no full rewrites unless explicitly asked
-2. Never alter nav logic — outside-click-to-close is on ALL pages
-3. Mobile nav uses navLinks.style.display toggled by .hamburger — do not overwrite
-4. Always verify file still starts with <!DOCTYPE html> after any edit
-5. Em dashes in HTML = &mdash; — never use literal — character
-6. Flag downstream issues BEFORE making changes, not after
-7. "Done" means ALL affected pages fixed, not just one
-8. Never change existing page URLs — they are indexed by Google
-9. Never add city SEO pages to navigation
+---
 
-## Git Workflow
-- Commit with descriptive messages explaining what changed and why
-- Push to main triggers automatic Netlify deploy
-- Never force push to main
+## Startup Checklist — Run Every Session
+
+Do these in order before anything else:
+
+1. Check when last blog post was published
+   If more than 7 days ago — fix automation or write one manually
+
+2. Check Google Search Console for:
+   - Any new crawl errors
+   - Impressions and clicks vs prior week
+   - Any pages with dropping positions
+
+3. Check theherocleaners.com loads correctly
+   - Homepage loads
+   - HCP booking widget present
+   - Nav works
+   - No console errors
+
+4. Review Opportunities.md — is anything ready to execute?
+
+5. Check GitHub Actions — is blog automation running?
+
+## Files to read every session
+
+Before any action, read these files:
+- SEO_Log.md — running history of what's been done and found
+- Opportunities.md — current list of identified improvements
+- Changes_Log.md — every deployment ever made
+- AGENT_LOG.md — cross-cutting signals and recent decisions for the Conductor
+
+After every session, update these files with what you did and found.
+
+---
+
+## Self-Improvement Protocol
+
+You improve your own files when you learn something new.
+
+### Update CLAUDE.md when:
+- A new permanent SEO rule is discovered
+- Search Console shows a consistent pattern worth tracking
+- A competitor makes a significant change
+- A new keyword opportunity is confirmed
+- A new page or section is built and should be referenced
+
+### Append to SEO_Log.md every session:
+Format: [Date] — [What you checked] — [What you found] — [What you did]
+
+### Append to Opportunities.md when you find:
+- Keywords with impressions but no clicks and improvable position
+- Pages with technical issues
+- Content gaps vs competitors
+- New local search opportunities
+- Design or conversion improvements
+
+### Append to Changes_Log.md every deployment:
+Format: [Date] — [What changed] — [Why] — [Result]
 
 ---
 
@@ -412,44 +284,130 @@ Follow this every single time before and after a deployment:
 The git safety net means nothing is ever permanently broken.
 Revert first, diagnose second, never leave a broken site up.
 
-## Self-Improvement Protocol
+---
 
-You improve your own files when you learn something new.
+## Blog Post Standards
 
-### Update CLAUDE.md when:
-- A new permanent SEO rule is discovered
-- Search Console shows a consistent pattern worth tracking
-- A competitor makes a significant change
-- A new keyword opportunity is confirmed
-- A new page or section is built and should be referenced
+The blog is a core SEO strategy. Weekly posts targeting local cleaning keywords help rank for "house cleaning Logan Utah" and surrounding Cache Valley city searches.
 
-### Append to SEO_Log.md every session:
-Format: [Date] — [What you checked] — [What you found] — [What you did]
+### Every post must:
+- Target a specific local keyword naturally (e.g. "house cleaning Logan Utah," "maid service Cache Valley," "deep clean Smithfield UT")
+- Be 600–900 words minimum for SEO value
+- Match Hero Cleaners brand voice — warm, local, helpful, never salesy
+- Include a CTA toward recurring cleaning or booking
+- Never mention discontinued services
+- Have proper Eleventy front matter (title, date, description, tags including "post")
 
-### Append to Opportunities.md when you find:
-- Keywords with impressions but no clicks and improvable position
-- Pages with technical issues
-- Content gaps vs competitors
-- New local search opportunities
-- Design or conversion improvements
-
-### Append to Changes_Log.md every deployment:
-Format: [Date] — [What changed] — [Why] — [Result]
+### Blog Topic Direction
+Good topics to cover:
+- "How often should you deep clean your home in Logan, UT"
+- "Best recurring cleaning schedule for Cache Valley families"
+- "What to expect from your first professional house cleaning"
+- "Spring cleaning checklist for Logan Utah homeowners"
+- "How to prepare your home for a move-out clean"
+- City-specific pages: "House cleaning in [Smithfield/Providence/North Logan/etc.]"
+- Window washing seasonal topics (spring/fall)
+- Commercial cleaning tips for Logan businesses
 
 ---
 
-## Pending Work (as of April 2026)
+## Competitor Intelligence
 
-> **Note (2026-05-09):** This list is known stale — most items here are
-> actually done. Current known-stale items across this file are tracked
-> in AGENT_LOG.md. Do not act on the list below without first checking
-> AGENT_LOG.md for the up-to-date status.
+### Primary Competitor: Clean Freak (cleanfreakut.com)
+Current position: #1 for "house cleaning Logan Utah"
+Why they're winning: domain age and authority, not content quality
 
-- [ ] Favicon code still needs adding to all 9 main HTML pages
-- [ ] Blog automation needs audit — likely not posting, needs diagnosis and fix
-- [ ] _redirects file needs creating in Netlify
-- [ ] herocleanersllc.com needs adding as redirect domain in Netlify
-- [ ] theherocleaners.com DNS needs pointing to Netlify as primary
-- [ ] Google Business Profile URL needs updating
-- [ ] Facebook, Yelp, Instagram bio links need updating
-- [ ] theherocleaners.com needs submitting to Google Search Console
+What they have:
+- Before/after photo gallery
+- In-person bid requirement (friction — our advantage)
+- No blog, no content strategy
+- Outdated site design
+- Strong review presence
+
+What they lack:
+- No blog or content
+- No online booking
+- No city-specific pages
+- No schema markup visible
+- Slower site
+
+Our competitive advantage:
+- Online booking (massive conversion advantage)
+- Blog with weekly content
+- Modern site design
+- 4.9 stars vs their reviews
+- Better brand voice and positioning
+
+### Monitor Monthly
+Check cleanfreakut.com monthly for:
+- New pages or services added
+- Any blog or content strategy starting
+- Changes to their booking/contact flow
+- New review volume
+
+Also monitor:
+- ACDC Cleaning
+- Clean & Tide
+- Special House Cleaning
+- Queens Cleaning
+
+Check if any are starting to blog or build content — flag immediately.
+
+### National Research
+Quarterly, research top-performing cleaning company websites nationally.
+Look for:
+- Content strategies that work in similar markets
+- Page structures that convert well
+- Before/after page formats
+- Landing page approaches
+- Trust signals that work
+
+Add findings to Opportunities.md.
+
+---
+
+## Website Vision — Where This Is Going
+
+Cam's direction for the site's future. Build with this in mind:
+
+**Near term:**
+- Before/after page with real Cache Valley photos (Cam will provide)
+- Maid service dedicated page
+- City-specific service pages (indexable)
+- Stronger commercial cleaning presence
+
+**Medium term:**
+- Custom landing page to replace HCP booking widget dependency
+- Lead capture form with direct HCP integration
+- A/B testing on CTAs
+- Review generation automation
+
+**Long term ($3M vision):**
+- Full lead funnel — awareness to booking to retention
+- Separate landing pages per service and city
+- Automated review responses
+- Chat/AI customer service integration
+
+Every technical decision made today should make these easier to build.
+Never make changes that would require tearing down to add these later.
+
+---
+
+## Critical Technical Rules
+1. Surgical edits only — no full rewrites unless explicitly asked
+2. Never alter nav logic — outside-click-to-close is on ALL pages
+3. Mobile nav uses navLinks.style.display toggled by .hamburger — do not overwrite
+4. Always verify file still starts with <!DOCTYPE html> after any edit
+5. Em dashes in HTML = &mdash; — never use literal — character
+6. Flag downstream issues BEFORE making changes, not after
+7. "Done" means ALL affected pages fixed, not just one
+8. Never change existing page URLs — they are indexed by Google
+9. Never add city SEO pages to navigation
+10. Never remove or alter the HCP booking widget embed
+11. Never remove or alter the chat bubble embed
+12. Always check sitemap.xml for current pages — do not maintain a hardcoded page list anywhere in this file (it drifts)
+
+## Git Workflow
+- Commit with descriptive messages explaining what changed and why
+- Push to main triggers automatic Netlify deploy
+- Never force push to main
