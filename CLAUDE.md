@@ -68,6 +68,22 @@ You are part of a system now. Act like it.
 
 ---
 
+## Brand & Strategy Sources — READ BEFORE PRODUCING ANY BRAND-FACING OUTPUT
+
+Before generating, editing, or publishing any brand-facing content — pages, blog posts, meta descriptions, schema descriptions, alt text, social copy, anything customers will see — read these two documents:
+
+1. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Brand Vault/BrandFoundation_v1.md`** — the **canonical** Hero Cleaners brand foundation. Voice, positioning, ideal customer, do-not-use words, brand stories. **This supersedes any brand language elsewhere in this CLAUDE.md if there is a conflict.** If the Vault says "we're not aspirational, we're useful" and a section below uses the word "premium," the Vault wins.
+
+2. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Residential Research Agent/RecommendationsPacket.md`** — the **active strategy doc** and execution checklist. **Phase B** (website fixes) is the workstream this agent owns. **Phase B.11** specifically defines the AI / GEO discipline. Cross-reference any planned page, copy change, or new section against the Phase B item list — most of your current work traces back to a specific recommendation there.
+
+Both docs are reference-only — do not edit them from here.
+- Brand work happens in the "Hero Cleaners Brand Foundation" Claude Project (per Brand Vault CLAUDE.md).
+- Strategy refinement happens in dedicated Conductor sessions.
+
+**If anything in this CLAUDE.md contradicts BrandFoundation_v1.md, the Vault wins.** This file will get cleaned up over time; until then, defer to the Vault.
+
+---
+
 ## Business Identity
 - **Legal Name:** Hero Cleaners LLC
 - **Address:** 1034 RSI Dr Suite 100, Logan, Utah 84321
@@ -84,15 +100,15 @@ You are part of a system now. Act like it.
 ---
 
 ## Mission & Vision
-Provide consistent, amazing home and commercial cleaning that genuinely makes people's lives easier. Vision: become THE home service provider in Cache Valley. Revenue goal: $1M within ~3 years.
+Provide consistent, amazing **residential** cleaning that genuinely makes people's lives easier. Vision: become THE residential cleaning provider in Cache Valley. Revenue goal: $1M within ~3 years. (See BrandFoundation_v1.md §8 for the full vision.)
 
 ## Service Area
-Logan, Utah + all of Cache Valley: North Logan, Smithfield, Hyrum, Nibley, Providence, River Heights, Hyde Park, Wellsville, Richmond, Lewiston, Clarkston
+Logan, Utah + all of Cache Valley: North Logan, Smithfield, Hyrum, Nibley, Providence, River Heights, Hyde Park, Wellsville, Richmond, Lewiston, Clarkston, Mendon, Mantua (travel fee), Avon (travel fee). Brigham City confirmed in-scope (2026-05-27). Preston, ID is bonus-only — take-the-work-when-it-comes, no acquisition investment (2026-06-01). Avon + Mantua added 2026-06-01 per Cam — higher-income targeting with travel fee.
 
 ## Three Departments
-- **Residential** — managed by Jaylee (GM, primary revenue driver)
-- **Windows** — managed by Abbey (also handles all billing) — seasonal March–November only
-- **Commercial** — managed by Laura
+- **Residential** — managed by Jaylee (GM). **Primary revenue driver and the strategic focus going forward.**
+- **Windows** — managed by Abbey (also handles all billing) — seasonal March–November only.
+- **Commercial** — managed by Laura. **Being phased OFF the website** per Cam's 2026-06-01 decision (residential-first focus). Operationally still running — existing commercial book rides down via attrition, not abrupt cut. **Do NOT publish new commercial-cleaning copy, pages, or blog posts.** The current `/commercial-cleaning` page + commercial nav items + commercial-themed blog post are scheduled for removal per `RecommendationsPacket.md` Phase B.1.
 
 ## The Core Positioning
 The people ARE the product. Customers don't just love clean homes — they love having someone they know and trust. Jaylee has transformed the customer experience. Recurring customers build genuine relationships with their cleaners. This is the competitive edge.
@@ -105,11 +121,16 @@ The people ARE the product. Customers don't just love clean homes — they love 
 
 ---
 
-## Active Services — Always Promote
-House Cleaning, Maid Service, Recurring Cleaning, Deep Cleaning, Move-In/Move-Out Cleaning, Commercial Cleaning, Window Washing
+## Active Services — Always Promote (residential-first as of 2026-06-01)
+House Cleaning, Maid Service, Recurring Cleaning, Deep Cleaning, Move-In Cleaning, Move-Out Cleaning, Post-Construction Cleaning, Window Washing
+
+**Note (2026-06-01):**
+- **Commercial Cleaning** is being removed from the website per RecommendationsPacket Phase B.1. It continues operationally but should not be promoted in new content.
+- **Move-In** and **Move-Out** are being broken into standalone pages per Phase B.4 + B.5 (currently a section inside `/deep-clean`).
+- **Post-Construction** is a Phase B.6 net-new page (Hero is currently invisible on this query; Breezy Fresh + H.C. Deep Cleaning own it).
 
 ## DISCONTINUED — Never Mention or Promote
-Power washing, driveway sealing, Christmas lights, Airbnb turnovers, apartment complexes, contractor/construction cleanup
+Power washing, driveway sealing, Christmas lights, Airbnb turnovers, apartment complexes, contractor/construction cleanup. Note: per RecommendationsPacket research, the **Airbnb / vacation rental vertical is parked** (Cam decision 2026-06-01) — don't accidentally surface it.
 
 ## Pricing (Internal Only — Never Publish Exact Rates)
 - All recurring plans: $60/hr
@@ -138,6 +159,26 @@ Power washing, driveway sealing, Christmas lights, Airbnb turnovers, apartment c
 **Fonts:** Bebas Neue / Impact (headings) · Open Sans / Helvetica Neue (body)
 
 **Logo:** Black superhero figure with red cape + "Hero" (black bold) + "Cleaners" (red bold) + squeegee icon
+
+---
+
+## AI / Generative Engine Optimization (GEO) — a discipline this agent owns
+
+You own GEO as an **explicit discipline alongside classic SEO.** GEO is the work of making AI systems — Google AI Overviews, Gemini, Perplexity, ChatGPT, Claude — accurately surface Hero Cleaners when someone asks about residential cleaning in Cache Valley.
+
+The full GEO checklist is in **Phase B.11 of the RecommendationsPacket** at `/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Residential Research Agent/RecommendationsPacket.md`. Sub-items B.11.a through B.11.g cover:
+
+- **B.11.a — Full Schema.org markup audit and completion** — `LocalBusiness`, `Service`, `FAQPage`, `Review`, `AggregateRating`, `Person`, `Article`, `Organization` schema across the site, validated against Google's Rich Results Test
+- **B.11.b — Ship `/llms.txt`** per the [llmstxt.org](https://llmstxt.org) emerging spec — like `robots.txt` for AI crawlers
+- **B.11.c — Rewrite `/about` as an entity-rich profile page** — pull from Cam's brand-discovery interview (origin, founder names, team size, real founding year, review count)
+- **B.11.d — Q&A-format content density** — restructure FAQ-relevant content as explicit Q&A blocks matching FAQ schema, on every service page and city page
+- **B.11.e — E-E-A-T signal completion** — real author bylines on every blog post (Cam, Braden, Jaylee), team-page bios with tenure, customer testimonials with full names where consented
+- **B.11.f — NAP consistency cross-citation audit** — Hero's name/address/phone identical across GBP, Yelp, Facebook, LinkedIn, Nextdoor, Thumbtack, Angi, BBB, Chamber
+- **B.11.g — Lighthouse / Core Web Vitals audit** — LCP, CLS, INP on top 10 pages; mobile especially
+
+**Read Phase B.11 in full before executing any GEO work.** The "why" matters — AI models extract structured facts and cross-check entity data across citations. Inconsistency drops Hero out of recommendations.
+
+**GEO compounds with classic SEO** — both share the same foundations (clean technical site, real entity data, fresh content, authoritative signals). Treat them as one integrated discipline, not two. Every classic SEO move should be evaluated for its GEO impact (and vice versa).
 
 ---
 
@@ -253,6 +294,26 @@ Format: [Date] — [What you checked] — [What you found] — [What you did]
 
 ### Append to Changes_Log.md every deployment:
 Format: [Date] — [What changed] — [Why] — [Result]
+
+---
+
+## Draft-First Deployment Standard (added 2026-06-01)
+
+**Every discretionary website change ships as a draft / Netlify Deploy Preview / PR branch first.** Cam reviews the preview URL. Only merges to main after Cam approves.
+
+The flow:
+1. Make changes on a branch — **never directly on `main`**
+2. Push branch → Netlify automatically generates a Deploy Preview URL
+3. Share the preview URL with Cam in the session
+4. Cam reviews the preview in browser
+5. Only after explicit Cam approval, merge to main → triggers production deploy
+6. Log the shipped change in `Changes_Log.md` per existing protocol
+
+**This standard applies to all discretionary changes** — new pages, copy edits, structural changes, schema additions, image swaps, meta tag changes, anything that affects the live site.
+
+**Exception — scheduled automation:** The Monday-morning blog auto-publish via GitHub Actions continues running. It's a maintained automation, not a discretionary edit. If the blog automation *itself* changes (template, frequency, target keywords, generation logic), that change goes through the draft-first flow above.
+
+**Where this conflicts with the Tier 2 ("auto-deploy, no approval needed") list above, this standard wins.** Tier 2 effectively collapses for discretionary edits during the Phase B rebuild period; only the maintained automations (Monday blog cron) remain genuinely auto-deploy.
 
 ---
 

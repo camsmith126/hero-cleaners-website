@@ -41,6 +41,18 @@ Sections can be omitted if empty for a given session. Keep entries short. Future
 
 ## Entries
 
+## 2026-06-01 — Conductor wiring update (Phase 0.1 of RecommendationsPacket)
+
+- Completed: CLAUDE.md updated by the Conductor to bake the Brand Vault + active strategy into this agent's auto-loaded context.
+- Completed: New **"Brand & Strategy Sources — READ BEFORE PRODUCING ANY BRAND-FACING OUTPUT"** section added near the top, pointing to `Brand Vault/BrandFoundation_v1.md` (canonical) and `Residential Research Agent/RecommendationsPacket.md` (active strategy). Both must be read before any brand-facing output. If anything in this CLAUDE.md contradicts the Vault, the Vault wins.
+- Completed: Residential-only direction locked in. Mission, Service Area, Three Departments, and Active Services blocks updated to reflect 2026-06-01 decision — commercial removed from website framing (ride-down via attrition operationally), Avon UT + Mantua UT added to service area context (travel fee, higher-income targeting), Preston ID demoted to bonus-only.
+- Completed: New **"AI / Generative Engine Optimization (GEO)"** section added as an explicit discipline this agent owns alongside classic SEO. Lists B.11.a through B.11.g sub-items with one-line summaries; full checklist lives in RecommendationsPacket Phase B.11.
+- Completed: New **"Draft-First Deployment Standard"** section added. Every discretionary website change ships as a Netlify Deploy Preview / PR branch first; Cam previews before merge to main. Monday blog auto-publish (GitHub Actions) explicitly preserved as scheduled-automation exception.
+- For Conductor: where the new draft-first standard conflicts with the existing Tier 2 ("auto-deploy, no approval needed") list, the new standard wins. Tier 2 effectively collapses for discretionary edits during the Phase B rebuild period. Cleanup pass on the Tier 2 list is deferred but worth a follow-up.
+- For Conductor: Phase B of the RecommendationsPacket is now this agent's active workstream — B.1 (commercial removal), B.2 (de-noindex 10 city pages), B.3 (5 net-new city pages), B.4–B.7 (move-out, move-in, post-construction, Meet Your Team), B.8 (pricing pre-frame), B.9 (referral), B.11 (full GEO discipline). Cam will trigger execution in dedicated Cowork sessions in this folder.
+- For Conductor: this CLAUDE.md still has known-stale operational content from before today's edit (the "9 main pages" / "likely not posting" / "#2 organic" notes called out in the 2026-05-09 log entry). Not fixing those today — too easy to introduce drift. Worth a focused cleanup pass.
+- Open: Cam to confirm whether Monday blog auto-publish should continue auto-deploying or also flip to draft-first. Current behavior preserved pending decision.
+
 ## 2026-05-09 (later, same day) — Domain canonical investigation
 
 - Decision: Documented `theherocleaners.com` as canonical and produced three formal artifacts: `Domain_Reference_Audit.md`, `Domain_Canonical_Recommendation.md`, `Domain_Consolidation_Plan.md`. Engineering side of consolidation was already executed earlier today (separate AGENT_LOG entry below).
