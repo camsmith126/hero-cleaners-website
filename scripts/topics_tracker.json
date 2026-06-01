@@ -1,5 +1,5 @@
 {
-  "next_index": 12,
+  "next_index": 13,
   "published": [
     {
       "index": 0,
@@ -72,6 +72,12 @@
       "topic": "What makes a great house cleaning company in Logan, UT?",
       "file": "2026-05-25-what-makes-a-great-house-cleaning-company-in-logan-ut.md",
       "date": "2026-05-25"
+    },
+    {
+      "index": 12,
+      "topic": "How to choose a trustworthy cleaning service in Cache Valley",
+      "file": "2026-06-01-how-to-choose-a-trustworthy-cleaning-service-in-cache-valley.md",
+      "date": "2026-06-01"
     }
   ]
 }
