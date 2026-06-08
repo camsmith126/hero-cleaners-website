@@ -41,6 +41,22 @@ Sections can be omitted if empty for a given session. Keep entries short. Future
 
 ## Entries
 
+## 2026-06-08 (later) — Brand Vault verify + canonical icon swap + F1 anchor
+
+- Completed: ran the verification + finish-up loop the prior session could not. Read the four canonical docs the sandbox could not reach (page-briefs/homepage.md, WebsiteStrategicBrief_v1.md §0/§2/§3/§4, BrandFoundation_v1.md §1/§5/§6/§8, Hero_VisualSystemSpec_v1.md + assets/README.md). Continued on branch `homepage-f1-f4-layering`; pushed commit cbb051c on top of the prior session's ad6d47b + 02d5cb3.
+- Verified against canon:
+  - **Layering Rule** — H1 plain head term + brand device demoted to `<p>` + descriptive logo alt: all correct vs Page Brief §"H1 direction" + brief §0 Worked example. No change.
+  - **F1 headline** — "WE DO ONE THING EXCELLENTLY" is on-canon per v1.1 §8. **F1 subhead refined** to land the canonical anchor phrase "People pay for a clean. They stay for the people" (v1.1 §2) per Page Brief Body-layer §"Headline angle" — the prior subhead had the right angle but did not land the canonical line.
+  - **F3 copy** — "We Fix It Before We Go" / "if it's not right, we fix it" in all three sites (trust bar, CTA trust row, FAQ). On-canon vs brief §2 F3.
+  - **F3 icon** — **swapped the stand-in circle-check SVG for the canonical `trust_makeitright_mono_white.svg`** in both red-background sites (trust bar + CTA trust row). Variant choice per assets/README §"Which variant on which background" (red CTA blocks → mono_white). Asset copied from Brand Vault → `website/assets/icons/`; Vault stays read-only.
+  - **F4 colors** — 0 retired hex remain (verified across all 13 pages). No change needed.
+  - **F2** — confirmed not applicable on the homepage. Only "same cleaner" reference is FAQ answer using honest §5 phrasing.
+- Verification: clean Eleventy build (48 files, 0 errors), `/assets/icons/trust_makeitright_mono_white.svg` ships, single H1, DOCTYPE intact. Deploy Preview re-built and smoke-tested live at deploy-preview-3 URL: F1 anchor present, both icon references resolve, asset serves 200.
+- For Conductor:
+  - **F2 site-wide cleanup pending** — three pages still carry the "Same Cleaner Every Visit" absolute (recurring-cleaning.html, maid-service.html, service-areas.html). Out of scope for the homepage PR; future Page Brief loops on those pages should land it.
+  - **Commercial cleaning still visible on the homepage** at the time of this PR (og:description, service quick-link, COMMERCIAL CLEANING service card, footer Services list). This is the Phase B.1 PR's job (#2 on `phase-b1-remove-commercial`). Both PRs touch the homepage; whichever merges second will need a quick reconcile.
+- Open: Cam reviews the updated Deploy Preview on PR #3, approves merge.
+
 ## 2026-06-08 — Homepage brand-fix execution (first Page Brief loop run)
 
 - Completed: first end-to-end run of the Page Brief production loop, executed against `../../Residential Research Agent/page-briefs/homepage.md`. Branch `homepage-f1-f4-layering`, commit ad6d47b. Draft-first: committed, NOT pushed — awaiting Cam to push + approve the Netlify preview before merge.

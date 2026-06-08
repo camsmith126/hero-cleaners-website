@@ -148,6 +148,20 @@
   these URLs to start showing up in GSC within 1-2 weeks
   after Google's next crawl.
 
+[2026-06-08] — Homepage brand-canon refinements (verification pass, branch homepage-f1-f4-layering, commit cbb051c)
+- F3 finish: swapped the prior session's on-pattern circle-check
+  stand-in for the canonical `trust_makeitright_mono_white.svg` from
+  Brand Vault — referenced as `<img>` from `website/assets/icons/`.
+  Brand-consistency + AI/GEO win (the icon-as-entity is now the
+  canonical asset, not a generated stand-in); no direct ranking impact.
+- F1 subhead now anchors the canonical phrase "People pay for a clean.
+  They stay for the people." (v1.1 §2). On-brand voice landing on the
+  page's main differentiating section is a conversion signal, not an
+  SEO one. The structural layer (H1, title, meta) is unchanged.
+- No URL changes, no schema changes, no robots/sitemap changes. The
+  homepage's structural-SEO surface is unchanged from the prior session
+  — this pass is brand-canon polish on the body layer + asset side.
+
 [2026-06-08] — Homepage Layering Rule + F1 structural change (branch homepage-f1-f4-layering, awaiting deploy)
 - Resolved the homepage H1 layering tension: the H1 was carrying the
   brand device "WE CLEAN. YOU RELAX." — body-layer copy in a

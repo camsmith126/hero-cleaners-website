@@ -155,6 +155,37 @@ Location to theherocleaners.com:
   Worth pruning in a future cleanup commit but not urgent —
   the rules are no-ops, not harmful.
 
+[2026-06-08] — commit cbb051c (branch homepage-f1-f4-layering) — Homepage icon swap + F1 subhead anchor (verification pass)
+Two follow-ups to the prior ad6d47b commit, picked up once the
+Brand Vault folder was reachable.
+
+(a) F3 icon swap: replaced the on-pattern circle-check inline SVG
+with the canonical `trust_makeitright_mono_white.svg` from
+`Brand Vault/assets/icons/svg/mono_white/`, copied to
+`website/assets/icons/`. Variant choice per `assets/README.md`
+(both insertion sites — trust bar + CTA trust row — sit on red
+backgrounds, which is the mono_white pairing). The Vault is
+read-only; the arsenal asset is sanctioned for copy-into-site.
+
+(b) F1 subhead: kept the focus/depth angle from ad6d47b but
+reworked the paragraph to land the canonical anchor phrase
+"People pay for a clean. They stay for the people" verbatim
+(per Page Brief Body-layer §"Headline angle"; source
+BrandFoundation v1.1 §2). The prior subhead had the right angle
+but did not land the canonical line.
+
+Why: finishes the parts the sandboxed session couldn't — Brand
+Vault was reachable this session. Verification: clean Eleventy
+build (48 files, 0 errors); /assets/icons/trust_makeitright_mono_white.svg
+ships and serves on the Deploy Preview; both trust-context icons
+reference the asset; F1 anchor phrase verified live; single H1
+unchanged; DOCTYPE intact. Status: pushed; Deploy Preview
+auto-rebuilt; awaiting Cam review on PR #3.
+
+Cross-PR note: Phase B.1 PR #2 (phase-b1-remove-commercial) also
+modifies the homepage; whichever merges second needs a quick diff
+reconcile on website/index.html (low risk — different sections).
+
 [2026-06-08] — commit ad6d47b (branch homepage-f1-f4-layering, AWAITING CAM APPROVAL) — Homepage brand fixes per page-briefs/homepage.md
 F1: reframed the "Hero Difference" headline from breadth-bragging
 ("MOST COMPANIES ARE GOOD AT A FEW THINGS. WE'RE GREAT AT ALL OF
