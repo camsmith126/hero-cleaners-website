@@ -148,6 +148,24 @@
   these URLs to start showing up in GSC within 1-2 weeks
   after Google's next crawl.
 
+[2026-06-08] — Homepage secondary-keyword H2 weave (commit 3e3da5e, branch homepage-f1-f4-layering)
+- Services-grid section H2 changed from "SERVICES BUILT FOR REAL
+  LIFE" to "HOUSE CLEANING SERVICES BUILT FOR REAL LIFE." Adds the
+  secondary keyword "house cleaning services" to a structural-layer
+  header (Page Brief §"Structural layer" secondary keyword list)
+  without disrupting brand voice. Real ranking value over time —
+  Google reads H2s with weight.
+- No change to title, meta, H1, or URL — the primary head term
+  "house cleaning logan utah" continues to anchor the structural
+  layer there.
+- No schema/sitemap/robots changes. F1/F3 copy rewords + full Brand
+  Vault icon rollout are brand-canon work (no direct SEO impact, but
+  AI/GEO entity-coherence improves as the icon-as-entity now matches
+  the canonical asset rather than ad-hoc inline SVGs).
+- Monitor GSC over the next 4 weeks for movement on `house cleaning
+  services logan ut` + variants (currently underweight on the
+  homepage; this H2 weave is the first structural placement).
+
 [2026-06-08] — Homepage brand-canon refinements (verification pass, branch homepage-f1-f4-layering, commit cbb051c)
 - F3 finish: swapped the prior session's on-pattern circle-check
   stand-in for the canonical `trust_makeitright_mono_white.svg` from

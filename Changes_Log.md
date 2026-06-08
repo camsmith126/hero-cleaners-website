@@ -155,6 +155,56 @@ Location to theherocleaners.com:
   Worth pruning in a future cleanup commit but not urgent —
   the rules are no-ops, not harmful.
 
+[2026-06-08] — commit 3e3da5e (branch homepage-f1-f4-layering) — Cam-review pass: copy rewording + full Brand Vault icon rollout + secondary-keyword H2
+Three things shipped after Cam's review of the prior preview.
+
+(1) Copy: F1 H2 reworded to "WE CLEAN HOMES. / AND WE'RE
+    REALLY GOOD AT IT." per Cam ("excellently" sounded stuffy).
+    F1 subhead dropped the turning-point/jack-of-all-trades
+    framing per Cam ("people don't care that we dropped other
+    services"); new subhead leads with what we do (7,800+ homes
+    since 2019) and lands the canonical anchor "People pay for
+    a clean. They stay for the people" verbatim. Trust-bar item
+    3: "We Fix It Before We Go" -> "Background-Checked Team"
+    (Cam ruled the canonical F3 phrase reads odd without its
+    conditional setup; CTA trust row + FAQ keep the conditional
+    versions). bullet_check_mono_white.svg pairs with the new
+    background-check item.
+
+(2) Brand Vault icon rollout: every visible icon slot on the
+    homepage now references a canonical asset. 9 new SVGs copied
+    from Brand Vault/assets/icons/ into website/assets/icons/,
+    variant by background per assets/README:
+    - Trust bar (red bg, mono_white): trust_insured,
+      trust_scheduling, bullet_check, trust_local.
+    - Hero card quick-links (white bg, onlight):
+      service_recurring, service_maid, service_deepclean,
+      service_window.
+    - Services grid cards (white bg, onlight): the same three
+      surviving service icons (commercial card still emoji,
+      removed by Phase B.1 PR #2).
+    - CTA trust row (red bg, mono_white): bullet_check,
+      trust_wecall, trust_makeitright, trust_local.
+    15 canonical icon references in index.html; 10 unique SVG
+    files; all serve 200 on the Deploy Preview.
+
+(3) Secondary-keyword H2 weave: services-grid section header
+    "SERVICES BUILT FOR REAL LIFE" -> "HOUSE CLEANING SERVICES
+    BUILT FOR REAL LIFE." Adds the secondary keyword
+    "house cleaning services" (Page Brief structural-layer
+    secondary list) without disrupting the brand-voice rhythm.
+    Title/meta/H1 unchanged.
+
+Why: Cam review of the prior preview (cbb051c) on PR #3.
+Status: build clean (48 files, 0 errors), single H1, DOCTYPE
+intact, 0 retired hex, 10 canonical icons in build, smoke-
+tested on the Deploy Preview (all icons 200, all new strings
+rendered). Pushed; Deploy Preview rebuilt; awaiting Cam.
+
+Cross-PR note: Phase B.1 PR #2 still modifies the homepage
+(commercial removal); whichever merges second needs a quick
+reconcile on website/index.html (different sections).
+
 [2026-06-08] — commit cbb051c (branch homepage-f1-f4-layering) — Homepage icon swap + F1 subhead anchor (verification pass)
 Two follow-ups to the prior ad6d47b commit, picked up once the
 Brand Vault folder was reachable.

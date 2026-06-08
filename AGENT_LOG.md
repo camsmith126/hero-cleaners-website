@@ -41,6 +41,26 @@ Sections can be omitted if empty for a given session. Keep entries short. Future
 
 ## Entries
 
+## 2026-06-08 (latest) — Cam review pass: F1/F3 rewording + full Brand Vault icon rollout + keyword H2 weave (commit 3e3da5e)
+
+- Decision (F3 trust-bar): Cam ruled the canonical phrase "we fix it before we go" reads odd without its conditional setup; the trust-bar context truncated it. Replaced trust-bar item with "Background-Checked Team" + bullet_check icon. CTA trust row keeps "If it's not right, we fix it" (conditional intact) and FAQ keeps the full sentence — both read fine.
+- Decision (F1 headline): Cam reworded "WE DON'T DO IT ALL. WE DO ONE THING EXCELLENTLY." to "WE CLEAN HOMES. AND WE'RE REALLY GOOD AT IT." (two-line device, whole second line wrapped in <em> red per VisualSystemSpec §3 headline-device convention).
+- Decision (F1 subhead): Cam — "we don't need to stress the fact that we dropped all these other services to focus on one thing. people don't care." Dropped the turning-point/jack-of-all-trades framing. New subhead leads with what we actually do ("7,800+ homes across Cache Valley since 2019") and lands the canonical anchor "People pay for a clean. They stay for the people" verbatim. Page Brief Body-layer anchor preserved; the why-we-focused frame removed.
+- Completed: full Brand Vault icon rollout on the homepage. Copied 9 new canonical icons from `Brand Vault/assets/icons/svg/{variant}/` into `website/assets/icons/`, picking variant by background per assets/README §"Which variant on which background":
+  - Trust bar (red bg, mono_white): trust_insured, trust_scheduling, bullet_check, trust_local.
+  - Hero card service quick-links (white bg, onlight): service_recurring, service_maid, service_deepclean, service_window.
+  - Services grid cards (white bg, onlight): service_recurring, service_deepclean, service_window.
+  - CTA trust row (red bg, mono_white): bullet_check, trust_wecall, trust_makeitright (already in place), trust_local.
+  - 15 canonical icon references in index.html, 10 unique SVG files; all serve 200 on the Deploy Preview.
+- Completed (SEO): secondary-keyword H2 weave on the services grid section header: "SERVICES BUILT FOR REAL LIFE" -> "HOUSE CLEANING SERVICES BUILT FOR REAL LIFE." Per Page Brief structural-layer secondary keyword list ("cleaning services logan ut", "residential cleaning logan utah" etc.). Title/meta/H1 unchanged — head term still anchors the structural layer there.
+- Verification: clean build (48 files, 0 errors), single H1, DOCTYPE intact, 0 retired hex, 10 canonical icons in build output, all serve 200 on preview, F1 anchor + new trust-bar phrase + new H2 wording all present on the rendered preview.
+- For Conductor:
+  - **Brand-canon F3 phrasing readability**: the canonical phrase fails the short-context comprehension test (trust bar). Works fine when the conditional is intact (CTA trust row, FAQ). Worth a Brand Vault revisit on whether the homepage trust-bar truncation pattern should drive a phrase rework, or whether the rule is just "always carry the conditional."
+  - **No `trust_background_check` icon in the arsenal** — used `bullet_check_mono_white.svg` as the closest semantic fit. Possible addition to the arsenal next time the Brand Foundation Project ships icons.
+  - **F2 site-wide still pending** (recurring-cleaning, maid-service, service-areas). Out of scope here.
+  - **Commercial cleaning footprint still on the homepage** — quick-link + service card both untouched here; both removed by Phase B.1 PR #2.
+- Open: Cam reviews the updated Deploy Preview on PR #3.
+
 ## 2026-06-08 (later) — Brand Vault verify + canonical icon swap + F1 anchor
 
 - Completed: ran the verification + finish-up loop the prior session could not. Read the four canonical docs the sandbox could not reach (page-briefs/homepage.md, WebsiteStrategicBrief_v1.md §0/§2/§3/§4, BrandFoundation_v1.md §1/§5/§6/§8, Hero_VisualSystemSpec_v1.md + assets/README.md). Continued on branch `homepage-f1-f4-layering`; pushed commit cbb051c on top of the prior session's ad6d47b + 02d5cb3.
