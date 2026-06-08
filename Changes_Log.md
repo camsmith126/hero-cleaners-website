@@ -154,3 +154,26 @@ Location to theherocleaners.com:
   is now dead code (the old hostname no longer hits this site).
   Worth pruning in a future cleanup commit but not urgent —
   the rules are no-ops, not harmful.
+
+[2026-06-08] — commit ad6d47b (branch homepage-f1-f4-layering, AWAITING CAM APPROVAL) — Homepage brand fixes per page-briefs/homepage.md
+F1: reframed the "Hero Difference" headline from breadth-bragging
+("MOST COMPANIES ARE GOOD AT A FEW THINGS. WE'RE GREAT AT ALL OF
+THEM.") to focus/depth ("WE DON'T DO IT ALL. WE DO ONE THING
+EXCELLENTLY.") + a subhead anchored in the one-thing / turning-point
+story. F3: replaced generic "satisfaction guaranteed" with "if
+something isn't right, we fix it before we go" in the trust bar, CTA
+trust row, and FAQ answer; paired with an on-pattern circle-check
+inline SVG (canonical trust_makeitright arsenal asset to be swapped
+in once Brand Vault is connected). F4: site-wide retired-hex swap
+across ALL 13 website/*.html pages to locked VisualSystemSpec values
+(#B71C1C/#D32F2F -> Hero Red #D92429; #1A1A1A -> Hero Black #171E26;
+rgb 183,28,28 -> 217,36,41). Layering Rule: homepage H1 changed from
+the brand line "WE CLEAN. YOU RELAX." to the plain head term "House
+Cleaning in Logan, Utah"; brand line demoted to a body display <p>
+(visually unchanged). Why: WebsiteStrategicBrief_v1 §2 brand fixes
+F1/F3/F4 + the Layering Rule, executed against the homepage Page
+Brief. Result: clean Eleventy build (119 files, 0 errors, verified in
+sandbox), DOCTYPE intact on all pages, exactly one H1 on the homepage,
+0 retired hex remaining. Status: committed to branch, NOT pushed
+(sandbox has no GitHub creds) — Cam to push + review the Netlify
+Deploy Preview before merge.

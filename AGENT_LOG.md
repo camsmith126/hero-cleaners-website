@@ -41,6 +41,22 @@ Sections can be omitted if empty for a given session. Keep entries short. Future
 
 ## Entries
 
+## 2026-06-08 — Homepage brand-fix execution (first Page Brief loop run)
+
+- Completed: first end-to-end run of the Page Brief production loop, executed against `../../Residential Research Agent/page-briefs/homepage.md`. Branch `homepage-f1-f4-layering`, commit ad6d47b. Draft-first: committed, NOT pushed — awaiting Cam to push + approve the Netlify preview before merge.
+- F1: reframed "Hero Difference" headline breadth->depth ("we do one thing excellently"). F3: generic "satisfaction guaranteed" -> "if something isn't right, we fix it before we go" (trust bar, CTA row, FAQ). F4: retired-hex swap across ALL 13 pages -> locked VisualSystemSpec values.
+- Decision (Layering Rule markup resolution): the homepage H1 was the brand device "WE CLEAN. YOU RELAX." — a body-layer line in a structural slot. Resolved by making the H1 the plain head term "House Cleaning in Logan, Utah" and demoting the brand line to `<p class="hero-brand-device">` (visually identical, body layer). Chose minimal-disruption preservation of the hero visual over a layout restructure.
+- Decision (F2): the live homepage trust bar carried NO "Same Cleaner Every Visit" absolute; the service card already reads "Same trusted team every visit" and the FAQ already uses the conditioned §5 phrasing. No change made — per brief §2 "don't over-correct good pages."
+- Decision (F4 scope): there is NO shared stylesheet — every page has its own inline `<style>`, contrary to the brief's "single stylesheet swap" assumption. Per Cam, ran the swap mechanically across all 13 `website/*.html` (exact-hex, color-only). Verified 0 retired hex remain, DOCTYPE intact, clean Eleventy build.
+- For Conductor / cross-agent:
+  - **Brand Vault + Residential Research Agent folders were NOT connected this session** — only the three agent folders are. Executed from canon embedded in CLAUDE.md + the session brief; could not read the Page Brief / BrandFoundation / VisualSystemSpec verbatim, and could not use the canonical `trust_makeitright` arsenal icon. Used an on-pattern circle-check inline SVG as a stand-in. **Follow-up: swap in the canonical `trust_makeitright` asset once Brand Vault is connected.**
+  - **Commercial cleaning is still visible on the homepage** (nav dropdown, a service card, footer links, OG + LocalBusiness schema "commercial services") — out of scope here but contradicts residential-first / commercial-off-website (Phase B.1). Flagging for the dedicated commercial-removal session.
+  - **Retired hex was site-wide** (B71C1C x54, D32F2F x79, 1A1A1A x29, rgb 183,28,28 x101 across 13 files) — all fixed on this branch. New pages must start from the locked values.
+- Open for Cam:
+  - **Push the branch** (sandbox has no GitHub creds): `git push -u origin homepage-f1-f4-layering` -> Netlify generates the Deploy Preview. Review, then merge if good.
+  - **Stale git locks**: sandbox left 0-byte `.git/index.lock`, `.git/HEAD.lock`, `.git/objects/maintenance.lock` it couldn't delete. They don't block `push`, but clear them before any local checkout/merge: `rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock`.
+  - Confirm the F1 headline + the new plain H1 read right to you.
+
 ## 2026-06-02 (latest) — Visual Arsenal + VisualSystemSpec v1.1 propagated
 
 - Completed: VisualSystemSpec is now at **v1.1** in the Vault — adds **Slate Gray `#5B6B7A`** as a locked structural-support color (alongside Hero Red `#D92429`, Hero Black `#171E26`, white). Slate is for organize/recede contexts (secondary buttons, dividers, footers, muted badges), never for emphasis (red owns emphasis).

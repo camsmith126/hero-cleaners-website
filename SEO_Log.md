@@ -147,3 +147,20 @@
   is a fresh long-tail organic asset. Expect impressions on
   these URLs to start showing up in GSC within 1-2 weeks
   after Google's next crawl.
+
+[2026-06-08] — Homepage Layering Rule + F1 structural change (branch homepage-f1-f4-layering, awaiting deploy)
+- Resolved the homepage H1 layering tension: the H1 was carrying the
+  brand device "WE CLEAN. YOU RELAX." — body-layer copy in a
+  structural slot. Changed the H1 to the plain head term "House
+  Cleaning in Logan, Utah" per the Layering Rule (structural layer =
+  literal / search-aligned). Brand line moved to a styled <p> (body
+  layer), visually preserved.
+- Title tag + meta description were already structural/compliant —
+  left as-is. White-logo alt text upgraded "Hero Cleaners" ->
+  "Hero Cleaners house cleaning in Logan, Utah" (descriptive,
+  structural layer).
+- Net effect: homepage now has a single keyword-aligned H1 for
+  "house cleaning logan utah" instead of an adjective-free slogan.
+  Monitor GSC position for that head term post-merge.
+- No URL changes. No nav changes. F4 color swap is cosmetic, no SEO
+  impact.
