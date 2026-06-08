@@ -72,9 +72,21 @@ You are part of a system now. Act like it.
 
 Before generating, editing, or publishing any brand-facing content — pages, blog posts, meta descriptions, schema descriptions, alt text, social copy, anything customers will see — read these two documents:
 
-1. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Brand Vault/BrandFoundation_v1.md`** — the **canonical** Hero Cleaners brand foundation. Voice, positioning, ideal customer, do-not-use words, brand stories. **This supersedes any brand language elsewhere in this CLAUDE.md if there is a conflict.** If the Vault says "we're not aspirational, we're useful" and a section below uses the word "premium," the Vault wins.
+1. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Brand Vault/BrandFoundation_v1.md`** — the **canonical** Hero Cleaners brand foundation (v1.1 as of 2026-06-01). Voice, positioning, ideal customer, do-not-use words, brand stories, vision. **This supersedes any brand language elsewhere in this CLAUDE.md if there is a conflict.**
 
-2. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Residential Research Agent/RecommendationsPacket.md`** — the **active strategy doc** and execution checklist. **Phase B** (website fixes) is the workstream this agent owns. **Phase B.11** specifically defines the AI / GEO discipline. Cross-reference any planned page, copy change, or new section against the Phase B item list — most of your current work traces back to a specific recommendation there.
+2. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Brand Vault/Hero_VisualSystemSpec_v1.md`** — the **canonical visual identity** (v1.1, 2026-06-02). Colors (Hero Red `#D92429`, Hero Black `#171E26`, **Slate Gray `#5B6B7A`** locked as structural-support, white), type, logo arsenal status. **Retired hex codes:** `#B71C1C`, `#CB2730`, `#D32F2F`, true black `#000000`, `#1A1A1A`. Every prior reference to these needs to swap to the locked values.
+
+2a. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Brand Vault/assets/`** — the **production-ready visual arsenal**. **`assets/README.md` is the authoritative day-to-day usage guide** (which variant on which background). Contents:
+   - `assets/icons/svg/` and `assets/icons/png/` — 15 standardized icons × 4 color variants (`onlight`, `ondark`, `mono_white`, `slate`). Covers 6 service icons, 5 trust-bar icons, 4 bullet/feature icons. **This set is the standardized replacement for the current ad-hoc site icons** (per WebsiteStrategicBrief).
+   - `assets/logos/` — INTERIM web-use logos (Hero Icon in black/white/slate + full-color lockup for light backgrounds only). Raster-derived; vector masters and a reversed full lockup are still needed and gated on a designer (don't improvise).
+   - **Variant rules for the dark hero sections and red CTA blocks:** use `ondark` on dark/navy hero grounds; `mono_white` on red CTA blocks and over photos.
+   - **`trust_makeitright` icon pairs with the brand line "if something isn't right, we fix it before we go"** — use it where the site currently says generic "satisfaction guaranteed" (this is the **F3** fix from WebsiteStrategicBrief §2). Available in all four variants — pick by background.
+
+3. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Residential Research Agent/WebsiteStrategicBrief_v1.md`** — the **brand-aware strategic brief** (shipped 2026-06-02 from the Brand Foundation Project). Per-page verdicts (KEEP/FIX/ADD/REMOVE), architecture decisions, the brand-vs-SEO layering rule (lifted into this CLAUDE.md as a permanent rule — see next section), F1–F5 site-wide brand fixes. **This brief sets the board.** Every page change you make traces back to a verdict here.
+
+4. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Residential Research Agent/page-briefs/`** — the **per-page execution specs** produced by the Residential Research Agent against the strategic brief. Each Page Brief: target keyword + search intent + competitor benchmark + voice anchors + structural-layer rules + body-layer direction. **This is what you execute against, page by page.** If a page you're working on doesn't have a Page Brief yet, stop and ask Cam to schedule a Research Agent session to produce one — don't freelance.
+
+5. **`/Users/camsmith/Desktop/AI AGENTS/Hero Cleaners/Residential Research Agent/RecommendationsPacket.md`** — the **research-and-recommendation floor.** Phase B (website fixes), Phase C (content), Phase D (offer strategy), Phase E (paid-search), Phase F (brand inputs). Phase B.11.a–g defines the AI / GEO discipline. **Conflict-resolution rule per strategic brief §6:** WebsiteStrategicBrief wins on brand framing; RecommendationsPacket wins on research/keyword specifics. They don't usually conflict — the brief was built on top of the packet — but where they do, this is the rule.
 
 Both docs are reference-only — do not edit them from here.
 - Brand work happens in the "Hero Cleaners Brand Foundation" Claude Project (per Brand Vault CLAUDE.md).
@@ -132,33 +144,86 @@ House Cleaning, Maid Service, Recurring Cleaning, Deep Cleaning, Move-In Cleanin
 ## DISCONTINUED — Never Mention or Promote
 Power washing, driveway sealing, Christmas lights, Airbnb turnovers, apartment complexes, contractor/construction cleanup. Note: per RecommendationsPacket research, the **Airbnb / vacation rental vertical is parked** (Cam decision 2026-06-01) — don't accidentally surface it.
 
-## Pricing (Internal Only — Never Publish Exact Rates)
+## Pricing (PUBLIC — policy reversed 2026-06-02)
+
+**The prior "Never Publish Exact Rates" rule is retired.** Cam confirmed 2026-06-02 that Hero is going public with pricing, Breezy Fresh model — rates visible on the website with a value pre-frame.
+
+Frame all published pricing with the value pre-frame per `Residential Research Agent/RecommendationsPacket.md` Phase B.8 — explain WHY Hero charges what it charges before showing the number. (Reason: `GeoHeatMap.md` §6 found pricing is the #1 cited cancellation reason at 29% — the number lands differently when value is pre-framed.)
+
+Current rates (confirm with Cam before publishing changes):
 - All recurring plans: $60/hr
-- Weekly visits: 2hr | Bi-weekly: 2.5hr
-- Weekly costs less per visit only because less work is needed — NOT a better rate
+- Weekly visits: 2hr · Bi-weekly: 2.5hr
+
+Voice rules around pricing still apply (per `Brand Vault/BrandFoundation_v1.md` §6):
 - Never use "best rate," "best value," or imply one plan is cheaper per hour
+- Weekly costs less per visit only because less work is needed — frame as logic, not as a discount
 
 ---
 
-## Brand Voice
-- Warm, personal, local — "like the neighbor who shows up without being asked"
-- Friendly, hardworking, down-to-earth, genuine, confident but not cocky
-- Always Cache Valley / Logan Utah local — never implies national reach
-- Never corporate, cold, salesy, or franchise-sounding
-- Recurring residential is always the nudge — every page guides toward recurring
+## Brand Voice + Identity
 
-**Use these phrases:** "We clean, you relax" · "Take the load off" · Hero/heroes · Cache Valley · Trust, relationships, experience
+**Canonical sources — do not duplicate brand language here:**
 
-**Never use:** "Property Solutions" · luxury-focused language · corporate/cold tone · condescending language · one-size-fits-all messaging
+- **Voice / positioning / ideal customer / do-not-use words / brand stories** → `Brand Vault/BrandFoundation_v1.md` §6 (Voice and personality), §3 (Who we serve), §4 (Who we don't serve), §10 (Brand stories)
+- **Visual identity — colors, type, logo arsenal, retired hex codes** → `Brand Vault/Hero_VisualSystemSpec_v1.md`
 
-## Brand Identity
-**Colors:**
-- Hero Red: #B71C1C | Hero Black: #1A1A1A | Clean White: #FFFFFF
-- Accent Red: #D32F2F | Light Rose: #FFCDD2 | Charcoal: #2D2D2D
+The "Brand & Strategy Sources" section near the top of this CLAUDE.md is the canonical pointer. Past versions of this file restated voice keywords, color hexes, and logo descriptions inline — those quick-reference blocks were sourced from the now-retired 2025 brand guide and have been removed (2026-06-02) to prevent drift. If a session needs a quick lookup, open the two Vault docs at session start — they're short.
 
-**Fonts:** Bebas Neue / Impact (headings) · Open Sans / Helvetica Neue (body)
+**Why this matters:** the Vault is the single source of truth. Inline duplicates in agent CLAUDE.md files are how brand drift happens. v1.1 already retired a color (`#B71C1C`) the prior inline block treated as canonical — proof that inline duplication actively works against us.
 
-**Logo:** Black superhero figure with red cape + "Hero" (black bold) + "Cleaners" (red bold) + squeegee icon
+---
+
+## The Layering Rule — PERMANENT CANONICAL GOVERNING RULE
+
+*Lifted from `Residential Research Agent/WebsiteStrategicBrief_v1.md` §0 on 2026-06-02. This rule governs every page on Hero's site, indefinitely. Quote it and apply it to every page you build, edit, or audit.*
+
+> **Keywords live in the structural layer. Brand voice lives in the body.**
+
+This rule exists because brand voice and SEO pull against each other on the same line. Brand wants distinctive, human, specific language ("They came for a clean home. They stayed for the people."). SEO wants the plain words people type into Google ("house cleaning Logan Utah"). If you force both into the same sentence, you get keyword-stuffed mush that ranks poorly *and* sounds like the franchises Hero is defined against (violating v1.1 §4 and §6). **The resolution is not compromise. It's separation by layer.**
+
+### Structural / search-facing layer
+
+**Write these in plain, literal, search-aligned language.** This is what Google reads and ranks.
+
+- URL slug
+- `<title>` tag
+- Meta description
+- `<h1>`
+- Section headers (`<h2>` / `<h3>`)
+- Image `alt` text
+- Schema.org JSON-LD
+
+**Example:** `<h1>House Cleaning in North Logan, Utah</h1>` — plain on purpose. Searchable. Literal. Not adjective-loaded.
+
+### Body / human layer
+
+**Pure brand voice** per `Brand Vault/BrandFoundation_v1.md` §6 + the `Residential Research Agent/CustomerLanguageBank.md` sanctioned list. This is what converts.
+
+- The actual prose a visitor reads
+- Subheads
+- Paragraphs
+- CTAs
+- Testimonial framing
+- FAQ answers
+
+**Example:** "We clean. You relax." — this lives in the body, never as an H1 or title tag.
+
+### How they coexist
+
+A page **ranks on its structural layer** and **converts on its body layer**. They never fight because they never occupy the same line. The H1 is searchable; the subhead beneath it is the brand. The title tag is plain; the meta description can lean slightly brand-warm while staying search-aligned. The alt text is descriptive; the body around the image is voice.
+
+### Hard line for BOTH layers
+
+Even the structural layer never uses v1.1 §6 do-not-use words or §4 price-shopper framing. **Plain ≠ generic-brand-adjective.**
+
+- ✅ "House cleaning Logan" — plain, fine
+- ❌ "Affordable premium cleaning experience" — keyword-stuffed AND off-brand
+
+Plain means **literal and search-aligned**, not adjective-loaded.
+
+### When in doubt
+
+If a page needs a line and you're not sure which layer it belongs to: ask "is this read by Google or by a human?" Google → structural layer rules. Human → body layer rules. If both, split it into two lines.
 
 ---
 
