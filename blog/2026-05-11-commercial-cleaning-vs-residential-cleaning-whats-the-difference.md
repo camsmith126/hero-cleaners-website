@@ -3,10 +3,14 @@ title: "Commercial cleaning vs residential cleaning: what's the difference? | Lo
 date: 2026-05-11
 description: "Hero Cleaners Cache Valley — Commercial cleaning vs residential cleaning: what's the difference?"
 slug: "commercial-cleaning-vs-residential-cleaning-whats-the-difference"
-tags: ["post", "house cleaning", "Logan UT", "Cache Valley"]
+tags: ["archived"]
 layout: post.njk
 permalink: /blog/commercial-cleaning-vs-residential-cleaning-whats-the-difference/index.html
+noindex: true
+eleventyExcludeFromCollections: true
 ---
+
+> **Archive note (2026-06-01):** Hero Cleaners has shifted to a residential-only focus. This post no longer reflects our current service direction and is preserved here only so existing links don't 404. It is excluded from the blog index, sitemap, and search engines.
 
 # Commercial Cleaning vs Residential Cleaning: What's the Difference?
 

@@ -34,14 +34,14 @@ This is especially important for families in Logan, UT who rely on recurring cle
 
 No two homes are the same, and no two families have the same needs. A great house cleaning company in Logan, UT understands that and offers flexible services to match.
 
-Maybe you need a weekly clean to keep up with the chaos of a busy household. Maybe you're preparing for a move-out and need every surface spotless for your landlord's walkthrough. Or maybe your office space downtown needs regular attention so your team can focus on what they do best.
+Maybe you need a weekly clean to keep up with the chaos of a busy household. Maybe you're preparing for a move-out and need every surface spotless for your landlord's walkthrough. Or maybe you just need one really good deep clean before the holidays so the house feels like a fresh start.
 
 Here at Hero Cleaners, we offer:
 
 - **Recurring house cleaning** — weekly, biweekly, or monthly schedules
 - **Deep cleans** — for when your home needs a thorough reset
 - **Move-out cleans** — to help you get that deposit back
-- **Commercial cleaning** — keeping Cache Valley businesses looking sharp
+- **Maid service** — same trusted cleaner every visit
 - **Window washing** — because those mountain views deserve a clear frame
 
 We also customize our pricing to fit your specific needs, starting at around $54 per hour. No cookie-cutter packages. Just honest service built around your home and your budget.
