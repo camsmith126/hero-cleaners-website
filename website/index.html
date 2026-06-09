@@ -24,8 +24,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --red: #B71C1C; --red-accent: #D32F2F; --red-light: #FFCDD2;
-      --black: #1A1A1A; --charcoal: #2D2D2D; --gray: #757575;
+      --red: #D92429; --red-accent: #D92429; --red-light: #FFCDD2;
+      --black: #171E26; --charcoal: #2D2D2D; --gray: #757575;
       --white: #FFFFFF; --off-white: #FAFAFA; --border: #EEEEEE;
       --font-display: 'Bebas Neue', Impact, Arial Black, sans-serif;
       --font-body: 'Open Sans', Helvetica Neue, Arial, sans-serif;
@@ -59,14 +59,14 @@
     .nav-dropdown:hover .nav-dropdown-menu { display: block; }
     .nav-dropdown > a { padding-bottom: 8px; margin-bottom: -8px; }
     .nav-dropdown-menu li { list-style: none; }
-    .nav-dropdown-menu a { display: block !important; padding: 11px 20px; color: #1A1A1A !important; font-size: 14px; font-weight: 600; white-space: nowrap; text-decoration: none; }
-    .nav-dropdown-menu a:hover { background: #FFF5F5; color: #B71C1C !important; }
+    .nav-dropdown-menu a { display: block !important; padding: 11px 20px; color: #171E26 !important; font-size: 14px; font-weight: 600; white-space: nowrap; text-decoration: none; }
+    .nav-dropdown-menu a:hover { background: #FFF5F5; color: #D92429 !important; }
     .nav-dropdown-menu a::after { display: none !important; }
     .nav-cta { display: flex; align-items: center; gap: 16px; }
     .nav-phone { font-size: 15px; font-weight: 700; color: var(--black); display: flex; align-items: center; gap: 6px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: var(--radius); font-family: var(--font-body); font-size: 14px; font-weight: 700; cursor: pointer; border: none; transition: all var(--transition); }
     .btn-primary { background: var(--red); color: var(--white); }
-    .btn-primary:hover { background: var(--red-accent); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(183,28,28,0.35); }
+    .btn-primary:hover { background: var(--red-accent); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(217,36,41,0.35); }
     .btn-secondary { background: transparent; color: var(--red); border: 2px solid var(--red); }
     .btn-secondary:hover { background: var(--red); color: var(--white); }
     .btn-white { background: var(--white); color: var(--red); }
@@ -77,13 +77,14 @@
 
     /* HERO */
     .hero { background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%); color: var(--white); padding: 80px 0 70px; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -60px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(183,28,28,0.25) 0%, transparent 70%); pointer-events: none; }
+    .hero::before { content: ''; position: absolute; top: -60px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(217,36,41,0.25) 0%, transparent 70%); pointer-events: none; }
     .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
-    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(183,28,28,0.2); border: 1px solid rgba(183,28,28,0.5); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red-light); margin-bottom: 20px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(217,36,41,0.2); border: 1px solid rgba(217,36,41,0.5); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red-light); margin-bottom: 20px; }
     .hero-badge-dot { width: 8px; height: 8px; background: var(--red-accent); border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.3)} }
-    .hero h1 { font-family: var(--font-display); font-size: clamp(48px, 6vw, 72px); line-height: 1; letter-spacing: 2px; margin-bottom: 8px; }
-    .hero h1 em { font-style: normal; color: var(--red-accent); }
+    .hero-brand-device { font-family: var(--font-display); font-size: clamp(48px, 6vw, 72px); line-height: 1; letter-spacing: 2px; margin-bottom: 10px; }
+    .hero-brand-device em { font-style: normal; color: var(--red-accent); }
+    .hero-h1 { font-family: var(--font-body); font-size: clamp(18px, 2.2vw, 24px); font-weight: 700; letter-spacing: 0.3px; line-height: 1.35; color: rgba(255,255,255,0.9); margin-bottom: 22px; }
     .hero-sub { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; line-height: 1.6; max-width: 460px; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; flex-direction: column; align-items: stretch; }
     .hero-trust { display: flex; align-items: center; gap: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
@@ -96,9 +97,9 @@
     .hero-card-title span { color: var(--red); }
     .service-quick-links { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
     .service-quick-link { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; border: 1.5px solid var(--border); border-radius: var(--radius); font-size: 14px; font-weight: 600; color: var(--charcoal); transition: all var(--transition); }
-    .service-quick-link:hover { border-color: var(--red); color: var(--red); background: rgba(183,28,28,0.03); }
+    .service-quick-link:hover { border-color: var(--red); color: var(--red); background: rgba(217,36,41,0.03); }
     .service-quick-link-icon { display: flex; align-items: center; gap: 10px; }
-    .service-icon-dot { width: 32px; height: 32px; background: rgba(183,28,28,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
+    .service-icon-dot { width: 32px; height: 32px; background: rgba(217,36,41,0.1); border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 16px; }
     .hero-card-rating { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--off-white); border-radius: var(--radius); }
     .stars { color: #F59E0B; font-size: 18px; letter-spacing: 1px; }
     .rating-text strong { display: block; font-size: 14px; font-weight: 700; }
@@ -125,14 +126,14 @@
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .service-card { background: var(--white); border-radius: 12px; padding: 32px 28px; border: 1.5px solid var(--border); transition: all 0.25s ease; position: relative; overflow: hidden; cursor: pointer; }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
-    .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(183,28,28,0.2); }
+    .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(217,36,41,0.2); }
     .service-card:hover::before { transform: scaleX(1); }
-    .service-card-icon { width: 52px; height: 52px; background: rgba(183,28,28,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
+    .service-card-icon { width: 52px; height: 52px; background: rgba(217,36,41,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
     .service-card h3 { font-family: var(--font-display); font-size: 22px; letter-spacing: 1px; margin-bottom: 12px; }
     .service-card p { font-size: 14px; color: var(--gray); line-height: 1.7; margin-bottom: 20px; }
     .service-card-includes { margin-bottom: 24px; }
     .service-card-includes li { font-size: 13px; color: var(--charcoal); padding: 4px 0; display: flex; align-items: center; gap: 8px; }
-    .service-card-includes li::before { content: '\2713'; color: var(--red); font-weight: 700; font-size: 13px; flex-shrink: 0; }
+    .service-card-includes li::before { content: ''; display: inline-block; width: 16px; height: 16px; background: url('/assets/logos/herocleaners_icon_black_onlight_transparent.png') center/contain no-repeat; flex-shrink: 0; }
     .service-link { font-size: 14px; font-weight: 700; color: var(--red); display: flex; align-items: center; gap: 6px; transition: gap var(--transition); }
     .service-link:hover { gap: 10px; }
 
@@ -141,12 +142,12 @@
     .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .why-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
     .why-feature { padding: 24px; border: 1.5px solid var(--border); border-radius: 10px; transition: all var(--transition); }
-    .why-feature:hover { border-color: rgba(183,28,28,0.25); box-shadow: var(--shadow-sm); }
+    .why-feature:hover { border-color: rgba(217,36,41,0.25); box-shadow: var(--shadow-sm); }
     .why-feature-icon { font-size: 28px; margin-bottom: 12px; }
     .why-feature h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
     .why-feature p { font-size: 13px; color: var(--gray); line-height: 1.6; }
     .why-story { padding: 40px; background: var(--black); border-radius: 16px; color: var(--white); position: relative; overflow: hidden; }
-    .why-story::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(183,28,28,0.3) 0%, transparent 70%); }
+    .why-story::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(217,36,41,0.3) 0%, transparent 70%); }
     .why-story-content { position: relative; z-index: 1; }
     .why-story-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red-light); margin-bottom: 16px; }
     .why-story h3 { font-family: var(--font-display); font-size: 32px; letter-spacing: 1.5px; line-height: 1.1; margin-bottom: 16px; }
@@ -186,9 +187,9 @@
     .how .section-title { color: var(--white); }
     .how .section-sub { color: rgba(255,255,255,0.55); margin: 0 auto; }
     .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
-    .how-steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 2px; background: linear-gradient(90deg, var(--red) 0%, rgba(183,28,28,0.2) 100%); }
+    .how-steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 20px); right: calc(12.5% + 20px); height: 2px; background: linear-gradient(90deg, var(--red) 0%, rgba(217,36,41,0.2) 100%); }
     .how-step { text-align: center; position: relative; }
-    .how-step-num { width: 56px; height: 56px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; color: var(--white); margin: 0 auto 20px; position: relative; z-index: 1; box-shadow: 0 0 0 8px rgba(183,28,28,0.15); }
+    .how-step-num { width: 56px; height: 56px; background: var(--red); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; color: var(--white); margin: 0 auto 20px; position: relative; z-index: 1; box-shadow: 0 0 0 8px rgba(217,36,41,0.15); }
     .how-step h4 { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
     .how-step p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
 
@@ -197,10 +198,10 @@
     .faq-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
     .faq-list { display: flex; flex-direction: column; gap: 12px; }
     .faq-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; }
-    .faq-item.open { border-color: rgba(183,28,28,0.3); }
+    .faq-item.open { border-color: rgba(217,36,41,0.3); }
     .faq-question { width: 100%; background: none; border: none; padding: 20px 24px; text-align: left; font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--black); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .faq-question:hover { color: var(--red); }
-    .faq-toggle { width: 24px; height: 24px; background: rgba(183,28,28,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: var(--red); transition: transform var(--transition); }
+    .faq-toggle { width: 24px; height: 24px; background: rgba(217,36,41,0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; color: var(--red); transition: transform var(--transition); }
     .faq-item.open .faq-toggle { transform: rotate(45deg); }
     .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
     .faq-item.open .faq-answer { max-height: 300px; }
@@ -256,7 +257,7 @@
     }
   
     .hcp-button.btn-primary, .hcp-button.plan-cta-primary { background: var(--red-accent) !important; }
-    .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #B71C1C !important; }
+    .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #D92429 !important; }
   </style>
 
   <!-- Canonical -->
@@ -341,7 +342,7 @@
       </ul>
       <div class="nav-cta">
         
-        <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary" onClick="HCPWidget.openModal()" style="background:#D32F2F;border-color:#D32F2F;color:white;;font-weight:700;">Book Online</button>
+        <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary" onClick="HCPWidget.openModal()" style="background:#D92429;border-color:#D92429;color:white;;font-weight:700;">Book Online</button>
       </div>
       <button class="hamburger"><span></span><span></span><span></span></button>
     </div>
@@ -354,12 +355,13 @@
       <div>
         <div class="hero-badge"><div class="hero-badge-dot"></div>Locally Owned &middot; Cache Valley, Utah</div>
         <div style="display:flex;align-items:center;gap:16px;">
-        <h1>WE CLEAN.<br><em>YOU RELAX.</em></h1>
-        <img src="/HeroCleaner_white.png" alt="Hero Cleaners" style="width:180px;height:auto;object-fit:contain;flex-shrink:0;margin-bottom:4px;">
+        <p class="hero-brand-device">WE CLEAN.<br><em>YOU RELAX.</em></p>
+        <img src="/HeroCleaner_white.png" alt="Hero Cleaners house cleaning in Logan, Utah" style="width:180px;height:auto;object-fit:contain;flex-shrink:0;margin-bottom:4px;">
       </div>
-        <p class="hero-sub">Cache Valley's most trusted maid service and house cleaning team &mdash; friendly, reliable people who treat your home and business like their own.</p>
+        <h1 class="hero-h1">House Cleaning in Logan, Utah</h1>
+        <p class="hero-sub">Cache Valley's most trusted maid service and house cleaning team &mdash; friendly, reliable people who treat your home like their own.</p>
         <div class="hero-actions">
-          <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" onClick="HCPWidget.openModal()" style="background:#D32F2F;border-color:#D32F2F;color:white;;font-weight:700;">Book Online</button>
+          <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" onClick="HCPWidget.openModal()" style="background:#D92429;border-color:#D92429;color:white;;font-weight:700;">Book Online</button>
           <a href="tel:4352770370" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;">Call or Text Us Now</a>
         </div>
         <div class="hero-trust">
@@ -375,11 +377,11 @@
       <div class="hero-card">
         <div class="hero-card-title">What can we help with <span>today?</span></div>
         <div class="service-quick-links">
-          <a href="/recurring-cleaning" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1F3E0;</div>Recurring Cleaning</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B71C1C" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
-          <a href="/maid-service" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1F9F9;</div>Maid Service</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B71C1C" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
-          <a href="/deep-clean" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x2728;</div>Deep Clean</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B71C1C" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
-          <a href="/commercial-cleaning" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1F3E2;</div>Commercial Cleaning</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B71C1C" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
-          <a href="/window-washing" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1FA9F;</div>Window Washing</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B71C1C" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+          <a href="/recurring-cleaning" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1F3E0;</div>Recurring Cleaning</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D92429" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+          <a href="/maid-service" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1F9F9;</div>Maid Service</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D92429" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+          <a href="/deep-clean" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x2728;</div>Deep Clean</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D92429" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+          <a href="/commercial-cleaning" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1F3E2;</div>Commercial Cleaning</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D92429" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
+          <a href="/window-washing" class="service-quick-link"><div class="service-quick-link-icon"><div class="service-icon-dot">&#x1FA9F;</div>Window Washing</div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D92429" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg></a>
         </div>
         <div class="hero-card-rating">
           <div class="stars">&#x2605;&#x2605;&#x2605;&#x2605;&#x2605;</div>
@@ -393,13 +395,13 @@
 <div class="trust-bar">
   <div class="container">
     <div class="trust-bar-inner">
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed & Insured</div>
+      <div class="trust-item"><img src="/assets/icons/trust_insured_mono_white.svg" alt="" width="22" height="22" style="display:inline-block;vertical-align:middle;margin-right:6px;">Licensed & Insured</div>
       <div class="trust-sep"></div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Flexible Scheduling</div>
+      <div class="trust-item"><img src="/assets/icons/trust_scheduling_mono_white.svg" alt="" width="22" height="22" style="display:inline-block;vertical-align:middle;margin-right:6px;">Flexible Scheduling</div>
       <div class="trust-sep"></div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Satisfaction Guaranteed</div>
+      <div class="trust-item"><img src="/assets/icons/bullet_check_mono_white.svg" alt="" width="22" height="22" style="display:inline-block;vertical-align:middle;margin-right:6px;">Background-Checked Team</div>
       <div class="trust-sep"></div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Locally Owned & Operated</div>
+      <div class="trust-item"><img src="/assets/icons/trust_local_mono_white.svg" alt="" width="22" height="22" style="display:inline-block;vertical-align:middle;margin-right:6px;">Locally Owned & Operated</div>
     </div>
   </div>
 </div>
@@ -408,7 +410,7 @@
   <div class="container">
     <div class="section-header centered">
       <span class="section-label">What We Do</span>
-      <h2 class="section-title">SERVICES BUILT FOR <em>REAL LIFE</em></h2>
+      <h2 class="section-title">HOUSE CLEANING SERVICES BUILT FOR <em>REAL LIFE</em></h2>
       <p class="section-sub">Whether you need a one-time deep clean or someone you can count on every week &mdash; we've got you covered, Cache Valley.</p>
     </div>
     <div class="services-grid">
@@ -426,8 +428,8 @@
     <div class="why-inner">
       <div>
         <span class="section-label">The Hero Cleaners Difference</span>
-        <h2 class="section-title">MOST COMPANIES ARE GOOD AT <em>A FEW THINGS.</em> WE'RE GREAT AT ALL OF THEM.</h2>
-        <p class="section-sub" style="margin-bottom:40px;">Quality of work is just the starting point. It's the communication, the reliability, the people &mdash; that's what keeps our customers coming back year after year.</p>
+        <h2 class="section-title">WE CLEAN HOMES.<br><em>AND WE'RE REALLY GOOD AT IT.</em></h2>
+        <p class="section-sub" style="margin-bottom:40px;">We've cleaned 7,800+ homes across Cache Valley since 2019. But the clean is just the deliverable &mdash; <strong>people pay for a clean. They stay for the people</strong> who show up every week, learn your home, and treat it like their own.</p>
         <div class="why-features">
           <div class="why-feature"><div class="why-feature-icon">&#x1F91D;</div><h4>Real Relationships</h4><p>You'll know your cleaners by name. They'll know your home. That's the way we like it.</p></div>
           <div class="why-feature"><div class="why-feature-icon">&#x1F4AC;</div><h4>Clear Communication</h4><p>We respond fast, show up on time, and always keep you in the loop.</p></div>
@@ -525,7 +527,7 @@
         <div class="faq-item open"><button class="faq-question" onclick="toggleFaq(this)">Do I need to be home when you clean?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Yes &mdash; for your first clean, we do ask that you&rsquo;re home, and it really matters to us. Your first visit is our chance to meet you in person, walk through your home together, understand your priorities, and make sure we&rsquo;re all on the same page before we get started. At the end of the clean, we&rsquo;ll do a final walkthrough with you to make sure everything looks exactly right. After that first visit, you absolutely don&rsquo;t need to be home &mdash; most of our customers give us a key or door code and we take it from there.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do you bring your own cleaning supplies?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Yes &mdash; we bring everything we need. If you have specific products you prefer, just let us know and we're happy to accommodate.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Will I get the same cleaner each time?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">We do our best to send the same team every visit &mdash; and for recurring customers, we make that a priority. Building a real relationship with your cleaner is part of what makes Hero Cleaners different.</div></div></div>
-        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What if I'm not happy with the clean?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Just let us know within 24 hours and we'll make it right &mdash; no questions asked. Your satisfaction is our top priority.</div></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What if I'm not happy with the clean?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Just let us know within 24 hours and we'll make it right &mdash; no questions asked. If something isn't right, we fix it before we go.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How do I get started?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">The easiest way is to call or text us at (435) 277-0370 or use our online booking form. We'll get you a quote quickly and find a time that works. First-time customers typically start with a deep clean.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Are your cleaners insured?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. Every team member is fully licensed and insured. We know inviting someone into your home takes trust &mdash; we take that responsibility seriously.</div></div></div>
       </div>
@@ -540,16 +542,16 @@
       <p>Book online in minutes &mdash; we'll personally reach out after every booking to make sure we come fully prepared. No guessing, no surprises.</p>
       <div class="cta-actions">
         <!--Start of Housecallpro Online booking button-->
-<button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" style="background:#D32F2F;border-color:#D32F2F;color:white;;font-weight:700;" onClick="HCPWidget.openModal()">Book Online Now</button>
+<button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" style="background:#D92429;border-color:#D92429;color:white;;font-weight:700;" onClick="HCPWidget.openModal()">Book Online Now</button>
 <script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
 <!--End of Housecallpro Online booking button-->
         <a href="tel:4352770370" class="btn btn-lg" style="background:rgba(255,255,255,0.15);color:white;border:2px solid rgba(255,255,255,0.4);">Call or Text (435) 277-0370</a>
       </div>
       <div class="cta-trust-row">
-        <div class="cta-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>No contracts</div>
+        <div class="cta-trust-item"><img src="/assets/icons/bullet_check_mono_white.svg" alt="" width="18" height="18" style="display:inline-block;vertical-align:middle;margin-right:6px;">No contracts</div>
         <div class="cta-trust-item">&#x26A1; We call after every booking</div>
-        <div class="cta-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Satisfaction guaranteed</div>
-        <div class="cta-trust-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Locally owned</div>
+        <div class="cta-trust-item"><img src="/assets/icons/trust_makeitright_mono_white.svg" alt="" width="18" height="18" style="display:inline-block;vertical-align:middle;margin-right:6px;">If it's not right, we fix it</div>
+        <div class="cta-trust-item"><img src="/assets/icons/trust_local_mono_white.svg" alt="" width="18" height="18" style="display:inline-block;vertical-align:middle;margin-right:6px;">Locally owned</div>
       </div>
       </div>
     </div>

@@ -147,3 +147,52 @@
   is a fresh long-tail organic asset. Expect impressions on
   these URLs to start showing up in GSC within 1-2 weeks
   after Google's next crawl.
+
+[2026-06-08] — Homepage secondary-keyword H2 weave (commit 3e3da5e, branch homepage-f1-f4-layering)
+- Services-grid section H2 changed from "SERVICES BUILT FOR REAL
+  LIFE" to "HOUSE CLEANING SERVICES BUILT FOR REAL LIFE." Adds the
+  secondary keyword "house cleaning services" to a structural-layer
+  header (Page Brief §"Structural layer" secondary keyword list)
+  without disrupting brand voice. Real ranking value over time —
+  Google reads H2s with weight.
+- No change to title, meta, H1, or URL — the primary head term
+  "house cleaning logan utah" continues to anchor the structural
+  layer there.
+- No schema/sitemap/robots changes. F1/F3 copy rewords + full Brand
+  Vault icon rollout are brand-canon work (no direct SEO impact, but
+  AI/GEO entity-coherence improves as the icon-as-entity now matches
+  the canonical asset rather than ad-hoc inline SVGs).
+- Monitor GSC over the next 4 weeks for movement on `house cleaning
+  services logan ut` + variants (currently underweight on the
+  homepage; this H2 weave is the first structural placement).
+
+[2026-06-08] — Homepage brand-canon refinements (verification pass, branch homepage-f1-f4-layering, commit cbb051c)
+- F3 finish: swapped the prior session's on-pattern circle-check
+  stand-in for the canonical `trust_makeitright_mono_white.svg` from
+  Brand Vault — referenced as `<img>` from `website/assets/icons/`.
+  Brand-consistency + AI/GEO win (the icon-as-entity is now the
+  canonical asset, not a generated stand-in); no direct ranking impact.
+- F1 subhead now anchors the canonical phrase "People pay for a clean.
+  They stay for the people." (v1.1 §2). On-brand voice landing on the
+  page's main differentiating section is a conversion signal, not an
+  SEO one. The structural layer (H1, title, meta) is unchanged.
+- No URL changes, no schema changes, no robots/sitemap changes. The
+  homepage's structural-SEO surface is unchanged from the prior session
+  — this pass is brand-canon polish on the body layer + asset side.
+
+[2026-06-08] — Homepage Layering Rule + F1 structural change (branch homepage-f1-f4-layering, awaiting deploy)
+- Resolved the homepage H1 layering tension: the H1 was carrying the
+  brand device "WE CLEAN. YOU RELAX." — body-layer copy in a
+  structural slot. Changed the H1 to the plain head term "House
+  Cleaning in Logan, Utah" per the Layering Rule (structural layer =
+  literal / search-aligned). Brand line moved to a styled <p> (body
+  layer), visually preserved.
+- Title tag + meta description were already structural/compliant —
+  left as-is. White-logo alt text upgraded "Hero Cleaners" ->
+  "Hero Cleaners house cleaning in Logan, Utah" (descriptive,
+  structural layer).
+- Net effect: homepage now has a single keyword-aligned H1 for
+  "house cleaning logan utah" instead of an adjective-free slogan.
+  Monitor GSC position for that head term post-merge.
+- No URL changes. No nav changes. F4 color swap is cosmetic, no SEO
+  impact.
