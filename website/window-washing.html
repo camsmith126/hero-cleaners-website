@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
   <style>
-    :root{--red:#B71C1C;--red-accent:#D32F2F;--red-light:#FFCDD2;--black:#1A1A1A;--charcoal:#2D2D2D;--gray:#757575;--white:#FFFFFF;--off-white:#FAFAFA;--border:#EEEEEE;--font-display:'Bebas Neue',Impact,Arial Black,sans-serif;--font-body:'Open Sans',Helvetica Neue,Arial,sans-serif;--shadow-sm:0 2px 8px rgba(0,0,0,0.08);--shadow-md:0 4px 20px rgba(0,0,0,0.12);--radius:8px;--transition:0.2s ease;}
+    :root{--red:#B71C1C;--red-accent:#D32F2F;--red-light:#FFCDD2;--black:#1A1A1A;--charcoal:#D32F2F;--gray:#757575;--white:#FFFFFF;--off-white:#FAFAFA;--border:#EEEEEE;--font-display:'Bebas Neue',Impact,Arial Black,sans-serif;--font-body:'Open Sans',Helvetica Neue,Arial,sans-serif;--shadow-sm:0 2px 8px rgba(0,0,0,0.08);--shadow-md:0 4px 20px rgba(0,0,0,0.12);--radius:8px;--transition:0.2s ease;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
     body{font-family:var(--font-body);color:var(--black);background:var(--white);line-height:1.6;overflow-x:hidden;}
     img{max-width:100%;display:block;}a{text-decoration:none;color:inherit;}ul{list-style:none;}
@@ -128,7 +128,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Window Washing","description":"Professional window cleaning and window washing in Logan, Utah. Residential and commercial service across Cache Valley &mdash; interior, exterior, screens, tracks, and sills.","provider":{"@type":"LocalBusiness","name":"Hero Cleaners","telephone":"+14352770370","url":"https://theherocleaners.com","address":{"@type":"PostalAddress","addressLocality":"Logan","addressRegion":"UT","postalCode":"84321","addressCountry":"US"}},"areaServed":"Cache Valley, UT","url":"https://theherocleaners.com/window-washing"}</script>
 </head><body><div class="announcement-bar">&#x1F3C6; Cache Valley's #1 Rated Cleaning Service &nbsp;&middot;&nbsp; 4.9 Stars &nbsp;&middot;&nbsp; <a href="tel:4352770370">Call or Text (435) 277-0370</a></div>
 <nav class="nav"><div class="container"><div class="nav-inner">
-  <a href="/"><img src="/HeroCleaners-logo.png" alt="Hero Cleaners" class="nav-logo"></a>
+  <a href="/"><img src="/hero-cleaners-stacked.png" alt="Hero Cleaners" class="nav-logo"></a>
   <ul class="nav-links">
     <li><a href="/">Home</a></li>
     <li class="nav-dropdown">
@@ -136,11 +136,13 @@
       <ul class="nav-dropdown-menu">
         <li><a href="/recurring-cleaning">Recurring Cleaning</a></li>
         <li><a href="/maid-service">Maid Service</a></li>
-        <li><a href="/deep-clean">Deep Clean</a></li>
+        <li><a href="/deep-clean">Deep Cleaning</a></li>
+        <li><a href="/move-out-cleaning">Move-Out Cleaning</a></li>
         <li><a href="/commercial-cleaning">Commercial Cleaning</a></li>
         <li><a href="/window-washing">Window Washing</a></li>
       </ul>
     </li>
+    <li><a href="/pricing">Pricing</a></li>
     <li><a href="/#areas">Service Areas</a></li>
     <li><a href="/#reviews">Reviews</a></li>
     <li><a href="/faq">FAQ</a></li>
@@ -157,9 +159,10 @@
   <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Services &rsaquo; Window Washing</div>
   <div class="page-hero-badge">Residential & Commercial</div>
   <div style="display:flex;align-items:center;gap:16px;">
-        <h1>WINDOW CLEANING<br><em>LOGAN, UTAH</em></h1>
+        <p style="font-family:var(--font-display);font-size:clamp(40px,5.5vw,60px);line-height:1.05;letter-spacing:2px;margin-bottom:8px;color:var(--white);">WINDOW <em style="font-style:normal;color:var(--red-accent);">CLEANING</em></p>
         <img src="/HeroCleaner_white.png" alt="Hero Cleaners" style="width:180px;height:auto;object-fit:contain;flex-shrink:0;margin-bottom:4px;">
       </div>
+  <h1 style="font-family:var(--font-body);font-size:clamp(20px,2.4vw,28px);font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.5px;line-height:1.3;margin-bottom:16px;">Window Cleaning in Logan, Utah</h1>
   <p>Let the light in. Hero Cleaners has been Cache Valley&rsquo;s go-to window cleaning team since 2019 &mdash; residential and commercial window washing across Logan, Utah and every city in the valley. Interior, exterior, screens, tracks, and sills done right, every time.</p>
   <div class="page-hero-actions">
     <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" onClick="HCPWidget.openModal()" style="background:#D32F2F;border-color:#D32F2F;color:white;;font-weight:700;">Book Online</button>
@@ -286,13 +289,13 @@
 </div></div></section><footer><div class="container">
   <div class="footer-grid">
     <div class="footer-brand">
-      <img src="/HeroCleaners-logo.png" alt="Hero Cleaners" class="footer-logo">
+      <img src="/hero-cleaners-stacked.png" alt="Hero Cleaners" class="footer-logo">
       <p>Cache Valley's most trusted cleaning service. Built on relationships, driven by service. Locally owned since 2019.</p>
       <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.97-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(435) 277-0370</div>
       <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>herocleanersinfo@gmail.com</div>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Recurring Cleaning</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Clean</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/faq">FAQ</a></li><li><a href="/contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Recurring Cleaning</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/referral">Refer a Friend</a></li><li><a href="/contact">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/service-areas#logan">Logan, UT</a></li><li><a href="/house-cleaning-north-logan-utah">North Logan</a></li><li><a href="/house-cleaning-smithfield-utah">Smithfield</a></li><li><a href="/service-areas">View All &#x2192;</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>&copy; 2026 Hero Cleaners LLC &middot; Logan, UT &middot; All rights reserved.</p><p><a href="/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p></div>
