@@ -93,6 +93,9 @@
     .check-list li::before{content:'\2713';color:var(--red);font-weight:700;font-size:15px;flex-shrink:0;margin-top:1px;}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
     .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+    .plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start;}
+    @media(max-width:1100px){.plans-grid{grid-template-columns:repeat(2,1fr);gap:24px;}}
+    @media(max-width:640px){.plans-grid{grid-template-columns:1fr;}}
     .card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:32px;transition:all 0.25s ease;}
     .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(183,28,28,0.2);}
     .card-icon{width:52px;height:52px;background:rgba(183,28,28,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
@@ -206,21 +209,22 @@
     <p class="section-sub">Not sure which one is right? Most families land on bi-weekly. But if weekly fits your life, it keeps your home consistently clean with a shorter visit each time &mdash; and we'll help you figure it out after you book.</p>
   </div>
 
-  <div class="three-col" style="align-items:start;">
+  <div class="plans-grid">
 
     <!-- WEEKLY -->
-    <div class="plan-card">
+    <div class="plan-card featured">
+      <div class="plan-badge" style="background:#2E7D32;">&#x1F4B0; Best Value</div>
       <div class="plan-icon">&#x1F504;</div>
       <div class="plan-name">WEEKLY</div>
-      <div class="plan-tagline">The most frequent &mdash; and the lowest price per visit</div>
-      <div class="plan-price-row"><div class="plan-price">$119</div><div class="plan-price-unit">per visit</div></div>
-      <div class="plan-price-note">$60/hr &middot; 2-hour visit &middot; your home stays consistently clean</div>
+      <div class="plan-tagline">The biggest discount &mdash; lowest per-hour rate of any plan</div>
+      <div class="plan-price-row"><div class="plan-price">$99</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note"><strong style="color:#2E7D32;">$50/hr</strong> &middot; 2-hour visit &middot; the most savings</div>
       <ul class="plan-includes">
-        <li>Your home never gets a chance to feel messy</li>
-        <li>Same trusted cleaners visit after visit &mdash; no explaining yourself every time</li>
-        <li>Lowest price per visit &mdash; shorter cleans because your home stays on top of it</li>
+        <li>Your home never has a chance to feel messy</li>
+        <li>Same trusted cleaners visit after visit</li>
+        <li>Best per-hour rate of any plan &mdash; weekly customers save the most</li>
         <li>Perfect for busy households, families with kids, or pet owners</li>
-        <li>After your first visit, we'll dial in the scope to exactly what your home needs</li>
+        <li>Shorter cleans because your home stays on top of it</li>
       </ul>
       <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-secondary" style="background:#D32F2F;color:white;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Weekly</button>
     </div>
@@ -231,8 +235,8 @@
       <div class="plan-icon">&#x1F5D3;&#xFE0F;</div>
       <div class="plan-name">BI-WEEKLY</div>
       <div class="plan-tagline">The sweet spot &mdash; what most Cache Valley families choose</div>
-      <div class="plan-price-row"><div class="plan-price">$149</div><div class="plan-price-unit">per visit</div></div>
-      <div class="plan-price-note">$60/hr &middot; 2.5-hour visit &middot; most popular plan</div>
+      <div class="plan-price-row"><div class="plan-price">$119</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note">$60/hr &middot; 2-hour visit &middot; most popular plan</div>
       <ul class="plan-includes">
         <li>Every two weeks keeps your home genuinely clean</li>
         <li>Same trusted cleaners visit after visit &mdash; they'll know your home well</li>
@@ -248,8 +252,8 @@
       <div class="plan-icon">&#x1F4C6;</div>
       <div class="plan-name">MONTHLY</div>
       <div class="plan-tagline">A solid reset &mdash; best if you stay on top of it yourself in between</div>
-      <div class="plan-price-row"><div class="plan-price">$209</div><div class="plan-price-unit">per visit</div></div>
-      <div class="plan-price-note">$60/hr &middot; 3.5-hour visit &middot; more time needed between monthly cleans</div>
+      <div class="plan-price-row"><div class="plan-price">$179</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note">$60/hr &middot; 3-hour visit &middot; more time between visits</div>
       <ul class="plan-includes">
         <li>We do the deep work so you maintain the result</li>
         <li>Same trusted cleaners, same standards every time</li>
@@ -260,6 +264,23 @@
       <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-secondary" style="background:#D32F2F;color:white;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Monthly</button>
     </div>
 
+    <!-- QUARTERLY -->
+    <div class="plan-card">
+      <div class="plan-icon">&#x1F343;</div>
+      <div class="plan-name">QUARTERLY</div>
+      <div class="plan-tagline">A seasonal reset &mdash; four times a year, the home gets the full treatment</div>
+      <div class="plan-price-row"><div class="plan-price">$239</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note">$60/hr &middot; 4-hour visit &middot; full seasonal reset</div>
+      <ul class="plan-includes">
+        <li>Top-to-bottom deep clean every season</li>
+        <li>Same trusted cleaners who know your home</li>
+        <li>Good fit if you handle weekly cleaning yourself and want quarterly help</li>
+        <li>Longer visit catches the spots regular cleaning skips</li>
+        <li>After your first visit we'll dial in exactly what to focus on each quarter</li>
+      </ul>
+      <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-secondary" style="background:#D32F2F;color:white;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Quarterly</button>
+    </div>
+
   </div>
 
   <!-- CUSTOMIZE NOTE -->
@@ -267,7 +288,7 @@
     <div style="font-size:24px;flex-shrink:0;">&#x1F4AC;</div>
     <div>
       <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);margin-bottom:5px;">Pricing is straightforward &mdash; and flexible after your first visit</div>
-      <div style="font-size:14px;color:var(--gray);line-height:1.7;">All plans are priced at $60/hr. The visit times shown are what we plan for upfront &mdash; but after your first clean, we'll dial in the scope to exactly what your home needs. If your home takes less time, the price reflects that. We talk through all of this when we reach out after you book.</div>
+      <div style="font-size:14px;color:var(--gray);line-height:1.7;">Bi-Weekly, Monthly, and Quarterly are priced at $60/hr; Weekly drops to $50/hr because consistent visits keep things in shape. The visit times shown are what we plan for upfront &mdash; but after your first clean, we'll dial in the scope to exactly what your home needs. If your home takes less time, the price reflects that. We talk through all of this when we reach out after you book.</div>
     </div>
   </div>
 
@@ -332,9 +353,10 @@
         <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:16px;">
           <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;">Rate Summary</div>
           <div style="display:flex;flex-direction:column;gap:8px;">
-            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Weekly</span><strong style="color:white;">$60/hr &middot; 2 hrs &middot; $119/visit</strong></div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Bi-Weekly</span><strong style="color:white;">$60/hr &middot; 2.5 hrs &middot; $149/visit</strong></div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Monthly</span><strong style="color:white;">$60/hr &middot; 3.5 hrs &middot; $209/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Weekly</span><strong style="color:white;">$50/hr &middot; 2 hrs &middot; $99/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Bi-Weekly</span><strong style="color:white;">$60/hr &middot; 2 hrs &middot; $119/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Monthly</span><strong style="color:white;">$60/hr &middot; 3 hrs &middot; $179/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Quarterly</span><strong style="color:white;">$60/hr &middot; 4 hrs &middot; $239/visit</strong></div>
             <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6;">After your first visit, we customize the scope to exactly what your home needs.</div>
           </div>
         </div>
