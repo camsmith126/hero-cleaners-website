@@ -5,8 +5,8 @@
 /first-time             /deep-clean             301
 /Move-Out               /deep-clean             301
 /move-out               /deep-clean             301
-/Commercial             /commercial-cleaning    301
-/commercial             /commercial-cleaning    301
+/Commercial             /                       301
+/commercial             /                       301
 /Window-washing         /window-washing         301
 /about-us               /about                  301
 /About-Us               /about                  301
@@ -20,7 +20,7 @@
 
 # Old WordPress URLs → closest new pages
 /house-cleaning/                    /recurring-cleaning     301
-/commercial-cleaning/               /commercial-cleaning    301
+/commercial-cleaning/               /                       301
 /window-washing/                    /window-washing         301
 /contact/                           /contact                301
 /about/                             /about                  301

@@ -6,6 +6,21 @@
   NODE_VERSION = "18"
 
 # ============================================================
+# SAME-DOMAIN PATH REDIRECTS — removed pages on theherocleaners.com
+# ============================================================
+
+# Phase B.1 (2026-06-01): commercial-cleaning page removed during
+# residential-first pivot. Redirect to homepage so any indexed link or
+# cached search result lands on a real page instead of a 404.
+# When B.13 (/small-business-cleaning) ships, update the `to` target
+# to /small-business-cleaning.
+[[redirects]]
+  from = "/commercial-cleaning"
+  to = "/"
+  status = 301
+  force = true
+
+# ============================================================
 # DOMAIN-LEVEL REDIRECTS — old slug to new slug (MUST come first)
 # These handle old herocleanersllc.com URLs that Google has indexed
 # ============================================================
