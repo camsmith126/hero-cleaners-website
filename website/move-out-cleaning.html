@@ -163,6 +163,9 @@
     .card p { color: rgba(255,255,255,0.85); }
     .card strong { color: var(--white); }
     .card .card-icon { background: rgba(255,255,255,0.12); }
+.dark-card{background:linear-gradient(135deg,var(--black) 0%,var(--red-accent) 100%);border-radius:16px;padding:40px;color:var(--white);position:relative;overflow:hidden;}
+.dark-card::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(183,28,28,0.3) 0%,transparent 70%);pointer-events:none;}
+.dark-card-content{position:relative;z-index:1;}
 </style>
   <script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
 </head>
