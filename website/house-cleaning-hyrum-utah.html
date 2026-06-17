@@ -78,11 +78,11 @@
     /* HERO */
     .hero { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); padding: 80px 0 70px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -60px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(183,28,28,0.25) 0%, transparent 70%); pointer-events: none; }
-    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
     .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(183,28,28,0.2); border: 1px solid rgba(183,28,28,0.5); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red-light); margin-bottom: 20px; }
     .hero-badge-dot { width: 8px; height: 8px; background: var(--red-accent); border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.3)} }
-    .hero h1 { font-family: var(--font-display); font-size: clamp(48px, 6vw, 72px); line-height: 1; letter-spacing: 2px; margin-bottom: 8px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(38px, 4.8vw, 56px); line-height: 1.05; letter-spacing: 2px; margin-bottom: 8px; }
     .hero h1 em { font-style: normal; color: var(--red-accent); }
     .hero-sub { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; line-height: 1.6; max-width: 460px; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; flex-direction: column; align-items: stretch; }
@@ -145,7 +145,7 @@
     .why-feature-icon { font-size: 28px; margin-bottom: 12px; }
     .why-feature h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
     .why-feature p { font-size: 13px; color: var(--gray); line-height: 1.6; }
-    .why-story { padding: 40px; background: var(--black); border-radius: 16px; color: var(--white); position: relative; overflow: hidden; }
+    .why-story { padding: 40px; background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); border-radius: 16px; color: var(--white); position: relative; overflow: hidden; }
     .why-story::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(183,28,28,0.3) 0%, transparent 70%); }
     .why-story-content { position: relative; z-index: 1; }
     .why-story-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red-light); margin-bottom: 16px; }
@@ -361,7 +361,7 @@
       <div>
         <div class="hero-badge"><div class="hero-badge-dot"></div>Locally Owned &middot; Hyrum, Utah &middot; Since 2019</div>
         <div style="display:flex;align-items:center;gap:16px;">
-        <p style="font-family:var(--font-display);font-size:clamp(48px,7vw,80px);line-height:1.05;letter-spacing:2px;margin-bottom:0;color:var(--white);">WE CLEAN.<br><em style="font-style:normal;color:var(--red-accent);">YOU RELAX.</em></p>
+        <p style="font-family:var(--font-display);font-size:clamp(38px,4.8vw,56px);line-height:1.05;letter-spacing:2px;margin-bottom:0;color:var(--white);">WE CLEAN HOMES.<br><em style="font-style:normal;color:var(--red-accent);">AND WE&rsquo;RE REALLY GOOD AT IT.</em></p>
         <img src="/HeroCleaner_white.png" alt="Hero Cleaners" style="width:180px;height:auto;object-fit:contain;flex-shrink:0;margin-bottom:4px;">
       </div>
         <h1 style="font-family:var(--font-body);font-size:clamp(20px,2.4vw,28px);font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.5px;line-height:1.3;margin-top:8px;margin-bottom:16px;">House Cleaning in Hyrum, Utah</h1>
@@ -474,7 +474,7 @@
     <div class="why-inner">
       <div>
         <span class="section-label">The Hero Cleaners Difference</span>
-        <h2 class="section-title">MOST COMPANIES ARE GOOD AT <em>A FEW THINGS.</em> WE'RE GREAT AT ALL OF THEM.</h2>
+        <h2 class="section-title">WE CLEAN. <em>YOU RELAX.</em></h2>
         <p class="section-sub" style="margin-bottom:40px;">Quality of work is just the starting point. It's the communication, the reliability, the people &mdash; that's what keeps our customers coming back year after year.</p>
         <div class="why-features">
           <div class="why-feature"><div class="why-feature-icon">&#x1F91D;</div><h4>Real Relationships</h4><p>You'll know your cleaners by name. They'll know your home. That's the way we like it.</p></div>
