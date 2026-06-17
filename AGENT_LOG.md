@@ -41,6 +41,58 @@ Sections can be omitted if empty for a given session. Keep entries short. Future
 
 ## Entries
 
+## 2026-06-08 (latest) — Cam review pass: F1/F3 rewording + full Brand Vault icon rollout + keyword H2 weave (commit 3e3da5e)
+
+- Decision (F3 trust-bar): Cam ruled the canonical phrase "we fix it before we go" reads odd without its conditional setup; the trust-bar context truncated it. Replaced trust-bar item with "Background-Checked Team" + bullet_check icon. CTA trust row keeps "If it's not right, we fix it" (conditional intact) and FAQ keeps the full sentence — both read fine.
+- Decision (F1 headline): Cam reworded "WE DON'T DO IT ALL. WE DO ONE THING EXCELLENTLY." to "WE CLEAN HOMES. AND WE'RE REALLY GOOD AT IT." (two-line device, whole second line wrapped in <em> red per VisualSystemSpec §3 headline-device convention).
+- Decision (F1 subhead): Cam — "we don't need to stress the fact that we dropped all these other services to focus on one thing. people don't care." Dropped the turning-point/jack-of-all-trades framing. New subhead leads with what we actually do ("7,800+ homes across Cache Valley since 2019") and lands the canonical anchor "People pay for a clean. They stay for the people" verbatim. Page Brief Body-layer anchor preserved; the why-we-focused frame removed.
+- Completed: full Brand Vault icon rollout on the homepage. Copied 9 new canonical icons from `Brand Vault/assets/icons/svg/{variant}/` into `website/assets/icons/`, picking variant by background per assets/README §"Which variant on which background":
+  - Trust bar (red bg, mono_white): trust_insured, trust_scheduling, bullet_check, trust_local.
+  - Hero card service quick-links (white bg, onlight): service_recurring, service_maid, service_deepclean, service_window.
+  - Services grid cards (white bg, onlight): service_recurring, service_deepclean, service_window.
+  - CTA trust row (red bg, mono_white): bullet_check, trust_wecall, trust_makeitright (already in place), trust_local.
+  - 15 canonical icon references in index.html, 10 unique SVG files; all serve 200 on the Deploy Preview.
+- Completed (SEO): secondary-keyword H2 weave on the services grid section header: "SERVICES BUILT FOR REAL LIFE" -> "HOUSE CLEANING SERVICES BUILT FOR REAL LIFE." Per Page Brief structural-layer secondary keyword list ("cleaning services logan ut", "residential cleaning logan utah" etc.). Title/meta/H1 unchanged — head term still anchors the structural layer there.
+- Verification: clean build (48 files, 0 errors), single H1, DOCTYPE intact, 0 retired hex, 10 canonical icons in build output, all serve 200 on preview, F1 anchor + new trust-bar phrase + new H2 wording all present on the rendered preview.
+- For Conductor:
+  - **Brand-canon F3 phrasing readability**: the canonical phrase fails the short-context comprehension test (trust bar). Works fine when the conditional is intact (CTA trust row, FAQ). Worth a Brand Vault revisit on whether the homepage trust-bar truncation pattern should drive a phrase rework, or whether the rule is just "always carry the conditional."
+  - **No `trust_background_check` icon in the arsenal** — used `bullet_check_mono_white.svg` as the closest semantic fit. Possible addition to the arsenal next time the Brand Foundation Project ships icons.
+  - **F2 site-wide still pending** (recurring-cleaning, maid-service, service-areas). Out of scope here.
+  - **Commercial cleaning footprint still on the homepage** — quick-link + service card both untouched here; both removed by Phase B.1 PR #2.
+- Open: Cam reviews the updated Deploy Preview on PR #3.
+
+## 2026-06-08 (later) — Brand Vault verify + canonical icon swap + F1 anchor
+
+- Completed: ran the verification + finish-up loop the prior session could not. Read the four canonical docs the sandbox could not reach (page-briefs/homepage.md, WebsiteStrategicBrief_v1.md §0/§2/§3/§4, BrandFoundation_v1.md §1/§5/§6/§8, Hero_VisualSystemSpec_v1.md + assets/README.md). Continued on branch `homepage-f1-f4-layering`; pushed commit cbb051c on top of the prior session's ad6d47b + 02d5cb3.
+- Verified against canon:
+  - **Layering Rule** — H1 plain head term + brand device demoted to `<p>` + descriptive logo alt: all correct vs Page Brief §"H1 direction" + brief §0 Worked example. No change.
+  - **F1 headline** — "WE DO ONE THING EXCELLENTLY" is on-canon per v1.1 §8. **F1 subhead refined** to land the canonical anchor phrase "People pay for a clean. They stay for the people" (v1.1 §2) per Page Brief Body-layer §"Headline angle" — the prior subhead had the right angle but did not land the canonical line.
+  - **F3 copy** — "We Fix It Before We Go" / "if it's not right, we fix it" in all three sites (trust bar, CTA trust row, FAQ). On-canon vs brief §2 F3.
+  - **F3 icon** — **swapped the stand-in circle-check SVG for the canonical `trust_makeitright_mono_white.svg`** in both red-background sites (trust bar + CTA trust row). Variant choice per assets/README §"Which variant on which background" (red CTA blocks → mono_white). Asset copied from Brand Vault → `website/assets/icons/`; Vault stays read-only.
+  - **F4 colors** — 0 retired hex remain (verified across all 13 pages). No change needed.
+  - **F2** — confirmed not applicable on the homepage. Only "same cleaner" reference is FAQ answer using honest §5 phrasing.
+- Verification: clean Eleventy build (48 files, 0 errors), `/assets/icons/trust_makeitright_mono_white.svg` ships, single H1, DOCTYPE intact. Deploy Preview re-built and smoke-tested live at deploy-preview-3 URL: F1 anchor present, both icon references resolve, asset serves 200.
+- For Conductor:
+  - **F2 site-wide cleanup pending** — three pages still carry the "Same Cleaner Every Visit" absolute (recurring-cleaning.html, maid-service.html, service-areas.html). Out of scope for the homepage PR; future Page Brief loops on those pages should land it.
+  - **Commercial cleaning still visible on the homepage** at the time of this PR (og:description, service quick-link, COMMERCIAL CLEANING service card, footer Services list). This is the Phase B.1 PR's job (#2 on `phase-b1-remove-commercial`). Both PRs touch the homepage; whichever merges second will need a quick reconcile.
+- Open: Cam reviews the updated Deploy Preview on PR #3, approves merge.
+
+## 2026-06-08 — Homepage brand-fix execution (first Page Brief loop run)
+
+- Completed: first end-to-end run of the Page Brief production loop, executed against `../../Residential Research Agent/page-briefs/homepage.md`. Branch `homepage-f1-f4-layering`, commit ad6d47b. Draft-first: committed, NOT pushed — awaiting Cam to push + approve the Netlify preview before merge.
+- F1: reframed "Hero Difference" headline breadth->depth ("we do one thing excellently"). F3: generic "satisfaction guaranteed" -> "if something isn't right, we fix it before we go" (trust bar, CTA row, FAQ). F4: retired-hex swap across ALL 13 pages -> locked VisualSystemSpec values.
+- Decision (Layering Rule markup resolution): the homepage H1 was the brand device "WE CLEAN. YOU RELAX." — a body-layer line in a structural slot. Resolved by making the H1 the plain head term "House Cleaning in Logan, Utah" and demoting the brand line to `<p class="hero-brand-device">` (visually identical, body layer). Chose minimal-disruption preservation of the hero visual over a layout restructure.
+- Decision (F2): the live homepage trust bar carried NO "Same Cleaner Every Visit" absolute; the service card already reads "Same trusted team every visit" and the FAQ already uses the conditioned §5 phrasing. No change made — per brief §2 "don't over-correct good pages."
+- Decision (F4 scope): there is NO shared stylesheet — every page has its own inline `<style>`, contrary to the brief's "single stylesheet swap" assumption. Per Cam, ran the swap mechanically across all 13 `website/*.html` (exact-hex, color-only). Verified 0 retired hex remain, DOCTYPE intact, clean Eleventy build.
+- For Conductor / cross-agent:
+  - **Brand Vault + Residential Research Agent folders were NOT connected this session** — only the three agent folders are. Executed from canon embedded in CLAUDE.md + the session brief; could not read the Page Brief / BrandFoundation / VisualSystemSpec verbatim, and could not use the canonical `trust_makeitright` arsenal icon. Used an on-pattern circle-check inline SVG as a stand-in. **Follow-up: swap in the canonical `trust_makeitright` asset once Brand Vault is connected.**
+  - **Commercial cleaning is still visible on the homepage** (nav dropdown, a service card, footer links, OG + LocalBusiness schema "commercial services") — out of scope here but contradicts residential-first / commercial-off-website (Phase B.1). Flagging for the dedicated commercial-removal session.
+  - **Retired hex was site-wide** (B71C1C x54, D32F2F x79, 1A1A1A x29, rgb 183,28,28 x101 across 13 files) — all fixed on this branch. New pages must start from the locked values.
+- Open for Cam:
+  - **Push the branch** (sandbox has no GitHub creds): `git push -u origin homepage-f1-f4-layering` -> Netlify generates the Deploy Preview. Review, then merge if good.
+  - **Stale git locks**: sandbox left 0-byte `.git/index.lock`, `.git/HEAD.lock`, `.git/objects/maintenance.lock` it couldn't delete. They don't block `push`, but clear them before any local checkout/merge: `rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock`.
+  - Confirm the F1 headline + the new plain H1 read right to you.
+
 ## 2026-06-02 (latest) — Visual Arsenal + VisualSystemSpec v1.1 propagated
 
 - Completed: VisualSystemSpec is now at **v1.1** in the Vault — adds **Slate Gray `#5B6B7A`** as a locked structural-support color (alongside Hero Red `#D92429`, Hero Black `#171E26`, white). Slate is for organize/recede contexts (secondary buttons, dividers, footers, muted badges), never for emphasis (red owns emphasis).

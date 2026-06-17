@@ -56,7 +56,7 @@
   </script>
 
   <style>
-    :root{--red:#B71C1C;--red-accent:#D32F2F;--red-light:#FFCDD2;--black:#1A1A1A;--charcoal:#2D2D2D;--gray:#757575;--white:#FFFFFF;--off-white:#FAFAFA;--border:#EEEEEE;--font-display:'Bebas Neue',Impact,Arial Black,sans-serif;--font-body:'Open Sans',Helvetica Neue,Arial,sans-serif;--shadow-sm:0 2px 8px rgba(0,0,0,0.08);--shadow-md:0 4px 20px rgba(0,0,0,0.12);--radius:8px;--transition:0.2s ease;}
+    :root{--red:#D92429;--red-accent:#D92429;--red-light:#FFCDD2;--black:#171E26;--charcoal:#2D2D2D;--gray:#757575;--white:#FFFFFF;--off-white:#FAFAFA;--border:#EEEEEE;--font-display:'Bebas Neue',Impact,Arial Black,sans-serif;--font-body:'Open Sans',Helvetica Neue,Arial,sans-serif;--shadow-sm:0 2px 8px rgba(0,0,0,0.08);--shadow-md:0 4px 20px rgba(0,0,0,0.12);--radius:8px;--transition:0.2s ease;}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{font-family:var(--font-body);color:var(--black);background:var(--white);line-height:1.6;overflow-x:hidden;}
@@ -66,10 +66,10 @@
     .container{max-width:1140px;margin:0 auto;padding:0 24px;}
     .announcement-bar{background:var(--black);color:var(--white);text-align:center;padding:10px 24px;font-size:13px;font-weight:600;}
     .announcement-bar a{color:var(--red-light);text-decoration:underline;}
-    .page-hero{background:linear-gradient(135deg,var(--black) 0%,var(--charcoal) 100%);color:var(--white);padding:80px 0;position:relative;overflow:hidden;}
-    .page-hero::before{content:'';position:absolute;top:-60px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(183,28,28,0.25) 0%,transparent 70%);pointer-events:none;}
+    .page-hero{background:linear-gradient(135deg,var(--black) 0%,var(--red-accent) 100%);color:var(--white);padding:80px 0;position:relative;overflow:hidden;}
+    .page-hero::before{content:'';position:absolute;top:-60px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(217,36,41,0.25) 0%,transparent 70%);pointer-events:none;}
     .page-hero-inner{position:relative;z-index:1;max-width:760px;}
-    .page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(183,28,28,0.2);border:1px solid rgba(183,28,28,0.5);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red-light);margin-bottom:20px;}
+    .page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(217,36,41,0.2);border:1px solid rgba(217,36,41,0.5);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red-light);margin-bottom:20px;}
     .page-hero h1{font-family:var(--font-display);font-size:clamp(44px,6vw,68px);line-height:1;letter-spacing:2px;margin-bottom:20px;}
     .page-hero h1 em{font-style:normal;color:var(--red-accent);}
     .page-hero p{font-size:18px;color:rgba(255,255,255,0.8);max-width:620px;line-height:1.7;margin-bottom:32px;}
@@ -98,8 +98,8 @@
     .check-list li:last-child{border-bottom:none;}
     .check-list li::before{content:'\2713';color:var(--red);font-weight:700;font-size:15px;flex-shrink:0;margin-top:1px;}
     .card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:32px;transition:all 0.25s ease;}
-    .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(183,28,28,0.2);}
-    .card-icon{width:52px;height:52px;background:rgba(183,28,28,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
+    .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(217,36,41,0.2);}
+    .card-icon{width:52px;height:52px;background:rgba(217,36,41,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
     .card h3{font-family:var(--font-display);font-size:20px;letter-spacing:1px;margin-bottom:10px;}
     .card p{font-size:14px;color:var(--gray);line-height:1.7;}
     .cta-section{background:var(--red);padding:80px 0;}
@@ -124,8 +124,8 @@
     .nav-dropdown-menu{display:none;position:absolute;top:100%;left:-8px;background:#fff;border:1px solid #eeeeee;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.12);min-width:215px;z-index:300;padding:6px 0;margin-top:0;}
     .nav-dropdown:hover .nav-dropdown-menu{display:block;}
     .nav-dropdown-menu li{list-style:none;}
-    .nav-dropdown-menu a{display:block!important;padding:11px 20px;color:#1A1A1A!important;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;}
-    .nav-dropdown-menu a:hover{background:#FFF5F5;color:#B71C1C!important;}
+    .nav-dropdown-menu a{display:block!important;padding:11px 20px;color:#171E26!important;font-size:14px;font-weight:600;white-space:nowrap;text-decoration:none;}
+    .nav-dropdown-menu a:hover{background:#FFF5F5;color:#D92429!important;}
     .nav-dropdown-menu a::after{display:none!important;content:none!important;}
     .nav-cta{display:flex;align-items:center;gap:16px;}
     .nav-phone{font-size:15px;font-weight:700;color:var(--black);display:flex;align-items:center;gap:6px;}
@@ -175,7 +175,7 @@
     <li><a href="/blog">Blog</a></li>
   </ul>
   <div class="nav-cta">
-    <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary" onClick="HCPWidget.openModal()" style="background:#D32F2F;border-color:#D32F2F;color:white;font-weight:700;">Book Online</button>
+    <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary" onClick="HCPWidget.openModal()" style="background:#D92429;border-color:#D92429;color:white;font-weight:700;">Book Online</button>
   </div>
   <button class="hamburger"><span></span><span></span><span></span></button>
 </div></div></nav>
