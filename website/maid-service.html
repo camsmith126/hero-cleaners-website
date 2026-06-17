@@ -97,7 +97,7 @@
     .check-list li{font-size:15px;color:var(--charcoal);padding:10px 0;display:flex;align-items:flex-start;gap:12px;border-bottom:1px solid var(--border);}
     .check-list li:last-child{border-bottom:none;}
     .check-list li::before{content:'\2713';color:var(--red);font-weight:700;font-size:15px;flex-shrink:0;margin-top:1px;}
-    .card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:32px;transition:all 0.25s ease;}
+    .card{background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:32px;transition:all 0.25s ease;}
     .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(183,28,28,0.2);}
     .card-icon{width:52px;height:52px;background:rgba(183,28,28,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
     .card h3{font-family:var(--font-display);font-size:20px;letter-spacing:1px;margin-bottom:10px;}
@@ -147,7 +147,16 @@
     .footer-bottom a{color:rgba(255,255,255,0.35);}
     @media(max-width:1024px){.two-col{grid-template-columns:1fr;gap:40px;}.three-col{grid-template-columns:1fr 1fr;}.city-grid{grid-template-columns:repeat(3,1fr);}.footer-grid{grid-template-columns:1fr 1fr;}}
     @media(max-width:768px){section{padding:60px 0;}.nav-links{display:none;}.nav-phone{display:none;}.hamburger{display:flex;}.three-col{grid-template-columns:1fr;}.city-grid{grid-template-columns:repeat(2,1fr);}.page-hero-actions{flex-direction:column;}.footer-grid{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}}
-  </style>
+  
+    .why-feature h4 { color: var(--white); }
+    .why-feature p { color: rgba(255,255,255,0.85); }
+    .why-feature .why-feature-icon { background: rgba(255,255,255,0.12); }
+    .card h3 { color: var(--white); }
+    .card h4 { color: var(--white); }
+    .card p { color: rgba(255,255,255,0.85); }
+    .card strong { color: var(--white); }
+    .card .card-icon { background: rgba(255,255,255,0.12); }
+</style>
   <script async src="https://online-booking.housecallpro.com/script.js?token=783f337442754ad48f775d1fd385cbbb&orgName=Hero-Cleaners"></script>
 </head>
 <body>
@@ -204,11 +213,11 @@
     <p class="section-sub">Pick what fits where you are right now &mdash; or do both. Most customers start with a Deep Cleaning to reset, then move into a Cleaning Plan to keep it that way.</p>
   </div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;max-width:1100px;margin-left:auto;margin-right:auto;" id="cleaning-plans">
-    <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:36px;">
-      <div style="font-family:var(--font-display);font-size:32px;letter-spacing:1px;color:var(--black);margin-bottom:8px;">CLEANING PLANS</div>
-      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:20px;">Recurring &middot; Most Popular</div>
-      <p style="font-size:15px;color:var(--charcoal);line-height:1.7;margin-bottom:20px;">Weekly, bi-weekly, or monthly maid service with the same trusted cleaners every visit. They learn your home, your preferences, your schedule &mdash; and you stop thinking about cleaning altogether.</p>
-      <ul style="list-style:none;padding-left:0;margin-bottom:24px;font-size:14px;color:var(--charcoal);line-height:1.9;">
+    <div style="background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:16px;padding:36px;">
+      <div style="font-family:var(--font-display);font-size:32px;letter-spacing:1px;color:var(--white);margin-bottom:8px;">CLEANING PLANS</div>
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--red-light);margin-bottom:20px;">Recurring &middot; Most Popular</div>
+      <p style="font-size:15px;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:20px;">Weekly, bi-weekly, or monthly maid service with the same trusted cleaners every visit. They learn your home, your preferences, your schedule &mdash; and you stop thinking about cleaning altogether.</p>
+      <ul style="list-style:none;padding-left:0;margin-bottom:24px;font-size:14px;color:rgba(255,255,255,0.9);line-height:1.9;">
         <li>&#x2714; Same housekeepers every visit</li>
         <li>&#x2714; All rooms, kitchens &amp; bathrooms</li>
         <li>&#x2714; Pause, skip, or cancel anytime</li>
@@ -217,10 +226,10 @@
       <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary" onClick="HCPWidget.openModal()" style="width:100%;">Book a Cleaning Plan</button>
     </div>
     <div style="background:var(--white);border:1.5px solid var(--border);border-radius:16px;padding:36px;" id="deep-cleaning">
-      <div style="font-family:var(--font-display);font-size:32px;letter-spacing:1px;color:var(--black);margin-bottom:8px;">DEEP CLEANING</div>
-      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--red);margin-bottom:20px;">One-Time &middot; Full Reset</div>
-      <p style="font-size:15px;color:var(--charcoal);line-height:1.7;margin-bottom:20px;">A thorough, top-to-bottom clean that gets every corner the regular routine skips. Perfect before starting a Cleaning Plan, after a renovation, or just as a seasonal reset.</p>
-      <ul style="list-style:none;padding-left:0;margin-bottom:24px;font-size:14px;color:var(--charcoal);line-height:1.9;">
+      <div style="font-family:var(--font-display);font-size:32px;letter-spacing:1px;color:var(--white);margin-bottom:8px;">DEEP CLEANING</div>
+      <div style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--red-light);margin-bottom:20px;">One-Time &middot; Full Reset</div>
+      <p style="font-size:15px;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:20px;">A thorough, top-to-bottom clean that gets every corner the regular routine skips. Perfect before starting a Cleaning Plan, after a renovation, or just as a seasonal reset.</p>
+      <ul style="list-style:none;padding-left:0;margin-bottom:24px;font-size:14px;color:rgba(255,255,255,0.9);line-height:1.9;">
         <li>&#x2714; Inside ovens, fridges, microwaves</li>
         <li>&#x2714; Baseboards, blinds, ceiling fans</li>
         <li>&#x2714; Detailed bathroom &amp; kitchen scrub</li>
