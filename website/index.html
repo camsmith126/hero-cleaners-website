@@ -123,7 +123,7 @@
     /* SERVICES */
     .services { background: var(--off-white); }
     .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .service-card { background: var(--white); border-radius: 12px; padding: 32px 28px; border: 1.5px solid var(--border); transition: all 0.25s ease; position: relative; overflow: hidden; cursor: pointer; }
+    .service-card { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); border-radius: 12px; padding: 32px 28px; border: 1.5px solid rgba(255,255,255,0.1); transition: all 0.25s ease; position: relative; overflow: hidden; cursor: pointer; }
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
     .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: rgba(183,28,28,0.2); }
     .service-card:hover::before { transform: scaleX(1); }
@@ -172,7 +172,7 @@
     .reviews-meta .stars { font-size: 20px; display: block; margin-bottom: 4px; }
     .reviews-meta span { font-size: 13px; color: var(--gray); font-weight: 600; }
     .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-    .review-card { background: var(--off-white); border-radius: 12px; padding: 28px; border: 1.5px solid var(--border); transition: all var(--transition); }
+    .review-card { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); border-radius: 12px; padding: 28px; border: 1.5px solid rgba(255,255,255,0.1); transition: all var(--transition); }
     .review-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
     .review-stars { color: #F59E0B; font-size: 16px; margin-bottom: 14px; }
     .review-text { font-size: 14px; color: var(--charcoal); line-height: 1.7; margin-bottom: 20px; font-style: italic; }
@@ -196,7 +196,7 @@
     .faq { background: var(--off-white); }
     .faq-inner { display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start; }
     .faq-list { display: flex; flex-direction: column; gap: 12px; }
-    .faq-item { background: var(--white); border: 1.5px solid var(--border); border-radius: 10px; overflow: hidden; }
+    .faq-item { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden; }
     .faq-item.open { border-color: rgba(183,28,28,0.3); }
     .faq-question { width: 100%; background: none; border: none; padding: 20px 24px; text-align: left; font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--black); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
     .faq-question:hover { color: var(--red); }
@@ -257,7 +257,21 @@
   
     .hcp-button.btn-primary, .hcp-button.plan-cta-primary { background: var(--red-accent) !important; }
     .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #B71C1C !important; }
-  </style>
+  
+    .service-card h3 { color: var(--white); }
+    .service-card p { color: rgba(255,255,255,0.85); }
+    .service-card .service-card-includes li { color: rgba(255,255,255,0.85); }
+    .service-card .service-card-includes li::before { color: var(--red-light); }
+    .service-card .service-link { color: var(--red-light); }
+
+    .review-card .review-text { color: rgba(255,255,255,0.9); }
+    .review-card .review-author-info strong { color: var(--white); }
+    .review-card .review-author-info span { color: rgba(255,255,255,0.7); }
+
+    .faq-item .faq-question { color: var(--white); }
+    .faq-item .faq-toggle { color: var(--red-light); }
+    .faq-item .faq-answer-inner { color: rgba(255,255,255,0.85); }
+</style>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://theherocleaners.com/">
