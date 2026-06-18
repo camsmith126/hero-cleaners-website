@@ -8,7 +8,7 @@
     gtag('config', 'G-8RKK7PMPJ0');
   </script>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Recurring Cleaning &amp; Maid Service Logan UT | Hero Cleaners</title><meta name="description" content="Weekly, bi-weekly, or monthly maid service and recurring house cleaning in Logan and Cache Valley. Same trusted cleaner every visit, transparent pricing, locally owned. Hero Cleaners &mdash; (435) 277-0370."/>
+  <title>Cleaning Plans in Logan, Utah | Hero Cleaners</title><meta name="description" content="Cleaning Plans by Hero Cleaners — weekly, bi-weekly, monthly, or quarterly maid service in Logan, Utah and Cache Valley. Same trusted cleaners."/>
   <meta name="robots" content="index, follow"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -55,7 +55,7 @@
     .section-header{margin-bottom:52px;}
     .section-header.centered{text-align:center;}
     .section-header.centered .section-sub{margin:0 auto;}
-    .page-hero{background:linear-gradient(135deg,var(--black) 0%,var(--charcoal) 100%);color:var(--white);padding:72px 0;position:relative;overflow:hidden;}
+    .page-hero{background:linear-gradient(135deg,var(--black) 0%,var(--red-accent) 100%);color:var(--white);padding:72px 0;position:relative;overflow:hidden;}
     .page-hero::before{content:'';position:absolute;top:-60px;right:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(183,28,28,0.25) 0%,transparent 70%);pointer-events:none;}
     .page-hero-inner{position:relative;z-index:1;max-width:720px;}
     .page-hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(183,28,28,0.2);border:1px solid rgba(183,28,28,0.5);border-radius:100px;padding:6px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--red-light);margin-bottom:20px;}
@@ -66,8 +66,8 @@
     .breadcrumb{font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:20px;display:flex;align-items:center;gap:8px;}
     .breadcrumb a{color:rgba(255,255,255,0.45);}
     .trust-bar{background:var(--red);padding:18px 0;}
-    .trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:40px;flex-wrap:wrap;}
-    .trust-item{display:flex;align-items:center;gap:10px;color:var(--white);font-size:14px;font-weight:600;}
+    .trust-bar-inner{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;}
+    .trust-item{display:flex;align-items:center;gap:6px;color:var(--white);font-size:13px;font-weight:600;white-space:nowrap;}
     .trust-sep{width:1px;height:20px;background:rgba(255,255,255,0.3);}
     .cta-section{background:var(--red);padding:80px 0;}
     .cta-inner{text-align:center;}
@@ -93,12 +93,15 @@
     .check-list li::before{content:'\2713';color:var(--red);font-weight:700;font-size:15px;flex-shrink:0;margin-top:1px;}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
     .three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
-    .card{background:var(--white);border:1.5px solid var(--border);border-radius:12px;padding:32px;transition:all 0.25s ease;}
+    .plans-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch;}
+    @media(max-width:1100px){.plans-grid{grid-template-columns:repeat(2,1fr);gap:24px;}}
+    @media(max-width:640px){.plans-grid{grid-template-columns:1fr;}}
+    .card{background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:32px;transition:all 0.25s ease;}
     .card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);border-color:rgba(183,28,28,0.2);}
     .card-icon{width:52px;height:52px;background:rgba(183,28,28,0.08);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px;}
     .card h3{font-family:var(--font-display);font-size:20px;letter-spacing:1px;margin-bottom:10px;}
     .card p{font-size:14px;color:var(--gray);line-height:1.7;}
-    .dark-card{background:var(--black);border-radius:16px;padding:40px;color:var(--white);position:relative;overflow:hidden;}
+    .dark-card{background:linear-gradient(135deg,var(--black) 0%,var(--red-accent) 100%);border-radius:16px;padding:40px;color:var(--white);position:relative;overflow:hidden;}
     .dark-card::before{content:'';position:absolute;top:-40px;right:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(183,28,28,0.3) 0%,transparent 70%);pointer-events:none;}
     .dark-card-content{position:relative;z-index:1;}
     .review-card{background:var(--off-white);border-radius:12px;padding:28px;border:1.5px solid var(--border);}
@@ -108,7 +111,7 @@
     .review-avatar{width:40px;height:40px;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-size:16px;font-weight:700;flex-shrink:0;}
     .review-author-info strong{display:block;font-size:14px;font-weight:700;}
     .review-author-info span{font-size:12px;color:var(--gray);}
-    .plan-card{border:2px solid var(--border);border-radius:16px;padding:36px 32px;position:relative;transition:all 0.25s ease;background:var(--white);}
+    .plan-card{border:2px solid var(--border);border-radius:16px;padding:36px 32px;position:relative;transition:all 0.25s ease;background:var(--white);display:flex;flex-direction:column;height:100%;}
     .plan-card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px);}
     .plan-card.featured{border-color:var(--red);box-shadow:0 8px 32px rgba(183,28,28,0.12);}
     .plan-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--red);color:white;font-size:11px;font-weight:700;letter-spacing:1.5px;padding:5px 18px;border-radius:100px;white-space:nowrap;}
@@ -122,7 +125,7 @@
     .plan-includes{display:flex;flex-direction:column;gap:10px;margin-bottom:28px;}
     .plan-includes li{font-size:13px;color:var(--charcoal);display:flex;align-items:flex-start;gap:10px;line-height:1.5;}
     .plan-includes li::before{content:'\2713';color:var(--red);font-weight:700;flex-shrink:0;margin-top:1px;}
-    .plan-cta{display:block;width:100%;text-align:center;padding:14px;border-radius:var(--radius);font-weight:700;font-size:14px;transition:all var(--transition);font-family:var(--font-body);}
+    .plan-cta{display:block;width:100%;text-align:center;padding:14px;border-radius:var(--radius);font-weight:700;font-size:14px;transition:all var(--transition);font-family:var(--font-body);margin-top:auto;}
     .plan-cta-primary{background:var(--red);color:white;border:2px solid var(--red);}
     .plan-cta-primary:hover{background:var(--red-accent);border-color:var(--red-accent);}
     .plan-cta-secondary{background:transparent;color:var(--red);border:2px solid var(--red);}
@@ -134,13 +137,22 @@
     @media(max-width:768px){section{padding:60px 0;}.nav-links{display:none;}.nav-phone{display:none;}.hamburger{display:flex;}.three-col{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;gap:32px;}.footer-bottom{flex-direction:column;text-align:center;}.cta-actions{flex-direction:column;align-items:center;}.trust-sep{display:none;}.trust-bar-inner{gap:20px;}.page-hero-actions{display:flex;gap:16px;flex-wrap:wrap;flex-direction:column;align-items:stretch;}.plan-card{padding:24px;}}
 
   @media(max-width:600px){.hero-actions{flex-direction:column;align-items:flex-start;}}
-    </style>
+    
+    .why-feature h4 { color: var(--white); }
+    .why-feature p { color: rgba(255,255,255,0.85); }
+    .why-feature .why-feature-icon { background: rgba(255,255,255,0.12); }
+    .card h3 { color: var(--white); }
+    .card h4 { color: var(--white); }
+    .card p { color: rgba(255,255,255,0.85); }
+    .card strong { color: var(--white); }
+    .card .card-icon { background: rgba(255,255,255,0.12); }
+</style>
 
   <link rel="canonical" href="https://theherocleaners.com/recurring-cleaning">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theherocleaners.com/recurring-cleaning">
-  <meta property="og:title" content="Recurring Cleaning &amp; Maid Service Logan UT | Hero Cleaners">
-  <meta property="og:description" content="Weekly, bi-weekly, or monthly maid service and recurring house cleaning in Logan and Cache Valley. Same trusted cleaner every visit, locally owned.">
+  <meta property="og:title" content="Cleaning Plans in Logan, Utah | Hero Cleaners">
+  <meta property="og:description" content="Cleaning Plans by Hero Cleaners — weekly, bi-weekly, monthly, or quarterly maid service in Logan, Utah and Cache Valley. Same trusted cleaners.">
   <meta property="og:image" content="https://theherocleaners.com/assets/images/hero-og.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Recurring House Cleaning","description":"Weekly, bi-weekly, or monthly residential cleaning service in Cache Valley, UT. Same trusted cleaner every visit.","provider":{"@type":"LocalBusiness","name":"Hero Cleaners","telephone":"+14352770370","url":"https://theherocleaners.com","address":{"@type":"PostalAddress","addressLocality":"Logan","addressRegion":"UT","postalCode":"84321","addressCountry":"US"}},"areaServed":"Cache Valley, UT","url":"https://theherocleaners.com/recurring-cleaning"}</script>
 </head><body><div class="announcement-bar">&#x1F3C6; Cache Valley's #1 Rated Cleaning Service &nbsp;&middot;&nbsp; 4.9 Stars &nbsp;&middot;&nbsp; <a href="tel:4352770370">Call or Text (435) 277-0370</a></div>
@@ -151,13 +163,15 @@
     <li class="nav-dropdown">
       <a href="/#services">Services</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="/recurring-cleaning">Recurring Cleaning</a></li>
+        <li><a href="/recurring-cleaning">Cleaning Plans</a></li>
         <li><a href="/maid-service">Maid Service</a></li>
-        <li><a href="/deep-clean">Deep Clean</a></li>
+        <li><a href="/deep-clean">Deep Cleaning</a></li>
+        <li><a href="/move-out-cleaning">Move-Out Cleaning</a></li>
         <li><a href="/commercial-cleaning">Commercial Cleaning</a></li>
         <li><a href="/window-washing">Window Washing</a></li>
       </ul>
     </li>
+    
     <li><a href="/#areas">Service Areas</a></li>
     <li><a href="/#reviews">Reviews</a></li>
     <li><a href="/faq">FAQ</a></li>
@@ -171,14 +185,15 @@
   <button class="hamburger"><span></span><span></span><span></span></button>
 </div></div></nav>
 <section class="page-hero"><div class="container"><div class="page-hero-inner">
-  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Services &rsaquo; Recurring Cleaning</div>
+  <div class="breadcrumb"><a href="/">Home</a> &rsaquo; Services &rsaquo; Cleaning Plans</div>
   <div class="page-hero-badge">&#x26A1; Most Popular Service</div>
   <div style="display:flex;align-items:center;gap:16px;">
-        <h1>RECURRING<br><em>CLEANING</em></h1>
+        <p style="font-family:var(--font-display);font-size:clamp(40px,5.5vw,60px);line-height:1.05;letter-spacing:2px;margin-bottom:8px;color:var(--white);">CLEANING <em style="font-style:normal;color:var(--red-accent);">PLANS</em></p>
         <img src="/HeroCleaner_white.png" alt="Hero Cleaners" style="width:180px;height:auto;object-fit:contain;flex-shrink:0;margin-bottom:4px;">
       </div>
+  <h1 style="font-family:var(--font-body);font-size:clamp(20px,2.4vw,28px);font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.5px;line-height:1.3;margin-bottom:16px;">Recurring House Cleaning in Logan, Utah</h1>
   <p>A real cleaner who knows your home. A consistent schedule that runs itself. Weekly, bi-weekly, or monthly &mdash; you pick what fits your life, and we handle the rest.</p>
-  <p style="font-size:15px;color:rgba(255,255,255,0.65);margin-top:12px;">Some folks call this a <a href="/maid-service" style="color:var(--red-light);text-decoration:underline;">maid service</a> &mdash; same idea, same trust, same friendly cleaner every visit.</p>
+  
   <div class="page-hero-actions" style="flex-direction: column;">
     <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" onClick="HCPWidget.openModal()" style="background:#D32F2F;border-color:#D32F2F;color:white;;font-weight:700;">Book Online</button>
     <a href="tel:4352770370" class="btn btn-secondary btn-lg" style="border-color:rgba(255,255,255,0.4);color:white;">Call or Text (435) 277-0370</a>
@@ -186,14 +201,16 @@
 </div></div></section>
 
 <div class="trust-bar"><div class="container"><div class="trust-bar-inner">
-  <div class="trust-item">&#x26A1; Bi-Weekly &mdash; Most Popular</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed &amp; Insured</div>
   <div class="trust-sep"></div>
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Same Cleaner Every Visit</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>300+ 5-Star Reviews</div>
   <div class="trust-sep"></div>
-  <div class="trust-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.97-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Open Communication, Every Step</div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Flexible Scheduling</div>
   <div class="trust-sep"></div>
-  <div class="trust-item">&#x2B50; 4.9 Stars &middot; 100+ Reviews</div>
-</div></div></div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Locally Owned &amp; Operated</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><polyline points="20 6 9 17 4 12"/></svg>Background-Checked</div>
+</div></div></div></div>
 
 <!-- PLAN CARDS -->
 <section style="background:var(--off-white)"><div class="container">
@@ -203,21 +220,21 @@
     <p class="section-sub">Not sure which one is right? Most families land on bi-weekly. But if weekly fits your life, it keeps your home consistently clean with a shorter visit each time &mdash; and we'll help you figure it out after you book.</p>
   </div>
 
-  <div class="three-col" style="align-items:start;">
+  <div class="plans-grid">
 
     <!-- WEEKLY -->
-    <div class="plan-card">
+    <div class="plan-card featured">
+      <div class="plan-badge" style="background:#2E7D32;">&#x1F4B0; Best Value</div>
       <div class="plan-icon">&#x1F504;</div>
       <div class="plan-name">WEEKLY</div>
-      <div class="plan-tagline">The most frequent &mdash; and the lowest price per visit</div>
-      <div class="plan-price-row"><div class="plan-price">$119</div><div class="plan-price-unit">per visit</div></div>
-      <div class="plan-price-note">$60/hr &middot; 2-hour visit &middot; your home stays consistently clean</div>
+      <div class="plan-tagline">The biggest discount &mdash; lowest per-hour rate of any plan</div>
+      <div class="plan-price-row"><div class="plan-price">$99</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note"><strong style="color:#2E7D32;">$50/hr</strong> &middot; 2-hour visit &middot; the most savings</div>
       <ul class="plan-includes">
-        <li>Your home never gets a chance to feel messy</li>
-        <li>Same cleaner every single week &mdash; no explaining yourself every time</li>
-        <li>Lowest price per visit &mdash; shorter cleans because your home stays on top of it</li>
-        <li>Perfect for busy households, families with kids, or pet owners</li>
-        <li>After your first visit, we'll dial in the scope to exactly what your home needs</li>
+        <li>Home stays consistently clean</li>
+        <li>Same trusted cleaners every visit</li>
+        <li>Best per-hour rate</li>
+        <li>Built for busy households</li>
       </ul>
       <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-secondary" style="background:#D32F2F;color:white;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Weekly</button>
     </div>
@@ -228,14 +245,13 @@
       <div class="plan-icon">&#x1F5D3;&#xFE0F;</div>
       <div class="plan-name">BI-WEEKLY</div>
       <div class="plan-tagline">The sweet spot &mdash; what most Cache Valley families choose</div>
-      <div class="plan-price-row"><div class="plan-price">$149</div><div class="plan-price-unit">per visit</div></div>
-      <div class="plan-price-note">$60/hr &middot; 2.5-hour visit &middot; most popular plan</div>
+      <div class="plan-price-row"><div class="plan-price">$109</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note">$55/hr &middot; 2-hour visit &middot; most popular plan</div>
       <ul class="plan-includes">
-        <li>Every two weeks keeps your home genuinely clean</li>
-        <li>Same cleaner every visit &mdash; they'll know your home well</li>
-        <li>Flexible &mdash; easy to adjust or skip when life happens</li>
-        <li>The plan we recommend for most households</li>
-        <li>After your first visit we'll customize the scope to fit your home perfectly</li>
+        <li>The sweet spot for most homes</li>
+        <li>Same trusted cleaners every visit</li>
+        <li>Catches up before things slip</li>
+        <li>Most popular plan we offer</li>
       </ul>
       <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-primary" style="background:#D32F2F;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Bi-Weekly</button>
     </div>
@@ -245,26 +261,41 @@
       <div class="plan-icon">&#x1F4C6;</div>
       <div class="plan-name">MONTHLY</div>
       <div class="plan-tagline">A solid reset &mdash; best if you stay on top of it yourself in between</div>
-      <div class="plan-price-row"><div class="plan-price">$209</div><div class="plan-price-unit">per visit</div></div>
-      <div class="plan-price-note">$60/hr &middot; 3.5-hour visit &middot; more time needed between monthly cleans</div>
+      <div class="plan-price-row"><div class="plan-price">$179</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note">$60/hr &middot; 3-hour visit &middot; more time between visits</div>
       <ul class="plan-includes">
-        <li>We do the deep work so you maintain the result</li>
-        <li>Same cleaner, same standards every time</li>
-        <li>Good fit if you clean regularly yourself between visits</li>
-        <li>Honest note: most monthly customers upgrade to bi-weekly within a few months</li>
-        <li>After your first visit we'll dial in the scope to what your home actually needs</li>
+        <li>A solid reset between your own routine</li>
+        <li>Same trusted cleaners every visit</li>
+        <li>Best if you maintain between visits</li>
+        <li>Many upgrade to bi-weekly eventually</li>
       </ul>
       <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-secondary" style="background:#D32F2F;color:white;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Monthly</button>
+    </div>
+
+    <!-- QUARTERLY -->
+    <div class="plan-card">
+      <div class="plan-icon">&#x1F343;</div>
+      <div class="plan-name">QUARTERLY</div>
+      <div class="plan-tagline">A seasonal reset &mdash; four times a year, the home gets the full treatment</div>
+      <div class="plan-price-row"><div class="plan-price">$239</div><div class="plan-price-unit">per visit</div></div>
+      <div class="plan-price-note">$60/hr &middot; 4-hour visit &middot; full seasonal reset</div>
+      <ul class="plan-includes">
+        <li>Full deep clean every season</li>
+        <li>Same trusted cleaners who know your home</li>
+        <li>Pairs with your own cleaning routine</li>
+        <li>Longer visit, deeper detail</li>
+      </ul>
+      <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button plan-cta plan-cta-secondary" style="background:#D32F2F;color:white;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Quarterly</button>
     </div>
 
   </div>
 
   <!-- CUSTOMIZE NOTE -->
-  <div style="margin-top:32px;background:white;border:1.5px solid var(--border);border-radius:12px;padding:24px 28px;display:flex;align-items:flex-start;gap:16px;">
+  <div style="margin-top:32px;background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px 28px;display:flex;align-items:flex-start;gap:16px;">
     <div style="font-size:24px;flex-shrink:0;">&#x1F4AC;</div>
     <div>
-      <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--charcoal);margin-bottom:5px;">Pricing is straightforward &mdash; and flexible after your first visit</div>
-      <div style="font-size:14px;color:var(--gray);line-height:1.7;">All plans are priced at $60/hr. The visit times shown are what we plan for upfront &mdash; but after your first clean, we'll dial in the scope to exactly what your home needs. If your home takes less time, the price reflects that. We talk through all of this when we reach out after you book.</div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--white);margin-bottom:5px;">Pricing is straightforward &mdash; and flexible after your first visit</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.7;">Monthly and Quarterly are priced at $60/hr; Bi-Weekly drops to $55/hr and Weekly drops to $50/hr because consistent visits keep things in shape. The visit times shown are what we plan for upfront &mdash; but after your first clean, we'll dial in the scope to exactly what your home needs. If your home takes less time, the price reflects that. From there, we work with you to land on the plan that actually fits &mdash; both your home and your budget. No rigid packages, no upsells, just the rhythm that makes sense for your life.</div>
     </div>
   </div>
 
@@ -275,63 +306,66 @@
 </div></div>
 </div></section>
 
-<!-- NOT SURE SECTION -->
-<section><div class="container">
+<!-- WHAT'S INCLUDED -->
+<section style="background:var(--off-white)"><div class="container">
   <div class="two-col">
     <div>
-      <span class="section-label">Not Sure Which Plan?</span>
-      <h2 class="section-title">WE'LL HELP YOU <em>FIGURE IT OUT</em></h2>
-      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">A lot of people aren't sure which frequency is right when they first book. That's completely normal &mdash; and it's exactly why we reach out before your first visit.</p>
-      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">We'll talk through your home, how it gets used, what matters most to you, and what fits your budget. After that conversation, we make a real recommendation &mdash; not a guess.</p>
-      <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:32px;">For what it's worth: if you're torn between bi-weekly and monthly, bi-weekly is almost always the better call. The starting price difference is real. The difference in how your home feels is even more real.</p>
-      <div style="display:flex;gap:16px;flex-wrap:wrap;">
-        <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" style="background:#D32F2F;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Online</button>
-        <a href="tel:4352770370" class="btn btn-secondary btn-lg">Call or Text to Talk It Through</a>
-      </div>
+      <span class="section-label">Our Mission</span>
+      <h2 class="section-title">CLEAN HOMES. PEACE OF MIND. <em>NEIGHBORS WE GET TO SERVE.</em></h2>
+      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">Maid service has a luxury reputation that doesn&rsquo;t match how most Cache Valley families actually use it. It&rsquo;s not a status thing &mdash; it&rsquo;s the hours of your weekend you stop spending on cleaning, and the mental load that lifts when you walk into a home that&rsquo;s already done for you.</p>
+      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">We started Hero Cleaners with one goal: give every neighbor in Cache Valley the chance to experience what a professionally cleaned home actually feels like. We&rsquo;re passionate about this work &mdash; about serving our community, building real relationships, and proving that great service at a great price is possible.</p>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;">Whether it&rsquo;s a recurring Weekly plan or a single seasonal Quarterly clean, we built the pricing so the door&rsquo;s open to everyone who wants in. Same trusted cleaners, same standard, same care &mdash; whether you&rsquo;re with us every week or four times a year.</p>
     </div>
     <div style="display:flex;flex-direction:column;gap:16px;">
-      <div style="background:var(--off-white);border:1.5px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
-        <div style="width:44px;height:44px;background:rgba(183,28,28,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">&#x1F4F1;</div>
-        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;">Step 1 &mdash; Book Online</div><div style="font-size:14px;color:var(--gray);line-height:1.6;">Pick a plan and a time. We require a card on file to book &mdash; you'll be charged after each completed visit, never before.</div></div>
+      <div style="background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:44px;height:44px;background:rgba(255,255,255,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">&#x1F4AC;</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;color:var(--white);">Step 1 &mdash; Book + We Reach Out</div><div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;">After you book, we call or text to learn your home and what matters to you. Your first visit gets built around you.</div></div>
       </div>
-      <div style="background:var(--off-white);border:1.5px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
-        <div style="width:44px;height:44px;background:rgba(183,28,28,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">&#x26A1;</div>
-        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;">Step 2 &mdash; We Reach Out</div><div style="font-size:14px;color:var(--gray);line-height:1.6;">We personally contact you to learn your home, confirm scope, talk through timing, and answer any questions. This call prevents surprises on both sides.</div></div>
+      <div style="background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:44px;height:44px;background:rgba(255,255,255,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">&#x1F4F1;</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;color:var(--white);">Step 2 &mdash; On Our Way</div><div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;">You get an &ldquo;on my way&rdquo; text before your cleaner heads over. No surprise knock.</div></div>
       </div>
-      <div style="background:var(--off-white);border:1.5px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
-        <div style="width:44px;height:44px;background:rgba(183,28,28,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">&#x1F3E1;</div>
-        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;">Step 3 &mdash; We Show Up Prepared</div><div style="font-size:14px;color:var(--gray);line-height:1.6;">For your first visit, we ask that you're home. We'll do a quick walkthrough together before we start, and again at the end to make sure everything looks exactly right. After that, no need to be there.</div></div>
+      <div style="background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:44px;height:44px;background:rgba(255,255,255,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">&#x1F3E0;</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;color:var(--white);">Step 3 &mdash; Walk-Through + Clean</div><div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;">Quick walk-through together when we arrive. Then we get to work.</div></div>
       </div>
-      <div style="background:var(--off-white);border:1.5px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
-        <div style="width:44px;height:44px;background:rgba(183,28,28,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">&#x2705;</div>
-        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;">Step 4 &mdash; We Check In</div><div style="font-size:14px;color:var(--gray);line-height:1.6;">Before we leave, someone goes through the home with you to make sure everything is exactly right. If it's not, we fix it before we go.</div></div>
+      <div style="background:linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%);color:var(--white);border:1.5px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;display:flex;gap:16px;align-items:flex-start;">
+        <div style="width:44px;height:44px;background:rgba(255,255,255,0.12);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;">&#x1F9C1;</div>
+        <div><div style="font-weight:700;font-size:15px;margin-bottom:4px;color:var(--white);">Step 4 &mdash; A Cupcake on the Way Out</div><div style="font-size:14px;color:rgba(255,255,255,0.85);line-height:1.6;">First clean ends with a cupcake, a quick check-in, and a chat about which Cleaning Plan fits best.</div></div>
       </div>
     </div>
   </div>
 </div></section>
 
-<!-- WHAT'S INCLUDED -->
-<section style="background:var(--off-white)"><div class="container">
+<!-- NOT SURE SECTION -->
+<section><div class="container">
   <div class="two-col">
     <div>
-      <span class="section-label">What's Included</span>
-      <h2 class="section-title">BUILT AROUND <em>YOUR HOME</em></h2>
-      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">We don't hand every customer the same checklist and call it done. What gets cleaned, how thoroughly, and in what order depends on you &mdash; your home, your priorities, and what matters most to your family.</p>
-      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">That's why we keep communication open &mdash; before your first visit and throughout our time together. Before we ever show up, we have a real conversation about what you care about most &mdash; whether that's the kitchen, the bathrooms, the floors, or something specific to your household.</p>
-      <p style="font-size:15px;color:var(--gray);line-height:1.8;">Over time, your cleaner gets to know your home and your preferences without you having to repeat yourself. That's what makes recurring cleaning with Hero Cleaners actually work.</p>
+      <span class="section-label">First Visit Discount</span>
+      <h2 class="section-title">TAKE $50 OFF YOUR <em>FIRST CLEANING PLAN VISIT</em></h2>
+      <div style="background:var(--white);border:2px solid var(--red);border-radius:12px;padding:24px 28px;margin-bottom:24px;">
+        <div style="font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--red);margin-bottom:8px;">How to claim it</div>
+        <p style="font-size:15px;color:var(--charcoal);line-height:1.7;margin:0;">Type <strong style="color:var(--black);">&ldquo;First Time&rdquo;</strong> in the additional details when you book your first Cleaning Plan visit. We take $50 off.</p>
+      </div>
+      <p style="font-size:16px;color:var(--charcoal);line-height:1.8;margin-bottom:20px;">A lot of first-time customers aren&rsquo;t sure which frequency to start with. That&rsquo;s normal &mdash; and it&rsquo;s exactly why we reach out before your first visit. We&rsquo;ll talk through your home, how it gets used, what matters most to you, and what fits your budget. After that conversation, we make a real recommendation &mdash; not a guess.</p>
+      <p style="font-size:15px;color:var(--gray);line-height:1.8;margin-bottom:32px;">For what it&rsquo;s worth: if you&rsquo;re torn between Bi-Weekly and Monthly, Bi-Weekly is almost always the better call. The price difference is real. The difference in how your home feels is even more real.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <button data-token="783f337442754ad48f775d1fd385cbbb" data-orgname="Hero-Cleaners" class="hcp-button btn btn-primary btn-lg" style="background:#D32F2F;border-color:#D32F2F;;font-weight:700;" onClick="HCPWidget.openModal()">Book Online</button>
+        <a href="tel:4352770370" class="btn btn-secondary btn-lg">Call or Text to Talk It Through</a>
+      </div>
     </div>
     <div class="dark-card">
-      <div class="dark-card-content">
+      <div class="dark-card-content" style="text-align:center;">
         <div class="section-label" style="color:var(--red-light);">How It Works</div>
-        <h3 style="font-family:var(--font-display);font-size:24px;letter-spacing:1px;color:white;margin-bottom:20px;line-height:1.1;">YOUR CLEANER LEARNS YOUR HOME &mdash; AND KEEPS GETTING BETTER AT IT</h3>
-        <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:20px;">After your first visit, your cleaner already knows your layout, your preferences, and what you care about most. By the third or fourth visit, they know your home better than most people who've been inside it.</p>
-        <p style="font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:20px;">No briefing required. No reminding them every time. Just consistent, reliable cleaning that gets better the longer we work together.</p>
-        <div style="background:rgba(255,255,255,0.08);border-radius:8px;padding:16px;">
-          <div style="font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:12px;">Rate Summary</div>
+        <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;color:white;margin-bottom:20px;line-height:1.1;">DONE-FOR-YOU CLEANING</h3>
+        <p style="font-size:18px;color:var(--white);line-height:1.7;margin-bottom:32px;font-weight:500;max-width:480px;margin-left:auto;margin-right:auto;">We come. We clean. We communicate. We leave you with a cupcake. Then we see you next time.</p>
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:20px;text-align:left;">
+          <div style="font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:14px;text-align:center;">Rate Summary</div>
           <div style="display:flex;flex-direction:column;gap:8px;">
-            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Weekly</span><strong style="color:white;">$60/hr &middot; 2 hrs &middot; $119/visit</strong></div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Bi-Weekly</span><strong style="color:white;">$60/hr &middot; 2.5 hrs &middot; $149/visit</strong></div>
-            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Monthly</span><strong style="color:white;">$60/hr &middot; 3.5 hrs &middot; $209/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Weekly</span><strong style="color:white;">$50/hr &middot; 2 hrs &middot; $99/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Bi-Weekly</span><strong style="color:white;">$55/hr &middot; 2 hrs &middot; $109/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Monthly</span><strong style="color:white;">$60/hr &middot; 3 hrs &middot; $179/visit</strong></div>
+            <div style="font-size:13px;color:rgba(255,255,255,0.75);display:flex;justify-content:space-between;"><span>Quarterly</span><strong style="color:white;">$60/hr &middot; 4 hrs &middot; $239/visit</strong></div>
             <div style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.1);font-size:12px;color:rgba(255,255,255,0.45);line-height:1.6;">After your first visit, we customize the scope to exactly what your home needs.</div>
           </div>
         </div>
@@ -376,8 +410,8 @@
       <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.64 3.18 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.97-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(435) 277-0370</div>
       <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>herocleanersinfo@gmail.com</div>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Recurring Cleaning</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Clean</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/faq">FAQ</a></li><li><a href="/contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Cleaning Plans</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/referral">Refer a Friend</a></li><li><a href="/contact">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/service-areas#logan">Logan, UT</a></li><li><a href="/house-cleaning-north-logan-utah">North Logan</a></li><li><a href="/house-cleaning-smithfield-utah">Smithfield</a></li><li><a href="/service-areas">View All &#x2192;</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p>&copy; 2026 Hero Cleaners LLC &middot; Logan, UT &middot; All rights reserved.</p><p><a href="/privacy-policy">Privacy Policy</a> &nbsp;&middot;&nbsp; <a href="/terms">Terms</a></p></div>

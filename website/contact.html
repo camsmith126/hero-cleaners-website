@@ -16,7 +16,7 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Hero Cleaners | Logan, UT | Call, Text or Book Online</title>
-  <meta name="description" content="Get in touch with Hero Cleaners &mdash; call, text, or book online. Serving Cache Valley, Logan, UT. (435) 277-0370." />
+  <meta name="description" content="Contact Hero Cleaners in Logan, Utah. Call or text (435) 277-0370 for house cleaning, maid service, deep cleaning, move-out, or window washing across Cache Valley." />
   <meta name="robots" content="index, follow" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,7 +74,7 @@
     .section-header { margin-bottom: 52px; }
     .section-header.centered { text-align: center; }
     .section-header.centered .section-sub { margin: 0 auto; }
-    .page-hero { background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%); color: var(--white); padding: 72px 0; position: relative; overflow: hidden; }
+    .page-hero { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); padding: 72px 0; position: relative; overflow: hidden; }
     .page-hero::before { content: ''; position: absolute; top: -60px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(183,28,28,0.25) 0%, transparent 70%); pointer-events: none; }
     .page-hero-inner { position: relative; z-index: 1; max-width: 680px; }
     .page-hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(183,28,28,0.2); border: 1px solid rgba(183,28,28,0.5); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red-light); margin-bottom: 20px; }
@@ -109,12 +109,12 @@
     .check-list li::before { content: '\2713'; color: var(--red); font-weight: 700; font-size: 15px; flex-shrink: 0; margin-top: 1px; }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
     .three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-    .card { background: var(--white); border: 1.5px solid var(--border); border-radius: 12px; padding: 32px; transition: all 0.25s ease; }
+    .card { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 32px; transition: all 0.25s ease; }
     .card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); border-color: rgba(183,28,28,0.2); }
     .card-icon { width: 52px; height: 52px; background: rgba(183,28,28,0.08); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px; }
     .card h3 { font-family: var(--font-display); font-size: 20px; letter-spacing: 1px; margin-bottom: 10px; }
     .card p { font-size: 14px; color: var(--gray); line-height: 1.7; }
-    .dark-card { background: var(--black); border-radius: 16px; padding: 40px; color: var(--white); position: relative; overflow: hidden; }
+    .dark-card { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); border-radius: 16px; padding: 40px; color: var(--white); position: relative; overflow: hidden; }
     .dark-card::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(183,28,28,0.3) 0%, transparent 70%); pointer-events: none; }
     .dark-card-content { position: relative; z-index: 1; }
     .review-card { background: var(--off-white); border-radius: 12px; padding: 28px; border: 1.5px solid var(--border); transition: all var(--transition); }
@@ -126,21 +126,30 @@
     .review-author-info strong { display: block; font-size: 14px; font-weight: 700; }
     .review-author-info span { font-size: 12px; color: var(--gray); }
     .trust-bar { background: var(--red); padding: 18px 0; }
-    .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 14px; font-weight: 600; }
+    .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 6px; color: var(--white); font-size: 13px; font-weight: 600; white-space: nowrap; }
     .trust-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.3); }
     @media (max-width: 1024px) { .footer-grid { grid-template-columns: 1fr 1fr; } .two-col { grid-template-columns: 1fr; gap: 40px; } .three-col { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 768px) { section { padding: 60px 0; } .nav-links { display: none; } .nav-phone { display: none; } .hamburger { display: flex; } .three-col { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; gap: 32px; } .footer-bottom { flex-direction: column; text-align: center; } .cta-actions { flex-direction: column; align-items: center; } .trust-sep { display: none; } .trust-bar-inner { gap: 20px; } .page-hero-actions { flex-direction: column; } }
     
     .hcp-button.btn-primary, .hcp-button.plan-cta-primary { background: var(--red-accent) !important; }
     .hcp-button.btn-primary:hover, .hcp-button.plan-cta-primary:hover { background: #B71C1C !important; }
-  </style>
+  
+    .why-feature h4 { color: var(--white); }
+    .why-feature p { color: rgba(255,255,255,0.85); }
+    .why-feature .why-feature-icon { background: rgba(255,255,255,0.12); }
+    .card h3 { color: var(--white); }
+    .card h4 { color: var(--white); }
+    .card p { color: rgba(255,255,255,0.85); }
+    .card strong { color: var(--white); }
+    .card .card-icon { background: rgba(255,255,255,0.12); }
+</style>
 
   <link rel="canonical" href="https://theherocleaners.com/contact">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://theherocleaners.com/contact">
   <meta property="og:title" content="Contact Hero Cleaners | Logan, UT | Call, Text or Book Online">
-  <meta property="og:description" content="Get in touch with Hero Cleaners — call, text, or book online. Serving Cache Valley, Logan, UT. (435) 277-0370.">
+  <meta property="og:description" content="Contact Hero Cleaners in Logan, Utah. Call or text (435) 277-0370 for house cleaning, maid service, deep cleaning, move-out, or window washing across Cache Valley.">
   <meta property="og:image" content="https://theherocleaners.com/assets/images/hero-og.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","url":"https://theherocleaners.com/contact","name":"Contact Hero Cleaners","description":"Contact Hero Cleaners in Logan, UT by phone, text, or online booking.","publisher":{"@type":"LocalBusiness","name":"Hero Cleaners","telephone":"+14352770370","url":"https://theherocleaners.com","address":{"@type":"PostalAddress","addressLocality":"Logan","addressRegion":"UT","postalCode":"84321","addressCountry":"US"}}}</script>
 </head>
@@ -154,13 +163,15 @@
     <li class="nav-dropdown">
       <a href="/#services">Services</a>
       <ul class="nav-dropdown-menu">
-        <li><a href="/recurring-cleaning">Recurring Cleaning</a></li>
+        <li><a href="/recurring-cleaning">Cleaning Plans</a></li>
         <li><a href="/maid-service">Maid Service</a></li>
-        <li><a href="/deep-clean">Deep Clean</a></li>
+        <li><a href="/deep-clean">Deep Cleaning</a></li>
+        <li><a href="/move-out-cleaning">Move-Out Cleaning</a></li>
         <li><a href="/commercial-cleaning">Commercial Cleaning</a></li>
         <li><a href="/window-washing">Window Washing</a></li>
       </ul>
     </li>
+    
     <li><a href="/#areas">Service Areas</a></li>
     <li><a href="/#reviews">Reviews</a></li>
     <li><a href="/faq">FAQ</a></li>
@@ -261,8 +272,8 @@
       <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>1034 W RSI DR, Logan, UT 84321</div>
       <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon&ndash;Fri &middot; 6:00 AM &ndash; 11:00 PM</div>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Recurring Cleaning</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Clean</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/contact">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Cleaning Plans</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/referral">Refer a Friend</a></li><li><a href="/contact">Contact</a></li></ul></div>
     <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/service-areas#logan">Logan, UT</a></li><li><a href="/house-cleaning-north-logan-utah">North Logan</a></li><li><a href="/house-cleaning-smithfield-utah">Smithfield</a></li><li><a href="/house-cleaning-hyrum-utah">Hyrum</a></li><li><a href="/house-cleaning-nibley-utah">Nibley</a></li><li><a href="/service-areas">View All Areas &#x2192;</a></li></ul></div>
   </div>
   <div class="footer-bottom">
@@ -278,7 +289,8 @@
 
   // Close nav when clicking outside
   document.addEventListener('click', function(e) {
-    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
+    var hamburger = document.querySelector('.hamburger');
+    if (navLinks && hamburger && getComputedStyle(hamburger).display !== 'none' && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
       navLinks.style.display = 'none';
     }
   });

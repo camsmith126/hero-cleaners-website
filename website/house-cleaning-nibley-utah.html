@@ -76,13 +76,13 @@
     .hamburger span { width: 26px; height: 2px; background: var(--black); border-radius: 2px; }
 
     /* HERO */
-    .hero { background: linear-gradient(135deg, var(--black) 0%, var(--charcoal) 100%); color: var(--white); padding: 80px 0 70px; position: relative; overflow: hidden; }
+    .hero { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); padding: 80px 0 70px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -60px; right: -80px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(183,28,28,0.25) 0%, transparent 70%); pointer-events: none; }
-    .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero-inner { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: center; position: relative; z-index: 1; }
     .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(183,28,28,0.2); border: 1px solid rgba(183,28,28,0.5); border-radius: 100px; padding: 6px 16px; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--red-light); margin-bottom: 20px; }
     .hero-badge-dot { width: 8px; height: 8px; background: var(--red-accent); border-radius: 50%; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(1.3)} }
-    .hero h1 { font-family: var(--font-display); font-size: clamp(48px, 6vw, 72px); line-height: 1; letter-spacing: 2px; margin-bottom: 8px; }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(38px, 4.8vw, 56px); line-height: 1.05; letter-spacing: 2px; margin-bottom: 8px; }
     .hero h1 em { font-style: normal; color: var(--red-accent); }
     .hero-sub { font-size: 18px; color: rgba(255,255,255,0.75); margin-bottom: 32px; line-height: 1.6; max-width: 460px; }
     .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; flex-direction: column; align-items: stretch; }
@@ -106,8 +106,8 @@
 
     /* TRUST BAR */
     .trust-bar { background: var(--red); padding: 18px 0; }
-    .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .trust-item { display: flex; align-items: center; gap: 10px; color: var(--white); font-size: 14px; font-weight: 600; }
+    .trust-bar-inner { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+    .trust-item { display: flex; align-items: center; gap: 6px; color: var(--white); font-size: 13px; font-weight: 600; white-space: nowrap; }
     .trust-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.3); }
 
     /* SECTIONS */
@@ -140,12 +140,12 @@
     .why { background: var(--white); }
     .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
     .why-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .why-feature { padding: 24px; border: 1.5px solid var(--border); border-radius: 10px; transition: all var(--transition); }
+    .why-feature { padding: 24px; background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); border: 1.5px solid rgba(255,255,255,0.1); border-radius: 10px; transition: all var(--transition); }
     .why-feature:hover { border-color: rgba(183,28,28,0.25); box-shadow: var(--shadow-sm); }
     .why-feature-icon { font-size: 28px; margin-bottom: 12px; }
     .why-feature h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
     .why-feature p { font-size: 13px; color: var(--gray); line-height: 1.6; }
-    .why-story { padding: 40px; background: var(--black); border-radius: 16px; color: var(--white); position: relative; overflow: hidden; }
+    .why-story { padding: 40px; background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); border-radius: 16px; color: var(--white); position: relative; overflow: hidden; }
     .why-story::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(183,28,28,0.3) 0%, transparent 70%); }
     .why-story-content { position: relative; z-index: 1; }
     .why-story-label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--red-light); margin-bottom: 16px; }
@@ -182,7 +182,7 @@
     .review-author-info span { font-size: 12px; color: var(--gray); }
 
     /* HOW */
-    .how { background: var(--black); color: var(--white); }
+    .how { background: linear-gradient(135deg, var(--black) 0%, var(--red-accent) 100%); color: var(--white); }
     .how .section-title { color: var(--white); }
     .how .section-sub { color: rgba(255,255,255,0.55); margin: 0 auto; }
     .how-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
@@ -338,8 +338,7 @@
       <a href="/"><img src="/HeroCleaners-logo.png" alt="Hero Cleaners" class="nav-logo"></a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        <li class="nav-dropdown"><a href="#services">Services</a><ul class="nav-dropdown-menu"><li><a href="/recurring-cleaning">Recurring Cleaning</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></li>
-        <li><a href="/pricing">Pricing</a></li>
+        <li class="nav-dropdown"><a href="#services">Services</a><ul class="nav-dropdown-menu"><li><a href="/recurring-cleaning">Cleaning Plans</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></li>
         <li><a href="#areas">Service Areas</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="/faq">FAQ</a></li>
@@ -361,7 +360,7 @@
       <div>
         <div class="hero-badge"><div class="hero-badge-dot"></div>Locally Owned &middot; Nibley, Utah &middot; Since 2019</div>
         <div style="display:flex;align-items:center;gap:16px;">
-        <p style="font-family:var(--font-display);font-size:clamp(48px,7vw,80px);line-height:1.05;letter-spacing:2px;margin-bottom:0;color:var(--white);">WE CLEAN.<br><em style="font-style:normal;color:var(--red-accent);">YOU RELAX.</em></p>
+        <p style="font-family:var(--font-display);font-size:clamp(38px,4.8vw,56px);line-height:1.05;letter-spacing:2px;margin-bottom:0;color:var(--white);">WE CLEAN HOMES.<br><em style="font-style:normal;color:var(--red-accent);">AND WE&rsquo;RE REALLY GOOD AT IT.</em></p>
         <img src="/HeroCleaner_white.png" alt="Hero Cleaners" style="width:180px;height:auto;object-fit:contain;flex-shrink:0;margin-bottom:4px;">
       </div>
         <h1 style="font-family:var(--font-body);font-size:clamp(20px,2.4vw,28px);font-weight:600;color:rgba(255,255,255,0.85);letter-spacing:0.5px;line-height:1.3;margin-top:8px;margin-bottom:16px;">House Cleaning in Nibley, Utah</h1>
@@ -398,18 +397,17 @@
   </div>
 </section>
 
-<div class="trust-bar">
-  <div class="container">
-    <div class="trust-bar-inner">
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed & Insured</div>
-      <div class="trust-sep"></div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Flexible Scheduling</div>
-      <div class="trust-sep"></div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Satisfaction Guaranteed</div>
-      <div class="trust-sep"></div>
-      <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Locally Owned & Operated</div>
-    </div>
-  </div>
+<div class="trust-bar"><div class="container"><div class="trust-bar-inner">
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Licensed &amp; Insured</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>300+ 5-Star Reviews</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Flexible Scheduling</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>Locally Owned &amp; Operated</div>
+  <div class="trust-sep"></div>
+  <div class="trust-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="vertical-align:middle;margin-right:6px;"><polyline points="20 6 9 17 4 12"/></svg>Background-Checked</div>
+</div></div></div>
 </div>
 
 <section class="services" id="services">
@@ -438,6 +436,9 @@
   <div style="max-width:900px;margin:48px auto 0;font-size:16px;line-height:1.8;color:var(--charcoal);">
     <p style="margin-bottom:24px;">Looking for house cleaning in Nibley, Utah? Hero Cleaners is Nibley&rsquo;s local house cleaning service and maid service. Whether you need a recurring weekly housekeeper, a one-time deep cleaning, move-out cleaning before your walk-through, or window washing for your home, our Nibley cleaning team handles it. We&rsquo;ve been the trusted house cleaners for Cache Valley families since 2019 &mdash; friendly, reliable people who treat your Nibley home like their own.</p>
 
+    <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:32px 0 12px;color:var(--black);">About House Cleaning in Nibley, Utah</h3>
+    <p style="margin-bottom:20px;">Nibley is one of the fastest-growing cities in Cache Valley, just south of Logan and a short drive from Hyrum. The population has climbed substantially over the past decade as families have moved in for the schools, the newer housing stock, and the easy access to both Logan and the rest of the valley. Most homes in the 84321 ZIP code are newer construction &mdash; two-story builds, finished basements, open floor plans &mdash; which is the type of layout our Nibley cleaning crews see most often. Hero Cleaners has been on the Nibley route since the community started its growth, and our weekly schedule includes time for the area.</p>
+    <p style="margin-bottom:24px;">A lot of our Nibley customers are young families and dual-income households who picked the area for the schools but don't have the time to keep up with a bigger house. Recurring service is the most common ask &mdash; bi-weekly cleaning is especially popular here &mdash; and we also do a lot of deep cleanings when families are getting ready for holidays, parties, or out-of-town guests. Nibley is about 10 minutes from our Logan headquarters, so response times for new customers are quick.</p>
     <h3 style="font-family:var(--font-display);font-size:28px;letter-spacing:1px;margin:32px 0 12px;color:var(--black);">House Cleaning &amp; Maid Service in Nibley</h3>
     <p style="margin-bottom:20px;">Our most popular service in Nibley is recurring house cleaning &mdash; weekly, bi-weekly, or monthly. The same trusted cleaners visit your Nibley home each time, learning your preferences and building a real relationship. Whether you call it housekeeping, maid service, or just house cleaning, we deliver consistent, dependable results across Nibley, Utah (84321) and the surrounding Cache Valley area. Many Nibley customers tell us the relief of coming home to a clean house is the best part of their week.</p>
 
@@ -471,7 +472,7 @@
     <div class="why-inner">
       <div>
         <span class="section-label">The Hero Cleaners Difference</span>
-        <h2 class="section-title">MOST COMPANIES ARE GOOD AT <em>A FEW THINGS.</em> WE'RE GREAT AT ALL OF THEM.</h2>
+        <h2 class="section-title">WE CLEAN. <em>YOU RELAX.</em></h2>
         <p class="section-sub" style="margin-bottom:40px;">Quality of work is just the starting point. It's the communication, the reliability, the people &mdash; that's what keeps our customers coming back year after year.</p>
         <div class="why-features">
           <div class="why-feature"><div class="why-feature-icon">&#x1F91D;</div><h4>Real Relationships</h4><p>You'll know your cleaners by name. They'll know your home. That's the way we like it.</p></div>
@@ -575,7 +576,7 @@
 
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do I need to be home when you clean?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Yes &mdash; for your first clean, we do ask that you&rsquo;re home, and it really matters to us. Your first visit is our chance to meet you in person, walk through your home together, understand your priorities, and make sure we&rsquo;re all on the same page before we get started. At the end of the clean, we&rsquo;ll do a final walkthrough with you to make sure everything looks exactly right. After that first visit, you absolutely don&rsquo;t need to be home &mdash; most of our customers give us a key or door code and we take it from there.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Do you bring your own cleaning supplies?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Yes &mdash; we bring everything we need. If you have specific products you prefer, just let us know and we're happy to accommodate.</div></div></div>
-        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Will I get the same cleaner each time?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">We do our best to send the same team every visit &mdash; and for recurring customers, we make that a priority. Building a real relationship with your cleaner is part of what makes Hero Cleaners different.</div></div></div>
+        <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Will I get the same cleaner each time?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">You can always request to have the same cleaner come every visit. We also like to have a few cleaners trained on your home so whenever there's a scheduling conflict, someone takes time off, or we're training a new cleaner, we don't skip a beat. Every team member is background-checked, insured, and held to the same Hero Cleaners standard.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">What if I'm not happy with the clean?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Just let us know within 24 hours and we'll make it right &mdash; no questions asked. Your satisfaction is our top priority.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">How do I get started?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">The easiest way is to call or text us at (435) 277-0370 or use our online booking form. We'll get you a quote quickly and find a time that works. First-time customers typically start with a deep clean.</div></div></div>
         <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Are your cleaners insured?<div class="faq-toggle">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. Every team member is fully licensed and insured. We know inviting someone into your home takes trust &mdash; we take that responsibility seriously.</div></div></div>
@@ -617,8 +618,8 @@
         <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>1034 W RSI DR, Logan, UT 84321</div>
         <div class="footer-contact-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon&ndash;Fri &middot; 6:00 AM &ndash; 11:00 PM</div>
       </div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Recurring Cleaning</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">First Time / Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/pricing">Pricing</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/referral">Refer a Friend</a></li><li><a href="/contact">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="/recurring-cleaning">Cleaning Plans</a></li><li><a href="/maid-service">Maid Service</a></li><li><a href="/deep-clean">First Time / Deep Cleaning</a></li><li><a href="/move-out-cleaning">Move-Out Cleaning</a></li><li><a href="/commercial-cleaning">Commercial Cleaning</a></li><li><a href="/window-washing">Window Washing</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="/about">About Us</a></li><li><a href="/reviews">Reviews</a></li><li><a href="/blog">Blog</a></li><li><a href="/faq">FAQ</a></li><li><a href="/referral">Refer a Friend</a></li><li><a href="/contact">Contact</a></li></ul></div>
       <div class="footer-col"><h4>Service Areas</h4><ul><li><a href="/service-areas#logan">Logan, UT</a></li><li><a href="/house-cleaning-north-logan-utah">North Logan</a></li><li><a href="/house-cleaning-smithfield-utah">Smithfield</a></li><li><a href="/house-cleaning-hyrum-utah">Hyrum</a></li><li><a href="/house-cleaning-nibley-utah">Nibley</a></li><li><a href="/service-areas">View All Areas &#x2192;</a></li></ul></div>
     </div>
     <div class="footer-bottom">
@@ -653,7 +654,8 @@
 
   // Close nav when clicking outside
   document.addEventListener('click', function(e) {
-    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
+    var hamburger = document.querySelector('.hamburger');
+    if (navLinks && hamburger && getComputedStyle(hamburger).display !== 'none' && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
       navLinks.style.display = 'none';
     }
   });
