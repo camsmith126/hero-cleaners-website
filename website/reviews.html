@@ -276,7 +276,8 @@
 
   // Close nav when clicking outside
   document.addEventListener('click', function(e) {
-    if (navLinks && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
+    var hamburger = document.querySelector('.hamburger');
+    if (navLinks && hamburger && getComputedStyle(hamburger).display !== 'none' && !e.target.closest('.nav') && !e.target.closest('.hamburger')) {
       navLinks.style.display = 'none';
     }
   });
