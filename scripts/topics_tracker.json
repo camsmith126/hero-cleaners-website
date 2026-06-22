@@ -1,5 +1,5 @@
 {
-  "next_index": 15,
+  "next_index": 16,
   "published": [
     {
       "index": 0,
@@ -90,6 +90,12 @@
       "topic": "How professional cleaning services save you time every week in Logan, UT",
       "file": "2026-06-15-how-professional-cleaning-services-save-you-time-every-week-in-logan-ut.md",
       "date": "2026-06-15"
+    },
+    {
+      "index": 15,
+      "topic": "The difference between a deep clean and a recurring clean \u2014 and which one you need",
+      "file": "2026-06-22-the-difference-between-a-deep-clean-and-a-recurring-clean-and-which-one-you-need.md",
+      "date": "2026-06-22"
     }
   ]
 }
