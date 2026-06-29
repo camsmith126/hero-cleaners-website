@@ -1,5 +1,5 @@
 {
-  "next_index": 16,
+  "next_index": 17,
   "published": [
     {
       "index": 0,
@@ -96,6 +96,12 @@
       "topic": "The difference between a deep clean and a recurring clean \u2014 and which one you need",
       "file": "2026-06-22-the-difference-between-a-deep-clean-and-a-recurring-clean-and-which-one-you-need.md",
       "date": "2026-06-22"
+    },
+    {
+      "index": 16,
+      "topic": "What does a professional house cleaner actually clean? A room-by-room breakdown",
+      "file": "2026-06-29-what-does-a-professional-house-cleaner-actually-clean-a-room-by-room-breakdown.md",
+      "date": "2026-06-29"
     }
   ]
 }
