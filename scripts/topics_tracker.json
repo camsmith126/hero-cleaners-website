@@ -1,5 +1,5 @@
 {
-  "next_index": 17,
+  "next_index": 18,
   "published": [
     {
       "index": 0,
@@ -102,6 +102,12 @@
       "topic": "What does a professional house cleaner actually clean? A room-by-room breakdown",
       "file": "2026-06-29-what-does-a-professional-house-cleaner-actually-clean-a-room-by-room-breakdown.md",
       "date": "2026-06-29"
+    },
+    {
+      "index": 17,
+      "topic": "Why recurring cleaning customers in Cache Valley get better results over time",
+      "file": "2026-07-06-why-recurring-cleaning-customers-in-cache-valley-get-better-results-over-time.md",
+      "date": "2026-07-06"
     }
   ]
 }
