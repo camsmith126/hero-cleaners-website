@@ -1,5 +1,5 @@
 {
-  "next_index": 20,
+  "next_index": 21,
   "published": [
     {
       "index": 0,
@@ -120,6 +120,12 @@
       "topic": "How to stop feeling embarrassed before your cleaner arrives \u2014 and why you shouldn't",
       "file": "2026-07-20-how-to-stop-feeling-embarrassed-before-your-cleaner-arrives-and-why-you-shouldnt.md",
       "date": "2026-07-20"
+    },
+    {
+      "index": 20,
+      "topic": "The benefits of professional window washing for Cache Valley businesses",
+      "file": "2026-07-27-the-benefits-of-professional-window-washing-for-cache-valley-businesses.md",
+      "date": "2026-07-27"
     }
   ]
 }
