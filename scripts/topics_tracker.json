@@ -1,5 +1,5 @@
 {
-  "next_index": 21,
+  "next_index": 22,
   "published": [
     {
       "index": 0,
@@ -126,6 +126,12 @@
       "topic": "The benefits of professional window washing for Cache Valley businesses",
       "file": "2026-07-27-the-benefits-of-professional-window-washing-for-cache-valley-businesses.md",
       "date": "2026-07-27"
+    },
+    {
+      "index": 21,
+      "topic": "Why relationship-based cleaning services outperform big cleaning franchises",
+      "file": "2026-08-03-why-relationship-based-cleaning-services-outperform-big-cleaning-franchises.md",
+      "date": "2026-08-03"
     }
   ]
 }
