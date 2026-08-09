@@ -34,7 +34,7 @@ LOOKBACK_DAYS = 28
 REPORT_LAG_DAYS = 3
 
 CONFIG_PATH = Path(__file__).parent / "gsc_config.json"
-DEFAULT_CREDENTIALS = "~/Desktop/HCP Automation/credentials.json"
+DEFAULT_CREDENTIALS = "~/Desktop/AI AGENTS/Hero Cleaners/Website Agent/google-credentials.json"
 DEFAULT_SITE_URL = "https://theherocleaners.com/"
 
 

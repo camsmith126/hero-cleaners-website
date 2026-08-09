@@ -4,7 +4,7 @@ gsc_submit_sitemap.py — Submit a sitemap to Google Search Console and list
 all sitemaps the property currently knows about.
 
 Auth and config share the same setup as gsc_report.py — service account at
-~/Desktop/HCP Automation/credentials.json, site URL from scripts/gsc_config.json
+~/Desktop/AI AGENTS/Hero Cleaners/Website Agent/google-credentials.json, site URL from scripts/gsc_config.json
 or GSC_SITE_URL env var. The only difference is this script needs the read/write
 scope (webmasters) instead of readonly.
 
@@ -26,7 +26,7 @@ from googleapiclient.errors import HttpError
 SCOPES = ["https://www.googleapis.com/auth/webmasters"]  # read/write
 
 CONFIG_PATH = Path(__file__).parent / "gsc_config.json"
-DEFAULT_CREDENTIALS = "~/Desktop/HCP Automation/credentials.json"
+DEFAULT_CREDENTIALS = "~/Desktop/AI AGENTS/Hero Cleaners/Website Agent/google-credentials.json"
 DEFAULT_SITE_URL = "https://theherocleaners.com/"
 
 
