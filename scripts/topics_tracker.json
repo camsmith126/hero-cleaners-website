@@ -1,5 +1,5 @@
 {
-  "next_index": 24,
+  "next_index": 25,
   "published": [
     {
       "index": 0,
@@ -144,6 +144,12 @@
       "topic": "Top cleaning tips from professional house cleaners in Cache Valley",
       "file": "2026-08-17-top-cleaning-tips-from-professional-house-cleaners-in-cache-valley.md",
       "date": "2026-08-17"
+    },
+    {
+      "index": 24,
+      "topic": "Fall home cleaning checklist for Logan, UT families",
+      "file": "2026-08-24-fall-home-cleaning-checklist-for-logan-ut-families.md",
+      "date": "2026-08-24"
     }
   ]
 }
