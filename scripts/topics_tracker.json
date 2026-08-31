@@ -1,5 +1,5 @@
 {
-  "next_index": 25,
+  "next_index": 26,
   "published": [
     {
       "index": 0,
@@ -150,6 +150,12 @@
       "topic": "Fall home cleaning checklist for Logan, UT families",
       "file": "2026-08-24-fall-home-cleaning-checklist-for-logan-ut-families.md",
       "date": "2026-08-24"
+    },
+    {
+      "index": 25,
+      "topic": "What happens if your cleaner misses something? How great cleaning companies handle it",
+      "file": "2026-08-31-what-happens-if-your-cleaner-misses-something-how-great-cleaning-companies-handl.md",
+      "date": "2026-08-31"
     }
   ]
 }
