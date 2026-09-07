@@ -1,5 +1,5 @@
 {
-  "next_index": 26,
+  "next_index": 27,
   "published": [
     {
       "index": 0,
@@ -156,6 +156,12 @@
       "topic": "What happens if your cleaner misses something? How great cleaning companies handle it",
       "file": "2026-08-31-what-happens-if-your-cleaner-misses-something-how-great-cleaning-companies-handl.md",
       "date": "2026-08-31"
+    },
+    {
+      "index": 26,
+      "topic": "Why Cache Valley families choose local cleaning services over national chains",
+      "file": "2026-09-07-why-cache-valley-families-choose-local-cleaning-services-over-national-chains.md",
+      "date": "2026-09-07"
     }
   ]
 }
