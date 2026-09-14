@@ -1,5 +1,5 @@
 {
-  "next_index": 27,
+  "next_index": 28,
   "published": [
     {
       "index": 0,
@@ -162,6 +162,12 @@
       "topic": "Why Cache Valley families choose local cleaning services over national chains",
       "file": "2026-09-07-why-cache-valley-families-choose-local-cleaning-services-over-national-chains.md",
       "date": "2026-09-07"
+    },
+    {
+      "index": 27,
+      "topic": "How a clean home improves your mental health and daily routine",
+      "file": "2026-09-14-how-a-clean-home-improves-your-mental-health-and-daily-routine.md",
+      "date": "2026-09-14"
     }
   ]
 }
