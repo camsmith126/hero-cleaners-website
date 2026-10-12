@@ -1,5 +1,5 @@
 {
-  "next_index": 31,
+  "next_index": 32,
   "published": [
     {
       "index": 0,
@@ -186,6 +186,12 @@
       "topic": "How Hero Cleaners customizes every clean to fit your home and budget",
       "file": "2026-10-05-how-hero-cleaners-customizes-every-clean-to-fit-your-home-and-budget.md",
       "date": "2026-10-05"
+    },
+    {
+      "index": 31,
+      "topic": "Why first-time house cleaning customers in Cache Valley are always surprised",
+      "file": "2026-10-12-why-first-time-house-cleaning-customers-in-cache-valley-are-always-surprised.md",
+      "date": "2026-10-12"
     }
   ]
 }
