@@ -1,5 +1,5 @@
 {
-  "next_index": 33,
+  "next_index": 34,
   "published": [
     {
       "index": 0,
@@ -198,6 +198,12 @@
       "topic": "Commercial cleaning for Logan, UT restaurants and food service businesses",
       "file": "2026-10-19-commercial-cleaning-for-logan-ut-restaurants-and-food-service-businesses.md",
       "date": "2026-10-19"
+    },
+    {
+      "index": 33,
+      "topic": "How professional cleaning helps Cache Valley families get their weekends back",
+      "file": "2026-10-26-how-professional-cleaning-helps-cache-valley-families-get-their-weekends-back.md",
+      "date": "2026-10-26"
     }
   ]
 }
