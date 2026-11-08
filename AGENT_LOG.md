@@ -41,7 +41,17 @@ Sections can be omitted if empty for a given session. Keep entries short. Future
 
 ## Entries
 
-## 2026-06-02 (latest) — Visual Arsenal + VisualSystemSpec v1.1 propagated
+## 2026-08-08 (latest) — Google Cloud auth outage FIXED (stale April key) — logged by Conductor
+
+- **What broke:** GSC/Sheets auth failing ("key created in April doesn't work anymore"). Root cause: `scripts/gsc_config.json` pointed at `~/Desktop/HCP Automation/credentials.json` — a leftover pre-migration copy holding the April service-account key, which was deleted from Google Cloud during the 2026-07-14 ecosystem-wide credential rotation. This agent's config was never repointed, so it kept reading the dead key.
+- **Fix (local):** July key now lives at `~/Desktop/AI AGENTS/Hero Cleaners/Website Agent/google-credentials.json` (OUTSIDE this repo — deliberately, so neither git nor Jekyll's `_site` build can ever pick it up; perms 600). `scripts/gsc_config.json` `credentials_path` updated to point there. Same service account (`hero-cleaners-sheets@hero-cleaners-automation`), key id `e24d9d78…` — matches what HCP Agent + Residential Agent use.
+- **Fix (CI):** The `GCP_SA_KEY` repo secret ALSO held the dead April key — the Tuesday "Weekly Report + Dashboard" workflow failed 3 straight weeks (Jul 21, Jul 28, Aug 4, dying at ~17s). Cam updated the secret 2026-08-08; manual run verified green (28s, matching healthy pre-rotation durations). Weekly reports resume next Tuesday.
+- **UNCOMMITTED CHANGE in this repo:** the `gsc_config.json` path edit is local-only. Next session: commit it (message like "fix: repoint GSC credentials path after key rotation"). Nothing secret in that file — path, site URL, sheet id only.
+- **Do NOT create new Google Cloud keys** for auth errors — check first whether you're holding a stale copy. Current key id prefix is `e24d9d78`. If auth fails, compare your local file's `private_key_id` against HCP Agent's `credentials.json` before touching Google Cloud.
+- Benign CI warning: GitHub deprecating Node 20 for action runners (checkout@v4 / setup-python@v5). Cosmetic; bump action versions whenever the workflow is next touched.
+- Signal for ecosystem: third stale-copy incident from the July rotation. Future rotations must sweep the whole filesystem + cloud-side stores (GitHub secrets, Supabase function secrets), not just known agent folders.
+
+## 2026-06-02 — Visual Arsenal + VisualSystemSpec v1.1 propagated
 
 - Completed: VisualSystemSpec is now at **v1.1** in the Vault — adds **Slate Gray `#5B6B7A`** as a locked structural-support color (alongside Hero Red `#D92429`, Hero Black `#171E26`, white). Slate is for organize/recede contexts (secondary buttons, dividers, footers, muted badges), never for emphasis (red owns emphasis).
 - Completed: Production-ready **Visual Arsenal** wired into Brand & Strategy Sources as a new section 2a. `Brand Vault/assets/README.md` is the authoritative day-to-day usage guide; this CLAUDE.md routes there rather than restating.

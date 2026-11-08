@@ -12,3 +12,6 @@ credentials.json
 *.key
 .env
 .env.*
+
+# Jekyll build output
+_site/
