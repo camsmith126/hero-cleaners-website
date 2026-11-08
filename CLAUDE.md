@@ -537,3 +537,11 @@ Never make changes that would require tearing down to add these later.
 - Commit with descriptive messages explaining what changed and why
 - Push to main triggers automatic Netlify deploy
 - Never force push to main
+
+## Two-machine sync
+
+This repo is used from both a MacBook Pro and a Mac mini, kept in sync through GitHub.
+
+- **At session start:** run `git pull` before doing anything else.
+- **Before ending a session:** commit and push all work.
+- **Never leave uncommitted work on a machine.** The other machine cannot see it.
