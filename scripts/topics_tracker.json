@@ -1,5 +1,5 @@
 {
-  "next_index": 35,
+  "next_index": 36,
   "published": [
     {
       "index": 0,
@@ -210,6 +210,12 @@
       "topic": "What professional cleaners wish every homeowner in Logan knew before booking",
       "file": "2026-11-02-what-professional-cleaners-wish-every-homeowner-in-logan-knew-before-booking.md",
       "date": "2026-11-02"
+    },
+    {
+      "index": 35,
+      "topic": "The best cleaning schedule for a 3-bedroom home in Cache Valley",
+      "file": "2026-11-09-the-best-cleaning-schedule-for-a-3-bedroom-home-in-cache-valley.md",
+      "date": "2026-11-09"
     }
   ]
 }
