@@ -1,5 +1,5 @@
 {
-  "next_index": 36,
+  "next_index": 37,
   "published": [
     {
       "index": 0,
@@ -216,6 +216,12 @@
       "topic": "The best cleaning schedule for a 3-bedroom home in Cache Valley",
       "file": "2026-11-09-the-best-cleaning-schedule-for-a-3-bedroom-home-in-cache-valley.md",
       "date": "2026-11-09"
+    },
+    {
+      "index": 36,
+      "topic": "How to maintain a clean home between professional visits in Logan, UT",
+      "file": "2026-11-16-how-to-maintain-a-clean-home-between-professional-visits-in-logan-ut.md",
+      "date": "2026-11-16"
     }
   ]
 }
